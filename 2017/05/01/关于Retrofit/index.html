@@ -15,7 +15,7 @@
 <meta property="og:url" content="//lazxy.github.io/2017/05/01/关于Retrofit/index.html">
 <meta property="og:site_name" content="Lazxy">
 <meta property="og:description" content="笔记转移之路的第一篇，就先好好回顾下这默默工作在层层封装下的劳模。  Retrofit同OkHttp一样都是square公司（然后查了一下发现Picasso和Dragger也是他们的项目，向大佬低头）的开源网络框架，大概因为这个原因，它们也有相似的Builder链式调用和相似的请求流程。当然Retrofit实际可以算作是OkHttp的加强版，其不仅有各种方便的注解简化代码，更有其他开源库的支持（">
-<meta property="og:updated_time" content="2017-05-04T01:38:40.686Z">
+<meta property="og:updated_time" content="2017-05-04T01:51:53.301Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于Retrofit">
 <meta name="twitter:description" content="笔记转移之路的第一篇，就先好好回顾下这默默工作在层层封装下的劳模。  Retrofit同OkHttp一样都是square公司（然后查了一下发现Picasso和Dragger也是他们的项目，向大佬低头）的开源网络框架，大概因为这个原因，它们也有相似的Builder链式调用和相似的请求流程。当然Retrofit实际可以算作是OkHttp的加强版，其不仅有各种方便的注解简化代码，更有其他开源库的支持（">
@@ -168,6 +168,7 @@
 <p>笔记转移之路的第一篇，就先好好回顾下这默默工作在层层封装下的劳模。</p>
 </blockquote>
 <p><strong>Retrofit</strong>同<strong>OkHttp</strong>一样都是square公司（然后查了一下发现Picasso和Dragger也是他们的项目，向大佬低头）的开源网络框架，大概因为这个原因，它们也有相似的Builder链式调用和相似的请求流程。当然Retrofit实际可以算作是OkHttp的加强版，其不仅有各种方便的注解简化代码，更有其他开源库的支持（看看漫山遍野的Retrofit+RxJava使用教程），下面简单地记录一下当时学习过的一些点。</p>
+<a id="more"></a>
 <h4 id="添加依赖"><a href="#添加依赖" class="headerlink" title="添加依赖"></a>添加依赖</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">compile &apos;com.squareup.retrofit2:retrofit:2.2.0&apos;</div><div class="line">compile &apos;com.squareup.okhttp3:okhttp:3.7.0&apos;</div><div class="line">//compile &apos;com.squareup.retrofit2:converter-gson:2.2.0&apos;</div><div class="line">//compile &apos;com.squareup.retrofit2:adapter-rxjava:2.2.0&apos;</div><div class="line">//compile &apos;io.reactivex:rxjava:1.1.7&apos; //这里如果也用rxjava 2.0以上版本会和上面的adapter-rxjaava出现不同版本库冲突问题。</div><div class="line">//compile &apos;io.reactivex:rxandroid:1.2.1&apos;</div></pre></td></tr></table></figure>
 <h4 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Retrofit retrofit = new Retrofit.Builder()</div><div class="line">                .baseUrl(&quot;http://lazxy.github.io/&quot;) //注意这里一定要以“/”结尾</div><div class="line">                .client(client)</div><div class="line">                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())//和RxJava一起用</div><div class="line">                .addConverterFactory(GsonConverterFactory.create())//和Gson一起用</div><div class="line">                .build();</div></pre></td></tr></table></figure>
 <p>实际上从这个Builder链就能大致看出Retrofit和OkHttp的关系了，Rerofit需要通过OkHttpClient来创建对象，其实也就是等于在它之上做了一层封装，除了OkHttp本身的各种属性之外，又给附上了适配器和对象转换。然而光有Retrofit对象并没有什么用，通道是搭好了，但请求对象呢？在OkHttp里，需要另外创建一个Request对象，在里面注入Url、请求头和各种Http请求方法，然而在Retrofit里，这一步直接换成了高大上的注解实现：</p>
@@ -439,7 +440,7 @@
 		open_in_new: false,
 		root: "/",
 		innerArchive: true,
-		showTags: false
+		showTags: true
 	}
 </script>
 
