@@ -141,6 +141,200 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-关于Retrofit" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/01/关于Retrofit/">关于Retrofit</a>
+    </h1>
+  
+
+        
+        <a href="/2017/05/01/关于Retrofit/" class="archive-article-date">
+  	<time datetime="2017-05-01T11:25:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>笔记转移之路的第一篇，就先好好回顾下这默默工作在层层封装下的劳模。</p>
+</blockquote>
+<p><strong>Retrofit</strong>同<strong>OkHttp</strong>一样都是square公司（然后查了一下发现Picasso和Dragger也是他们的项目，向大佬低头）的开源网络框架，大概因为这个原因，它们也有相似的Builder链式调用和相似的请求流程。当然Retrofit实际可以算作是OkHttp的加强版，其不仅有各种方便的注解简化代码，更有其他开源库的支持（看看漫山遍野的Retrofit+RxJava使用教程），下面简单地记录一下当时学习过的一些点。</p>
+<h4 id="添加依赖"><a href="#添加依赖" class="headerlink" title="添加依赖"></a>添加依赖</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">compile &apos;com.squareup.retrofit2:retrofit:2.2.0&apos;</div><div class="line">compile &apos;com.squareup.okhttp3:okhttp:3.7.0&apos;</div><div class="line">//compile &apos;com.squareup.retrofit2:converter-gson:2.2.0&apos;</div><div class="line">//compile &apos;com.squareup.retrofit2:adapter-rxjava:2.2.0&apos;</div><div class="line">//compile &apos;io.reactivex:rxjava:1.1.7&apos; //这里如果也用rxjava 2.0以上版本会和上面的adapter-rxjaava出现不同版本库冲突问题。</div><div class="line">//compile &apos;io.reactivex:rxandroid:1.2.1&apos;</div></pre></td></tr></table></figure>
+<h4 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Retrofit retrofit = new Retrofit.Builder()</div><div class="line">                .baseUrl(&quot;http://lazxy.github.io/&quot;) //注意这里一定要以“/”结尾</div><div class="line">                .client(client)</div><div class="line">                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())//和RxJava一起用</div><div class="line">                .addConverterFactory(GsonConverterFactory.create())//和Gson一起用</div><div class="line">                .build();</div></pre></td></tr></table></figure>
+<p>实际上从这个Builder链就能大致看出Retrofit和OkHttp的关系了，Rerofit需要通过OkHttpClient来创建对象，其实也就是等于在它之上做了一层封装，除了OkHttp本身的各种属性之外，又给附上了适配器和对象转换。然而光有Retrofit对象并没有什么用，通道是搭好了，但请求对象呢？在OkHttp里，需要另外创建一个Request对象，在里面注入Url、请求头和各种Http请求方法，然而在Retrofit里，这一步直接换成了高大上的注解实现：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">interface DemoService &#123;</div><div class="line">@GET(&quot;demo/&#123;id&#125;&quot;)</div><div class="line">Call&lt;ResponseBody&gt; test(@Path(&quot;id&quot;) int id);</div><div class="line">&#125;</div><div class="line"></div><div class="line">...</div><div class="line">Call&lt;ResponseBody&gt; call = retrofit.create(DemoService.class);</div><div class="line">call.enqueue(new Callback()&#123;...&#125;)</div></pre></td></tr></table></figure>
+<p>这里直接通过向retrofit的create(Class class)方法传入接口类字节码实现反射调用创建了Call对象，也就是请求的载体，再和OkHttp一样，用一个enqueue方法把请求加入队列，就完成了请求的调用过程。其中请求的Http请求类型通过注解@GET注入，类似的还有下列注解：</p>
+<table>
+<thead>
+<tr>
+<th>请求类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td>通过请求获得响应，最多携带2048字节信息</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>发送数据给服务器端，数据长度无限制，但非幂等，反复请求会造成数据的反复创建。</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>更新或创建服务器端的数据，与POST的区别在于PUT的地址是精确到单个资源的，而POST只能作用于资源集合层面。（即前者能够针对单一文件进行操作，但后者只能在目录下进行创建操作）</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>删除服务器端数据。</td>
+</tr>
+<tr>
+<td>HEAD</td>
+<td>同GET相同，但响应体为空，多用于测试连接性和信息更新。</td>
+</tr>
+<tr>
+<td>OPTIONS</td>
+<td>获取服务器端支持的请求方法，或者用于检查服务器的性能</td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td>更新服务器端数据的局部，可以是一个或多个字段，与PUT不同，PATCH操作是非幂等的，因为局部更新需要服务器程序配合，可能会造成资源改变。</td>
+</tr>
+<tr>
+<td>HTTP</td>
+<td>通用型注解，可以用来表示上面七种请求类型。</td>
+</tr>
+</tbody>
+</table>
+<p>上面几种请求就是基本的几种Http请求，注解内的值表示retrofit创建时赋予的主路径(baseUrl)下的子路径<strong>（当注解值仅为路径名时实际路径为baseUrl+注解值；而当注解值以“/”开头时实际路径为baseUrl实际路径为baseUrl的域名+注解值，忽略baseUrl中已有的路径）</strong>，<strong>但当注解值为全路径且与baseUrl指向的域不同时，以注解值为准。</strong>中间动态参数用<code>{param}</code>标注，在注解方法的参数列表中需要出现一一对应的@Path(“param”)注解来注入具体值。另附@HTTP注解的例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">@HTTP(method = &quot;get&quot;, path = &quot;demo/&#123;id&#125;&quot;, hasBody = false) （替代上面的get）</div></pre></td></tr></table></figure>
+<p>另外还有以下几个相关注解：</p>
+<table>
+<thead>
+<tr>
+<th>注解名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FormUrlEncoded</td>
+<td>表示请求体是一个Form表单，实际作用方式为设置请求头的Content-Type:application/x-www-form-urlencoded</td>
+</tr>
+<tr>
+<td>Multipart</td>
+<td>表示请求体支持分段传输，常用于文件上传，实际为设置请求头Content-Type:multipart/form-data</td>
+</tr>
+<tr>
+<td>Streaming</td>
+<td>表示响应体数据以流的形式返回，而不进入内存，在返回大容量数据时会用到</td>
+</tr>
+<tr>
+<td>Headers</td>
+<td>用于添加请求头，其注解参数即为要添加的请求头键值对，可一次添加多个头</td>
+</tr>
+</tbody>
+</table>
+<p>好了，上面提到的注解都是用于注解函数的，而对于函数中的各个参数，则采用下列注解：</p>
+<table>
+<thead>
+<tr>
+<th>注解名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Header</td>
+<td>用于注解需要添加的头，注解参数为键，被注解的函数参数为值。</td>
+</tr>
+<tr>
+<td>Body</td>
+<td>用于非表单请求体，即自定义对象，在发起请求的过程中会被相应的Convert序列化为预设的格式（如Json），并且其结果直接被设置为Request的请求体。</td>
+</tr>
+<tr>
+<td>Field</td>
+<td>用于注解单个表单字段，使用时需要有FormUrlEncoded注解或者相应头表示其请求体为表单格式。</td>
+</tr>
+<tr>
+<td>FieldMap</td>
+<td>用于注解多个表单字段的集合，只接受Map<string,string>类型，其他类型会被强制调用toString()方法，使用时需要有FormUrlEncoded注解或者相应头表示其请求体为表单格式。</string,string></td>
+</tr>
+<tr>
+<td>Part</td>
+<td>用于注解单个分段表单字段，支持类型为RequestBody、MultiPartBody.Part(内部表示)与其他任意类型(也是通过Convert转换),使用时需要有Multipart注解或者相应头表示其请求体为分段表单格式。</td>
+</tr>
+<tr>
+<td>PartMap</td>
+<td>用于注解多个分段表单字段，只接受Map<string,requestbody>类型，非RequestBody类型会通过Converter转换，使用时需要有Multipart注解或者相应头表示其请求体为分段表单格式。</string,requestbody></td>
+</tr>
+<tr>
+<td>Path</td>
+<td>用于注解Url路径相关参数，其参数与上述Http请求方法中的<code>{param}</code>中参数一一对应。</td>
+</tr>
+<tr>
+<td>Query</td>
+<td>注解Url的附带参数值，其注解参数为键，被注解函数为值，注解结果会显示在最终请求的的路径上，形如?name=Lazxy。其实这个结果与Field最终表现出来的结果是相同的，但区别在于后者作用对象是请求体而非Url。</td>
+</tr>
+<tr>
+<td>QueryMap</td>
+<td>同FieldMap,区别也同样在于作用点为URL</td>
+</tr>
+<tr>
+<td>Url</td>
+<td>用于注解Url路径，当该注解存在时，Http方法会直接以该注解值为Url</td>
+</tr>
+</tbody>
+</table>
+<p><strong>PS</strong>:Path推荐只用在与路径有关时，包括数据的部分最好用Query解决，而数据量较大或者需要不可见时建议用Filed提交。另外Query、Field和Part都支持数组或者实现了Iterable等可迭代对象导入。</p>
+<h4 id="关于CallAdapter和Converter"><a href="#关于CallAdapter和Converter" class="headerlink" title="关于CallAdapter和Converter"></a>关于CallAdapter和Converter</h4><p>​    在最基本的使用中，我们定义的接口及其内被注解的方法返回值类型为Call<responebody>，而在正常的使用中，我们更希望能够返回一个我们自定义的对象类型从而更容易地将其打包或解析为请求体，这时就需要用到Retrofit的Converter机制了。Retrofit能够通过addConverterFactory方法来添加相应的Converter工厂类，并在<strong>需要解析</strong>时（包括对@Body注解对象转换为ResponseBody和ResponseBody转换为相应对象）创建相应的实现了Converter<f,t>接口的类，来进行对象类型转换，从而得到Call<object>(这样便没有办法获得响应头或者状态码)、Call<result<object>&gt;(这里是retrofit2.adapter.rxjava.Result)或者Call<response<object>&gt;(这里是retrofit2.response)对象。</response<object></result<object></object></f,t></responebody></p>
+<p>​    Converter<f,t>实现类的结构也很简单，主要是重写一个convert方法完成由F对象到T对象的转换。而Converter.Factory接口中定义了两个responseBodyConverter，分别用于ResponseBody对目标类的转换以及目标类对ResponseBody的转换，返回值分别为Converter<responsebody,?>和Converter&lt;?,ResponseBody&gt;；以及一个stringConverter，用于@Field、@Path等注解参数到String的转换，返回值自然是一个Converter&lt;?,String&gt;（当上述三个方法返回null时则代表无法解析相应类型）。所以Converter的工作原理就很清楚了，<strong>当需要类型转换时，Converter.Factory会调用相应的工厂方法，创建对应转换方向的Converter对象，Converter对象再调用自身的convert方法完成实际转换工作。</strong></responsebody,?></f,t></p>
+<blockquote>
+<p>需要注意的是Converter的添加是有优先级的，当多个Converter都能对同一对象进行转换时，会优先调用先添加的Converter。而GsonConveter是不区分对象类型的，故当需要特别地解析某个对象的，需要将其Converter先于GsonConverter添加，否则会报类型不匹配的错误。</p>
+</blockquote>
+<p>​    事实上，除了Call<t>中的T可以被代换，Call本身也是可以被替换的，这也是Retrofit与RxJava这一对能够处处展现其相性的前提。对于响应载体的替换需要用到CallAdapter，其实现与Converter相似，也是需要实现CallAdapter<t>，并且实现CallAdapter.Factory工厂类，最后用addAdapterFactory方法添加，这样一来自定义接口中就可以返回自定义响应载体对象了。</t></t></p>
+<p>​    CallAdapter<t>的接口又定义了些什么呢？它首先有两个方法，responseType和adapt，这两个方法很好理解，前者用于返回响应体类型，即上面Converter定义的对象类型；而后者用于返回CallAdpater用于代理Call的类型，即其泛型T，它接受一个Call参数，相当于上面的ResponseBody，是原始响应载体。当然前面已经提到CallAdapter同样有一个内部工厂类，其中有get、getParameterUpperBound和getRawType三个方法。get自然是用于取得一个对象，其返回值便是需要返回的响应载体类型，如果无法进行合适的转换则返回null；getParameterUpperBound方法用于获取响应体类型，与responseType的返回值相同；getRawType返回的是T的Class对象。CallAdapter类的创建过程也大致可以归结为：<strong>生成响应载体时，调用CallAdapter.Factory的get方法，传入需要的类型参数，如Observable<entity>，首先通过getRawType确认是否为Observable，再通过getParameterUpperBound获取其泛型类型Entity，在构造CallAdapter实现类时传入，从而使responseType方法能获得正确的泛型类型，最后通过adapt返回目标响应载体对象。</entity></strong></t></p>
+<h4 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h4><p>本来是想Retrofit和Gson一起列在这篇里的，不过貌似放在一起并不是很合适，Gson就下一次再搬喽，大概还有<del>封装好了之后就再也没好好看过的</del> RxJava？ </p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-新的开始" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -286,6 +480,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
