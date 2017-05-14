@@ -6,14 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//lazxy.github.io">
-  <title>Archives: 2017/5 | Lazxy</title>
+  <title>关于Activity栈 | Lazxy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Lazxy">
-<meta property="og:url" content="//lazxy.github.io/archives/2017/05/index.html">
+  <meta name="description" content="​    前两天在写项目的时候突然碰到个问题，当用户进入应用时，先进入MainActivity，如果判断为非登陆状态，则应该直接跳转到登陆页面 ，如果在登陆界面放弃登陆，则应该直接回到主界面。这意味着在登陆界面打开时，MainActivity应该从回退栈中弹出，而不是下压。那个时候草草百度了一番，用Intent加Flag的方法匆匆混了过去，然而新栈建立的Transition动画着实让人难受(所以">
+<meta name="keywords" content="笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于Activity栈">
+<meta property="og:url" content="//lazxy.github.io/2017/05/10/关于Activity栈/index.html">
 <meta property="og:site_name" content="Lazxy">
+<meta property="og:description" content="​    前两天在写项目的时候突然碰到个问题，当用户进入应用时，先进入MainActivity，如果判断为非登陆状态，则应该直接跳转到登陆页面 ，如果在登陆界面放弃登陆，则应该直接回到主界面。这意味着在登陆界面打开时，MainActivity应该从回退栈中弹出，而不是下压。那个时候草草百度了一番，用Intent加Flag的方法匆匆混了过去，然而新栈建立的Transition动画着实让人难受(所以">
+<meta property="og:image" content="//lazxy.github.io/2017/05/10/关于Activity栈/pic1.png">
+<meta property="og:updated_time" content="2017-05-14T06:33:44.614Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Lazxy">
+<meta name="twitter:title" content="关于Activity栈">
+<meta name="twitter:description" content="​    前两天在写项目的时候突然碰到个问题，当用户进入应用时，先进入MainActivity，如果判断为非登陆状态，则应该直接跳转到登陆页面 ，如果在登陆界面放弃登陆，则应该直接回到主界面。这意味着在登陆界面打开时，MainActivity应该从回退栈中弹出，而不是下压。那个时候草草百度了一番，用Intent加Flag的方法匆匆混了过去，然而新栈建立的Transition动画着实让人难受(所以">
+<meta name="twitter:image" content="//lazxy.github.io/2017/05/10/关于Activity栈/pic1.png">
   
     <link rel="alternative" href="/atom.xml" title="Lazxy" type="application/atom+xml">
   
@@ -139,36 +146,53 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-关于Activity栈" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      关于Activity栈
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/10/关于Activity栈/" class="archive-article-date">
+
+        
+        <a href="/2017/05/10/关于Activity栈/" class="archive-article-date">
   	<time datetime="2017-05-10T08:15:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-10</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/10/关于Activity栈/">关于Activity栈</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>​    前两天在写项目的时候突然碰到个问题，当用户进入应用时，先进入MainActivity，如果判断为非登陆状态，则应该直接跳转到登陆页面 ，如果在登陆界面放弃登陆，则应该直接回到主界面。这意味着在登陆界面打开时，MainActivity应该从回退栈中弹出，而不是下压。那个时候草草百度了一番，用Intent加Flag的方法匆匆混了过去，然而新栈建立的Transition动画着实让人难受(所以又回去补了一波动画的相关，然而还是没有补到Activity Transition的部分-_-)，今天完善各个界面的逻辑和细节的时候又想起来了这档子事，于是抛下写到一半的代码，准备温习一下Activity进栈出栈的具体过程。<del>又逮着码字的机会了了！！</del></p>
+</blockquote>
+<p>​    Activity的出入栈控制主要来自于两个地方Activity的声明处——Manifest文件定义的属性和Activity的开启者——Intent的Flag定义。下面分别看看它们都能定义哪些属性。</p>
+<a id="more"></a>
+<h4 id="Manifest"><a href="#Manifest" class="headerlink" title="Manifest"></a>Manifest</h4><p>​    Manifest中关于Activity栈的控制，大多数人最先接触到的大概就是<code>android:launchMode</code>的四个属性：standard、singleTop、singleTask和singleInstance，它们的意义如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">1.standard</div><div class="line">	Activity的默认启动模式，在任何情况下都直接将一个新的Activity实例入栈。</div><div class="line">2.singleTop</div><div class="line">	常用的Activity启动模式，当要开启的Activity已在栈顶时，不创建新的实例，但调用onNewIntent方法；不在栈顶时，创建新的实例。</div><div class="line">3.singleTask</div><div class="line">	当Activity为该启动模式时，会先在栈中查找是否存在该Activity实例，没有的话会新建一个实例，这个实例所在的栈与taskAffinity属性有关；如果当前栈中存在该Activity实例的话，则会将该实例送到栈顶，并且将其之前所有的Activity全部弹出。</div><div class="line">4.singleInstance</div><div class="line">	当Activity为该模式时，该Activity实例会有一个独立的栈，并且该栈中只会有这一个实例，所有跳转到这个Activity的进程都会共享这一个实例。当从这个栈切换到别的Activity时，会将新的Activity压入Activity启动前的栈中，此时再返回就会跳过这个singleInstance的Activity而回到开始的栈。</div></pre></td></tr></table></figure>
+<p>有两个需要注意的点，一是被singleTask标注的Activity已在别的进程的Task中存在且处于栈顶时，就不会在Activity调用进程创建一个新实例，而是将后台进程的Task栈内容压入当前Task栈，如下图所示：</p>
+<p><img src="/2017/05/10/关于Activity栈/pic1.png" alt="singleTask工作原理示意图"></p>
+<p>二是Android的栈弹出策略：在当前Task中的Activity实例已全部弹出，就会回到该Task的上一个栈，而不是直接退回到主界面（也是因为这个原因让我把LoginActivity设置为singleTask从而建一个新栈，在onBackPress时直接回到主界面的想法落空了）。</p>
+<p>除了launchMode管控的Activity启动策略之外Activity还有下面几个与返回栈相关的属性：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">android:taskAffinity = &quot;string&quot;</div><div class="line">	其值默认为当前包名，用于标识无归属Activity的归属任务。这里的无归属Activity指以设置了Flag为FLAG_ACTIVITY_NEW_TASK的Intent打开的Activity ，或者是launchMode为singleTask而当前Task中无其实例需要新建一个实例的Activity。它能够指定上述Activity所属的Task，或者说设定其亲缘关系。这个属性设置可以达到创建多个栈并改变其退出顺序的效果（比如实现以为不可能实现的退出MainActivity而不退出应用）</div><div class="line">	</div><div class="line">android:allowTaskReparenting = [true|false]</div><div class="line">	其值表示是否允许将标注的Activity在当前Task转入后台时改变其所处Task，而归属到taskAffinity标注的Task中去，仅对launchMode为standard与singleTop的Activity有效，默认为false。一个具体的例子就是当我们的应用调用了一个外部浏览器时，当该属性为true，则打开的web页面将归属于浏览器，此时退出浏览器后会直接回到主界面；反之，该属性为false时，退出浏览器界面后将会回到原来的应用界面。</div><div class="line">	</div><div class="line">android:clearTaskOnLaunch=[&quot;true&quot; | &quot;false&quot;]</div><div class="line">	其值表示home键返回桌面又从桌面再次打开应用时，是否清除栈底以外的所有Activity（注意，因为Launcher入口只有一个，所以这里的栈指的就是MainActivity栈，其他栈不受影响）。</div><div class="line">	</div><div class="line">android:alwaysRetainTaskState=[&quot;true&quot; | &quot;false&quot;]</div><div class="line">	其值表示是否允许始终保持Task的状态(系统一般会在应用无响应半小时后清除根Activity之外的所有Activity)。</div><div class="line">	</div><div class="line">android:finishOnTaskLaunch=[&quot;true&quot; | &quot;false&quot;]</div><div class="line">	当该值为true时，标记的Activity在栈顶，且应用此时从桌面被启动时，该Activity将被finish，（但当Activity为根Activity时失效）。</div></pre></td></tr></table></figure>
+<p>更多相关的属性，参见官方文档：[<activity>标签][<a href="https://developer.android.google.cn/guide/topics/manifest/activity-element.html" target="_blank" rel="external">https://developer.android.google.cn/guide/topics/manifest/activity-element.html</a>]</activity></p>
+<hr>
+<p><strong>Intent</strong></p>
+<p>​    Intent作为Android四大组件的沟通桥梁，用Action确定了响应对象，用Category规定了响应条件，用Data描述了请求数据类型，至于开启新组件的属性和模式，则交给了Flag。下面是列举出来的几个Flag：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">FLAG_ACTIVITY_NEW_TASK</div><div class="line">	根据亲缘关系开启一个Activity，若此时存在与其有亲缘关系的栈，则在该栈中开启Activity，开启方式受launchMode约束；否则创建一个新栈。与FLAG_ACTIVITY_MULTIPLE_TASK一起使用时，无论如何都会创建一个新栈。</div><div class="line">	</div><div class="line">FLAG_ACTIVITY_CLEAR_TOP</div><div class="line">	类似singleTask模式，在开启已存在栈中的Activity实例时，将其推至栈顶，并将其上的Activity全部出栈，但此时“推至栈顶”这个过程实际上是连已存在的相关Activity实例也一并弹出栈，而重新创建一个Activity实例，而不是调用NewIntent.</div><div class="line">	</div><div class="line">FLAG_ACTIVITY_CLEAR_TASK</div><div class="line">	在目标Activity打开前清除其所在栈内的Activity实例，必须与FLAG_ACTIVITY_NEW_TASK一起用。</div><div class="line">	</div><div class="line">FLAG_ACTIVITY_SINGLE_TOP</div><div class="line">	效果同singleTop.</div><div class="line">	</div><div class="line">FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS </div><div class="line">	由此标志开启的Activity所处栈不会出现在Recent界面，该Activity需要是这个栈的根Activity，其效果与activity=excludeFromRecents = &quot;true&quot;一致。</div><div class="line"></div><div class="line">FLAG_ACTIVITY_TASK_ON_HOME </div><div class="line">	由此标识开启的Activity所处栈将会直接置于Home所处栈之上，也就是onBackPress时会直接退出到主界面。此标识需要同FLAG_ACTIVITY_NEW_TASK一同使用，并且必须保证其开启了一个新栈。</div><div class="line"></div><div class="line">FLAG_ACTIVITY_NO_ANIMATION</div><div class="line">	取消Activity的Transition效果。</div></pre></td></tr></table></figure>
+<p>更多的Flag参见：[Intent][<a href="https://developer.android.google.cn/reference/android/content/Intent.html#FLAG_ACTIVITY_NEW_TASK" target="_blank" rel="external">https://developer.android.google.cn/reference/android/content/Intent.html#FLAG_ACTIVITY_NEW_TASK</a>]</p>
+<h4 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h4><p>讲道理其实Activity的栈操作还是挺麻烦的一件事，还有很多属性都没有列举出来，以及startActivityForResult的一些特殊情况也并没有总结，<del>关爱懒癌晚期患者</del>。不过上面的在正常情况下应该是够用了，一般的场景也不会太多的去关注onBackPress会返回到什么界面（至今看到同应用多栈操作的貌似也就系统的Setting和WPS的多任务阅读），实在不行反正链接就在那，随时可以回去翻，就这样吧~</p>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -180,95 +204,93 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://lazxy.github.io/2017/05/10/关于Activity栈/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/05/关于动画/" class="archive-article-date">
-  	<time datetime="2017-05-05T02:29:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-05</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/05/关于动画/">关于动画</a>
-    </h1>
+    <a href="/2017/05/05/关于动画/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          关于动画
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+
+
+
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/01/关于Retrofit/" class="archive-article-date">
-  	<time datetime="2017-05-01T11:25:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/01/关于Retrofit/">关于Retrofit</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -291,8 +313,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
