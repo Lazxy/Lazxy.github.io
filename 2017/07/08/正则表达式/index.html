@@ -8,12 +8,17 @@
   <link rel="dns-prefetch" href="//lazxy.github.io">
   <title>Lazxy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="说到正则表达式，还是我当初学Java的时候留下的坑，后来因为各种需要匹配筛选的场景都用比较简单的方式绕过去了，用到的频率也不算高。然而随着需求的逐渐复杂，这个坑总是要填的，于是就有了这一篇笔记，在此仅作为手册查询，实际应用还是得多练啊。  正则表达式​    正则表达式的匹配语法其实也很简单，只需要将下面的各种字符像普通字符串一样列举出来，各种支持正则的语言自然会对其实际语义进行处理，然后寻找和">
+<meta name="keywords">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Lazxy">
-<meta property="og:url" content="//lazxy.github.io/index.html">
+<meta property="og:url" content="//lazxy.github.io/2017/07/08/正则表达式/index.html">
 <meta property="og:site_name" content="Lazxy">
+<meta property="og:description" content="说到正则表达式，还是我当初学Java的时候留下的坑，后来因为各种需要匹配筛选的场景都用比较简单的方式绕过去了，用到的频率也不算高。然而随着需求的逐渐复杂，这个坑总是要填的，于是就有了这一篇笔记，在此仅作为手册查询，实际应用还是得多练啊。  正则表达式​    正则表达式的匹配语法其实也很简单，只需要将下面的各种字符像普通字符串一样列举出来，各种支持正则的语言自然会对其实际语义进行处理，然后寻找和">
+<meta property="og:updated_time" content="2017-07-08T02:35:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Lazxy">
+<meta name="twitter:description" content="说到正则表达式，还是我当初学Java的时候留下的坑，后来因为各种需要匹配筛选的场景都用比较简单的方式绕过去了，用到的频率也不算高。然而随着需求的逐渐复杂，这个坑总是要填的，于是就有了这一篇笔记，在此仅作为手册查询，实际应用还是得多练啊。  正则表达式​    正则表达式的匹配语法其实也很简单，只需要将下面的各种字符像普通字符串一样列举出来，各种支持正则的语言自然会对其实际语义进行处理，然后寻找和">
   
     <link rel="alternative" href="/atom.xml" title="Lazxy" type="application/atom+xml">
   
@@ -139,9 +144,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-正则表达式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-正则表达式" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
@@ -203,330 +206,87 @@
       
 
       
-      <div class="clearfix"></div>
-    </div>
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
   </div>
-</article>
+</div>
 
-
-
-
-
-  
-    <article id="post-关于RxJava2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/19/关于RxJava2/">关于RxJava2</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/19/关于RxJava2/" class="archive-article-date">
-  	<time datetime="2017-05-19T05:46:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>先前对RxJava的认识只停留在“它是可以与Retrofit配合的线程调度工具”的层面，并没有更多地探索它的原理和用法。然后在项目中要进行耗时文件I/O操作，正在考虑用AsynTask还是Handler来进行多线程处理回调时，突然想起了RxJava，遂决定再翻一遍以前看过的技术文章，认真地把它好好学一遍。（并且曾在项目里用过的RxJava由于依赖问题用的基本是RxJava1.x，不过既然RxJava2.x也已经发布稳定版，当然是学最新的啦。）</p>
-</blockquote>
-<h4 id="配置依赖"><a href="#配置依赖" class="headerlink" title="配置依赖"></a>配置依赖</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">compile &apos;io.reactivex.rxjava2:rxjava:2.1.0&apos; </div><div class="line">compile &apos;io.reactivex.rxjava2:rxandroid:2.0.1&apos;//RxAndroid更新可能会慢一点，但反正不要求版本号一致</div><div class="line">//这里的包名也和1.x时代的 &apos;io.reactivex:rxjava&apos;有所区别了</div></pre></td></tr></table></figure>
-<h4 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h4><p>RxJava的事件与线程调度主要是通过观察者模式，而它最主要的两个对象自然也就是观察者和被观察者（或者叫被订阅者），及Observer和Observable，其承担的任务分别为事件处理与事件产生（或者说分发），其基本使用如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">//这里的ObservableOnSubscribe与RxJava1.x中的Observable.OnSubscribe一样都是事件的分发者，不过1.x中的调用方法是call，参数为Subscriber</div><div class="line">Observable.create(new ObservableOnSubscribe&lt;T&gt;()&#123;</div><div class="line">  @Override</div><div class="line">  public void subscribe(ObservableEmitter&lt;T&gt; emitter) throws Exception&#123;</div><div class="line">    emitter.onNext(t1);</div><div class="line">    emitter.onNext(t2);</div><div class="line">    emitter.onComplete();//表示订阅关系结束，接下来的onNext操作将不会得到响应。该方法可以调用多次，但只有第一次起效</div><div class="line">    //emitter.onError(); //表示异常出现，也会中断消息队列的发送，该方法只能调用一次，多次调用或与onComplete()共同出现会抛出异常</div><div class="line">  &#125;</div><div class="line">&#125;).subscribeOn(Schedulers.io()) //表示在I/O线程被订阅，或者说分发消息</div><div class="line">  .observeOn(AndroidSchedulers.mainThread())//表示在主线程观察，或者说处理消息</div><div class="line">  .onSubscribe(new Observer&lt;T&gt;() &#123;</div><div class="line">            @Override</div><div class="line">            public void onSubscribe(Disposable d) &#123;</div><div class="line">				//作为第一个被调用的方法，可以保存其持有的Disposable对象，用于切断Observable与Observer间的关系，类似上面的onComplete()</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            @Override</div><div class="line">            public void onNext(T value) &#123;</div><div class="line">				//响应上面的onNext()</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            @Override</div><div class="line">            public void onError(Throwable e) &#123;</div><div class="line">				//响应上面的onError()</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            @Override</div><div class="line">            public void onComplete() &#123;</div><div class="line">				//响应上面的onComplete()</div><div class="line">            &#125;</div><div class="line">        &#125;);</div></pre></td></tr></table></figure>
-<p>上面表示了一个未进行额外操作的订阅模式操作，总的来说就是<code>确定消息分发逻辑</code> -&gt;<code>确定线程关系</code>-&gt;<code>消息分发</code>-&gt;<code>消息处理</code>的一个过程。不过这是相对于一个消息队列的处理逻辑，如果仅仅是简单的想要执行一些异步任务的话，Observable与Observer都可以简化构造过程，如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">//传入一个或多个同一类型参数，最多10个，默认分发策略是依次onNext,最后onComplete</div><div class="line">Observable.just(index) </div><div class="line">                .subscribeOn(Schedulers.io())</div><div class="line">                .observeOn(AndroidSchedulers.mainThread())</div><div class="line">                .subscribe(observer);</div></pre></td></tr></table></figure>
-<p>或者：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">//直接传入一个数组,也是依次调用onNext，最后onComplete</div><div class="line">Observable.from(&quot;I&quot;,&quot;Love&quot;,&quot;You&quot;)</div><div class="line">                .subscribeOn(Schedulers.io())</div><div class="line">                .observeOn(AndroidSchedulers.mainThread())</div><div class="line">                .subscribe(observer);</div></pre></td></tr></table></figure>
-<p>Observer处理流程还可以直接写在链里：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">...//同上</div><div class="line">.doOnNext(new Consumer&lt;String&gt;() &#123;</div><div class="line">                    @Override</div><div class="line">                    public void accept(@NonNull String s) throws Exception &#123;</div><div class="line">                        ...</div><div class="line">                    &#125;</div><div class="line">                &#125;)</div><div class="line">.doOnError(new Consumer&lt;Throwable&gt;() &#123;</div><div class="line">                    @Override</div><div class="line">                    public void accept(@NonNull Throwable throwable) throws Exception &#123;</div><div class="line">                        </div><div class="line">                    &#125;</div><div class="line">                &#125;)                   </div><div class="line">.doOnComplete(new Action() &#123;</div><div class="line">                    @Override</div><div class="line">                    public void run() throws Exception &#123;</div><div class="line">                    </div><div class="line">                    &#125;</div><div class="line">                &#125;)</div><div class="line">.doOnSubscribe(new Consumer&lt;Disposable&gt;() &#123;</div><div class="line">                    @Override</div><div class="line">                    public void accept(@NonNull Disposable disposable) throws Exception &#123;</div><div class="line">                        </div><div class="line">                    &#125;</div><div class="line">                &#125;)</div><div class="line">.onSubscribe();//这里面也可以再写Observer对象，这样上面定义的方法和这里的Observer对象方法都会被调用一次，也可以传入对应的几个Consumer(或Action)，参数顺序同上。</div></pre></td></tr></table></figure>
-<p>这样以来，就可以省去一大部分不需要实现的流程与逻辑方法了，不过要进行异步操作，subscribeOn和observeOn两个方法当然是需要注意的，下面是需要了解的基础信息：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">1.RxJava为这两个方法提供了几个预设值，分别为：</div><div class="line">  Schedulers.io() 代表io操作的线程, 通常用于网络,读写文件等io密集型的操作</div><div class="line">  Schedulers.computation() 代表CPU计算密集型的操作, 例如需要大量计算的操作</div><div class="line">  Schedulers.newThread() 代表一个常规的新线程</div><div class="line">  AndroidSchedulers.mainThread() 代表Android的主线程</div><div class="line">  </div><div class="line">2.subscribeOn被多次调用时，只有第一次起效，但observeOn被多次调用时，新的线程会起效。</div><div class="line">PS：RxJava分发机制的执行顺序是与其构成链的顺序完全一致的，故在不同分发方法之间插入observeOn可以达到分离回调所处线程的效果。</div></pre></td></tr></table></figure>
-<p>到这里，RxJava的基本使用就差不多了。</p>
-<h4 id="操作符"><a href="#操作符" class="headerlink" title="操作符"></a>操作符</h4><p>操作符是RxJava中相当重要的一部分，通过各种各样的操作符，能够轻易地完成各种对象的转换以及不同被观察者间的对接，可以将其看作适配器模式的一种使用。下面是一些常用的操作符(上面create、just等方法其实也是操作符的一种)：</p>
-<p><strong>转换操作符</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">1.Map</div><div class="line">RxJava中最简单的操作符，其作用是将对象类型进行转换（这个操作其实在Observer端也可以直接实现，不过将其分离开来可以显得代码条例更清晰）。</div><div class="line"></div><div class="line">示例：</div><div class="line">//Integer-&gt;String的示例，此时Observable对象的泛型为Integer，但Observer的泛型为String</div><div class="line">.map(new Function&lt;Integer, String&gt;() &#123; </div><div class="line">      @Override</div><div class="line">      public String apply(Integer integer) throws Exception &#123;</div><div class="line">      return &quot;This is result &quot; + integer;</div><div class="line">   &#125;</div><div class="line"></div><div class="line">2.flatMap</div><div class="line">用于两个Observable的嵌套操作，或者说将一种类型的Observable转化为另一种类型的Observable再继续分发，但这种转换分发的过程是无序的，可能会打乱队列原本的顺序。</div><div class="line">示例：</div><div class="line">//将一个Observable&lt;Integer&gt;转化为一个Observable&lt;String&gt;对象，并按原策略接下去分发。</div><div class="line">.flatMap(new Function&lt;Integer, ObservableSource&lt;String&gt;&gt;() &#123;</div><div class="line">            @Override</div><div class="line">            public ObservableSource&lt;String&gt; apply(Integer integer) throws Exception &#123;</div><div class="line">                final List&lt;String&gt; list = new ArrayList&lt;&gt;();</div><div class="line">                for (int i = 0; i &lt; 3; i++) &#123;</div><div class="line">                    list.add(&quot;I am value &quot; + integer);</div><div class="line">                &#125;</div><div class="line">                return Observable.fromIterable(list);</div><div class="line">            &#125;</div><div class="line">            </div><div class="line">3.concatMap</div><div class="line">与flatMap基本相同，区别在于其是有序转换的。</div><div class="line"></div><div class="line">4.buffer</div><div class="line">可用于Observable值的缓存，可设定相应的缓存数量，缓存时间，以及缓存满后一次传送几个信息。</div><div class="line">示例：</div><div class="line">Observable.from(strings)</div><div class="line">.buffer(strings.length)//全部缓存到数组并一次性输出到回调</div><div class="line">//.buffer(strings.length,1)//全部缓存，一次输出一个</div><div class="line">//.buffer(3, TimeUnit.SECONDS)//每隔3秒取出一次</div><div class="line">.subscribe(new Observer&lt;List&lt;String&gt;&gt;...)</div></pre></td></tr></table></figure>
-<p><strong>合并操作符</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">1.zip:</div><div class="line">按消息分发顺序一一对应地将两个Observable队列合并，其发送结果长度以两个队列中较短的那个为准，多余的消息并不会触发Observer的回调</div><div class="line">示例：</div><div class="line">//合并两个Observable队列，前者为Integer类型，后者为Sring类型，合成结果为String类型</div><div class="line">Observable.zip(observable1, observable2, new BiFunction&lt;Integer, String, String&gt;() &#123;           </div><div class="line">@Override                                                                                    </div><div class="line">public String apply(Integer integer, String s) throws Exception &#123;                            </div><div class="line">return integer + s;                                                                      </div><div class="line">&#125; </div><div class="line">//需要注意的是，这两个队列需要处于不同的线程才会有交替发送的现象，否则会等待其中一个队列把消息发完才开始发第二个队列的消息并合并</div><div class="line"></div><div class="line">2.merge</div><div class="line">按照消息分发顺序合并两个相同类型的队列，依次输出，不需要一一对应，且不进行任何中间操作。</div><div class="line">示例：</div><div class="line">Observable.merge(observable1,observable2);</div></pre></td></tr></table></figure>
-<p><strong>过滤操作符</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">1.filter</div><div class="line">设置过滤条件，禁止不符合条件的消息发送。</div><div class="line">示例：</div><div class="line">.filter(new Pridecate()&#123;</div><div class="line">  @Override</div><div class="line">  boolean test(String str) throws Exception&#123;</div><div class="line">    return str.length()&gt;5;//过滤长度小于5的字符串</div><div class="line">  &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">2.take</div><div class="line">只选取前n个消息发送。</div><div class="line">示例：</div><div class="line">.take(100)//选取队列中前100个消息</div><div class="line"></div><div class="line">3.skip</div><div class="line">跳过前n个消息发送。</div><div class="line">示例：</div><div class="line">.skip(5)//跳过队列中的前5个消息</div></pre></td></tr></table></figure>
-<p>这些操作符的基础都是Observable类下的lift()，其实质是创建一个新的Observable来代理转换前的Observable，以此实现相应操作功能，这个机制也同样适用于Schedulers，可以参考解析：<a href="http://gank.io/post/560e15be2dca930e00da1083" target="_blank" rel="external">给Android开发者的RxJava详解</a>.更多操作符，可以参见RxJava的Github页面<a href="http://reactivex.io/documentation/operators.html" target="_blank" rel="external">Oprators</a>.</p>
-
-      
-
-      
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://lazxy.github.io/2017/07/08/正则表达式/" alt="微信分享二维码">
     </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
+</div>
 
-      
-
-      
-
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-
-
-
-
   
-    <article id="post-关于Activity栈" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/10/关于Activity栈/">关于Activity栈</a>
-    </h1>
+    <a href="/2017/05/19/关于RxJava2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          关于RxJava2
+        
+      </div>
+    </a>
   
-
-        
-        <a href="/2017/05/10/关于Activity栈/" class="archive-article-date">
-  	<time datetime="2017-05-10T08:15:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>​    前两天在写项目的时候突然碰到个问题，当用户进入应用时，先进入MainActivity，如果判断为非登陆状态，则应该直接跳转到登陆页面 ，如果在登陆界面放弃登陆，则应该直接回到主界面。这意味着在登陆界面打开时，MainActivity应该从回退栈中弹出，而不是下压。那个时候草草百度了一番，用Intent加Flag的方法匆匆混了过去，然而新栈建立的Transition动画着实让人难受(所以又回去补了一波动画的相关，然而还是没有补到Activity Transition的部分-_-)，今天完善各个界面的逻辑和细节的时候又想起来了这档子事，于是抛下写到一半的代码，准备温习一下Activity进栈出栈的具体过程。<del>又逮着码字的机会了了！！</del></p>
-</blockquote>
-<p>​    Activity的出入栈控制主要来自于两个地方Activity的声明处——Manifest文件定义的属性和Activity的开启者——Intent的Flag定义。下面分别看看它们都能定义哪些属性。</p>
-        
-          <a class="article-more-a" href="/2017/05/10/关于Activity栈/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
+  
+</nav>
 
 
 
 
 
   
-    <article id="post-关于动画" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/05/关于动画/">关于动画</a>
-    </h1>
   
 
-        
-        <a href="/2017/05/05/关于动画/" class="archive-article-date">
-  	<time datetime="2017-05-05T02:29:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>一直以来各种动画效果也只是零碎地在需要用到的时候复制粘贴，或者直接自己Draw一遍，并且记下一些零碎的代码段。然而最近比赛项目又碰到了需要各种动画过场的情况，想想这问题也是积攒已久了，于是准备认真的学习一下。</p>
-</blockquote>
-<p>​    首先，Android里的动画分为三种：<strong>PropertyAnimation（属性动画）</strong>、<strong>ViewAnimation（视图动画）</strong>和<strong>DrawableAnimation（帧动画，By the way，官网中翻是可绘制动画，感觉就很不对劲 -_-）</strong>。其中属性动画在API 11之后加入，它可以对所有对象（包括未渲染到屏幕的对象）添加动画效果，拓展性强且特点多样，是官方推荐的动画实现手段；视图动画则是比较老的动画实现手段，其仅对View起效，并且只有视觉上的变化，而不实际改变View的位置或其他真实属性；可绘制动画则适用于借助Drawable资源实现的情景，通过切换帧实现动画效果，比如常见的进度条旋转与游戏中人物走动效果等。下面依次说一下各个动画的用法。</p>
-        
-          <a class="article-more-a" href="/2017/05/05/关于动画/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-关于Retrofit" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/01/关于Retrofit/">关于Retrofit</a>
-    </h1>
   
 
-        
-        <a href="/2017/05/01/关于Retrofit/" class="archive-article-date">
-  	<time datetime="2017-05-01T11:25:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>笔记转移之路的第一篇，就先好好回顾下这默默工作在层层封装下的劳模。</p>
-</blockquote>
-<p><strong>Retrofit</strong>同<strong>OkHttp</strong>一样都是square公司（然后查了一下发现Picasso和Dragger也是他们的项目，向大佬低头）的开源网络框架，大概因为这个原因，它们也有相似的Builder链式调用和相似的请求流程。当然Retrofit实际可以算作是OkHttp的加强版，其不仅有各种方便的注解简化代码，更有其他开源库的支持（看看漫山遍野的Retrofit+RxJava使用教程），下面简单地记录一下当时学习过的一些点。</p>
-        
-          <a class="article-more-a" href="/2017/05/01/关于Retrofit/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-新的开始" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/28/新的开始/">新的开始</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/28/新的开始/" class="archive-article-date">
-  	<time datetime="2017-04-28T13:47:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>​    开始码字前瞟了一眼右下角的时间，嗯，<em>21：48</em> ，今天<em>4.28</em>，非常整齐。终于，不管中间是不是曲曲折折，不管结果看着满屏幕命令行的我是不是仍然一脸懵逼，反正总算是有块儿可以写点什么的地方了。</p>
-        
-          <a class="article-more-a" href="/2017/04/28/新的开始/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
   
 
 
@@ -549,8 +309,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
