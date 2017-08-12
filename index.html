@@ -141,6 +141,188 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Realm数据库学习笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/25/Realm数据库学习笔记/">Realm数据库学习笔记</a>
+    </h1>
+  
+
+        
+        <a href="/2017/07/25/Realm数据库学习笔记/" class="archive-article-date">
+  	<time datetime="2017-07-25T11:34:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>​    SQLite 用着实在有些烦，手写语句的安全性也确实不够高，于是从众多数据库开源项目中找了个听说挺靠谱的来学习一波。（文档学习法愈演愈烈啊！）</p>
+</blockquote>
+<h4 id="依赖配置"><a href="#依赖配置" class="headerlink" title="依赖配置"></a>依赖配置</h4><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Project级gradle</span></div><div class="line">buildscript &#123;</div><div class="line">    repositories &#123;</div><div class="line">        jcenter()</div><div class="line">    &#125;</div><div class="line">    dependencies &#123;</div><div class="line">        classpath <span class="string">"io.realm:realm-gradle-plugin:3.5.0"</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//Module级gradle</span></div><div class="line">apply <span class="string">plugin:</span> <span class="string">'realm-android'</span></div><div class="line">...</div></pre></td></tr></table></figure>
+<p>由于Realm的文本库中已经包含了ProGuard文件配置，故不需要再对其做额外的防混淆设置了。</p>
+        
+          <a class="article-more-a" href="/2017/07/25/Realm数据库学习笔记/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-Kotlin笔记(二)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/10/Kotlin笔记(二)/">Kotlin笔记（二）</a>
+    </h1>
+  
+
+        
+        <a href="/2017/07/10/Kotlin笔记(二)/" class="archive-article-date">
+  	<time datetime="2017-07-10T13:24:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>Kotlin文档翻译第二季，函数之后的内容明显变难了不少，好多地方也不太敢肯定正误，干脆就略过了，将就着看吧..</p>
+</blockquote>
+<h4 id="十三-Functions"><a href="#十三-Functions" class="headerlink" title="十三.Functions"></a>十三.Functions</h4><ol>
+<li><p><em>声明方法</em>：特点是以<strong>fun</strong>关键字来表征函数，并且返回值类型写在参数列表之后，无返回值可省略，甚至返回值语句可以直接以赋值的形式表示返回。</p></li></ol>
+        
+          <a class="article-more-a" href="/2017/07/10/Kotlin笔记(二)/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-Kotlin笔记(一)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/10/Kotlin笔记(一)/">Kotlin笔记（一）</a>
+    </h1>
+  
+
+        
+        <a href="/2017/07/10/Kotlin笔记(一)/" class="archive-article-date">
+  	<time datetime="2017-07-10T12:23:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>​    Kotlin成Android开发的一级语言后生吃了不少关于这门语言如何好用的安利，于是抱着“用不用得上先学了再说”的想法把它加进了学习计划。然而现在潮流刚起，各种教程参差不齐，怎么学呢？当然是看文档啊！所以在残存的英（谷）语（歌）底（翻）子（译）的帮助下，就有了这么一篇精简版的文档翻译版笔记。</p>
+</blockquote>
+<h4 id="1-Package："><a href="#1-Package：" class="headerlink" title="1.Package："></a>1.Package：</h4><p>同Java基本一致，不过新增了 as关键字为包取别名用于对包名进行简化。</p>
+        
+          <a class="article-more-a" href="/2017/07/10/Kotlin笔记(一)/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-正则表达式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -224,6 +406,7 @@
         <blockquote>
 <p>先前对RxJava的认识只停留在“它是可以与Retrofit配合的线程调度工具”的层面，并没有更多地探索它的原理和用法。然后在项目中要进行耗时文件I/O操作，正在考虑用AsynTask还是Handler来进行多线程处理回调时，突然想起了RxJava，遂决定再翻一遍以前看过的技术文章，认真地把它好好学一遍。（并且曾在项目里用过的RxJava由于依赖问题用的基本是RxJava1.x，不过既然RxJava2.x也已经发布稳定版，当然是学最新的啦。）</p>
 </blockquote>
+<h4 id="配置依赖"><a href="#配置依赖" class="headerlink" title="配置依赖"></a>配置依赖</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">compile &apos;io.reactivex.rxjava2:rxjava:2.1.0&apos; </div><div class="line">compile &apos;io.reactivex.rxjava2:rxandroid:2.0.1&apos;//RxAndroid更新可能会慢一点，但反正不要求版本号一致</div><div class="line">//这里的包名也和1.x时代的 &apos;io.reactivex:rxjava&apos;有所区别了</div></pre></td></tr></table></figure>
         
           <a class="article-more-a" href="/2017/05/19/关于RxJava2/#more">more >></a>
         
