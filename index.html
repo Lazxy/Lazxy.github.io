@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="//lazxy.github.io">
   <title>Lazxy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -12,6 +12,7 @@
 <meta property="og:title" content="Lazxy">
 <meta property="og:url" content="//lazxy.github.io/index.html">
 <meta property="og:site_name" content="Lazxy">
+<meta property="og:locale" content="zh">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Lazxy">
   
@@ -32,7 +33,7 @@
   
 
 </head>
-
+</html>
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -141,6 +142,65 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Java多线程相关" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/11/Java多线程相关/">Java多线程相关</a>
+    </h1>
+  
+
+        
+        <a href="/2017/08/11/Java多线程相关/" class="archive-article-date">
+  	<time datetime="2017-08-11T10:03:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>记得刚开始学Android的时候，曾经做过一个图库类应用，在我知道Universal-Image-Loader之前，类似从图片加载图片与遍历文件夹这样的操作都是很粗暴地直接在主线程里做。。于是GridView滑动地永远都是那么痛苦而挣扎。。进入页面总要卡个两秒钟。。后来学乖了开始知道用多线程操作，然而每次要用到子线程都是直接new Thread（你封装个Runnable会死啊！！）。。再之后接触了更多开源库，对于多线程的妙用也算是有些体会了，然而貌似好多概念还不是很清楚呢。。于是就有了这一篇。</p>
+</blockquote>
+        
+          <a class="article-more-a" href="/2017/08/11/Java多线程相关/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-Realm数据库学习笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -164,7 +224,7 @@
         <blockquote>
 <p>​    SQLite 用着实在有些烦，手写语句的安全性也确实不够高，于是从众多数据库开源项目中找了个听说挺靠谱的来学习一波。（文档学习法愈演愈烈啊！）</p>
 </blockquote>
-<h4 id="依赖配置"><a href="#依赖配置" class="headerlink" title="依赖配置"></a>依赖配置</h4><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Project级gradle</span></div><div class="line">buildscript &#123;</div><div class="line">    repositories &#123;</div><div class="line">        jcenter()</div><div class="line">    &#125;</div><div class="line">    dependencies &#123;</div><div class="line">        classpath <span class="string">"io.realm:realm-gradle-plugin:3.5.0"</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//Module级gradle</span></div><div class="line">apply <span class="string">plugin:</span> <span class="string">'realm-android'</span></div><div class="line">...</div></pre></td></tr></table></figure>
+<h4 id="依赖配置"><a href="#依赖配置" class="headerlink" title="依赖配置"></a>依赖配置</h4><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Project级gradle</span></span><br><span class="line">buildscript &#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">        jcenter()</span><br><span class="line">    &#125;</span><br><span class="line">    dependencies &#123;</span><br><span class="line">        classpath <span class="string">"io.realm:realm-gradle-plugin:3.5.0"</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//Module级gradle</span></span><br><span class="line">apply <span class="string">plugin:</span> <span class="string">'realm-android'</span></span><br><span class="line">...</span><br></pre></td></tr></table></figure>
 <p>由于Realm的文本库中已经包含了ProGuard文件配置，故不需要再对其做额外的防混淆设置了。</p>
         
           <a class="article-more-a" href="/2017/07/25/Realm数据库学习笔记/#more">more >></a>
@@ -406,10 +466,87 @@
         <blockquote>
 <p>先前对RxJava的认识只停留在“它是可以与Retrofit配合的线程调度工具”的层面，并没有更多地探索它的原理和用法。然后在项目中要进行耗时文件I/O操作，正在考虑用AsynTask还是Handler来进行多线程处理回调时，突然想起了RxJava，遂决定再翻一遍以前看过的技术文章，认真地把它好好学一遍。（并且曾在项目里用过的RxJava由于依赖问题用的基本是RxJava1.x，不过既然RxJava2.x也已经发布稳定版，当然是学最新的啦。）</p>
 </blockquote>
-<h4 id="配置依赖"><a href="#配置依赖" class="headerlink" title="配置依赖"></a>配置依赖</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">compile &apos;io.reactivex.rxjava2:rxjava:2.1.0&apos; </div><div class="line">compile &apos;io.reactivex.rxjava2:rxandroid:2.0.1&apos;//RxAndroid更新可能会慢一点，但反正不要求版本号一致</div><div class="line">//这里的包名也和1.x时代的 &apos;io.reactivex:rxjava&apos;有所区别了</div></pre></td></tr></table></figure>
+<h4 id="配置依赖"><a href="#配置依赖" class="headerlink" title="配置依赖"></a>配置依赖</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">compile &apos;io.reactivex.rxjava2:rxjava:2.1.0&apos; </span><br><span class="line">compile &apos;io.reactivex.rxjava2:rxandroid:2.0.1&apos;//RxAndroid更新可能会慢一点，但反正不要求版本号一致</span><br><span class="line">//这里的包名也和1.x时代的 &apos;io.reactivex:rxjava&apos;有所区别了</span><br></pre></td></tr></table></figure>
         
           <a class="article-more-a" href="/2017/05/19/关于RxJava2/#more">more >></a>
         
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-面试相关各知识点总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/13/面试相关各知识点总结/">面试相关各知识点总结</a>
+    </h1>
+  
+
+        
+        <a href="/2017/05/13/面试相关各知识点总结/" class="archive-article-date">
+  	<time datetime="2017-05-13T00:55:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>Mark了好多前人总结的面试题库，准备至少全部看一遍，算是完整地复习一遍基础知识吧，顺手记一些并不太清楚或者容易遗忘的知识点在这。</p>
+</blockquote>
+<ol>
+<li><p>关于<strong>XML</strong>的解析</p>
+<p>XML（可拓展标记语言），一般常用的解析方式主要有两种：<strong>DOM</strong>和<strong>SAX</strong>，前者一次性地将整个XML文件节点树构造出来放进内存，易对节点进行各种操作，但缺点在于占用资源，容易造成内存浪费；后者以流式方法解析XML，节约资源的同时并不利于节点操作。</p>
+<p>例程参考地址 [深入解读XML解析][<a href="http://blog.csdn.net/sdksdk0/article/details/50749326" target="_blank" rel="noopener">http://blog.csdn.net/sdksdk0/article/details/50749326</a>] （文中包括了XML的基本语法与Schema命名空间约束等知识点）</p>
+</li>
+</ol>
+<ol>
+<li><p>关于<strong>String</strong>的各种小知识点</p>
+<p>String构造时，<code>String s = &quot;String&quot;</code>与 <code>String s = new String(&quot;string&quot;)</code>在内存里的处理是不一样的，前者直接在字符串常量池中构造了一个对象，之后每个用相同方法构造的String引用都指向同一个地址；而后者实际上构造了两个对象，一个在字符串常量池，另一个在堆里(即s指向的地址)。</p>
+<p>​</p>
+</li>
+<li><p>关于try catch语句里return的顺序</p>
+<p>在try catch语句中，如果存在return 且有finally代码块，则会<strong>先执行return表达式，再执行finally，最后返回相应值。</strong></p>
+<p>实验参考 [finally与return 的执行顺序][<a href="http://www.cnblogs.com/lanxuezaipiao/p/3440471.html" target="_blank" rel="noopener">http://www.cnblogs.com/lanxuezaipiao/p/3440471.html</a>]</p>
+<p>​</p>
+</li>
+<li><p>Serializable与Parcelable</p>
+<p>​</p>
+</li>
+</ol>
+
       
 
       
@@ -623,63 +760,10 @@
 
 
   
-    <article id="post-新的开始" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/28/新的开始/">新的开始</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/28/新的开始/" class="archive-article-date">
-  	<time datetime="2017-04-28T13:47:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>​    开始码字前瞟了一眼右下角的时间，嗯，<em>21：48</em> ，今天<em>4.28</em>，非常整齐。终于，不管中间是不是曲曲折折，不管结果看着满屏幕命令行的我是不是仍然一脸懵逼，反正总算是有块儿可以写点什么的地方了。</p>
-        
-          <a class="article-more-a" href="/2017/04/28/新的开始/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 
 
@@ -690,7 +774,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2017 Lazxy
+    		&copy; 2020 Lazxy
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
