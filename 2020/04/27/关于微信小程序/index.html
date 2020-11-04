@@ -6,22 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="//lazxy.github.io">
-  <title>Java多线程相关 | Lazxy</title>
+  <title>关于微信小程序 | Lazxy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="记得刚开始学Android的时候，曾经做过一个图库类应用，在我知道Universal-Image-Loader之前，类似从图片加载图片与遍历文件夹这样的操作都是很粗暴地直接在主线程里做。。于是GridView滑动地永远都是那么痛苦而挣扎。。进入页面总要卡个两秒钟。。后来学乖了开始知道用多线程操作，然而每次要用到子线程都是直接new Thread（你封装个Runnable会死啊！！）。。再之后接触">
+  <meta name="description" content="疫情之后回来上班，学了一波小程序开发，很多理念上的东西和APP开发别无二致，还都是数据驱动UI的开发方式，就很赞。  基本结构 小程序文件四件套：.json 配置文件，有全局和页面的文件；.wxml 模板样式文件，类似Android xml，天然支持数据绑定；.wxss 微信版CSS文件，用来声明具体样式，比标准CSS多了一个长度单位rpx；.js 就是普通的JS文件，用来为wxml文件中绑定的">
 <meta name="keywords" content="笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java多线程相关">
-<meta property="og:url" content="//lazxy.github.io/2017/08/11/Java多线程相关/index.html">
+<meta property="og:title" content="关于微信小程序">
+<meta property="og:url" content="//lazxy.github.io/2020/04/27/关于微信小程序/index.html">
 <meta property="og:site_name" content="Lazxy">
-<meta property="og:description" content="记得刚开始学Android的时候，曾经做过一个图库类应用，在我知道Universal-Image-Loader之前，类似从图片加载图片与遍历文件夹这样的操作都是很粗暴地直接在主线程里做。。于是GridView滑动地永远都是那么痛苦而挣扎。。进入页面总要卡个两秒钟。。后来学乖了开始知道用多线程操作，然而每次要用到子线程都是直接new Thread（你封装个Runnable会死啊！！）。。再之后接触">
+<meta property="og:description" content="疫情之后回来上班，学了一波小程序开发，很多理念上的东西和APP开发别无二致，还都是数据驱动UI的开发方式，就很赞。  基本结构 小程序文件四件套：.json 配置文件，有全局和页面的文件；.wxml 模板样式文件，类似Android xml，天然支持数据绑定；.wxss 微信版CSS文件，用来声明具体样式，比标准CSS多了一个长度单位rpx；.js 就是普通的JS文件，用来为wxml文件中绑定的">
 <meta property="og:locale" content="zh">
-<meta property="og:image" content="//lazxy.github.io/2017/08/11/Java多线程相关/线程池任务提交流程.png">
-<meta property="og:updated_time" content="2017-09-17T11:43:30.000Z">
+<meta property="og:updated_time" content="2020-11-04T08:40:18.684Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java多线程相关">
-<meta name="twitter:description" content="记得刚开始学Android的时候，曾经做过一个图库类应用，在我知道Universal-Image-Loader之前，类似从图片加载图片与遍历文件夹这样的操作都是很粗暴地直接在主线程里做。。于是GridView滑动地永远都是那么痛苦而挣扎。。进入页面总要卡个两秒钟。。后来学乖了开始知道用多线程操作，然而每次要用到子线程都是直接new Thread（你封装个Runnable会死啊！！）。。再之后接触">
-<meta name="twitter:image" content="//lazxy.github.io/2017/08/11/Java多线程相关/线程池任务提交流程.png">
+<meta name="twitter:title" content="关于微信小程序">
+<meta name="twitter:description" content="疫情之后回来上班，学了一波小程序开发，很多理念上的东西和APP开发别无二致，还都是数据驱动UI的开发方式，就很赞。  基本结构 小程序文件四件套：.json 配置文件，有全局和页面的文件；.wxml 模板样式文件，类似Android xml，天然支持数据绑定；.wxss 微信版CSS文件，用来声明具体样式，比标准CSS多了一个长度单位rpx；.js 就是普通的JS文件，用来为wxml文件中绑定的">
   
     <link rel="alternative" href="/atom.xml" title="Lazxy" type="application/atom+xml">
   
@@ -147,20 +145,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Java多线程相关" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-关于微信小程序" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Java多线程相关
+      关于微信小程序
     </h1>
   
 
         
-        <a href="/2017/08/11/Java多线程相关/" class="archive-article-date">
-  	<time datetime="2017-08-11T10:03:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-11</time>
+        <a href="/2020/04/27/关于微信小程序/" class="archive-article-date">
+  	<time datetime="2020-04-27T06:30:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-27</time>
 </a>
         
       </header>
@@ -168,103 +166,227 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>记得刚开始学Android的时候，曾经做过一个图库类应用，在我知道Universal-Image-Loader之前，类似从图片加载图片与遍历文件夹这样的操作都是很粗暴地直接在主线程里做。。于是GridView滑动地永远都是那么痛苦而挣扎。。进入页面总要卡个两秒钟。。后来学乖了开始知道用多线程操作，然而每次要用到子线程都是直接new Thread（你封装个Runnable会死啊！！）。。再之后接触了更多开源库，对于多线程的妙用也算是有些体会了，然而貌似好多概念还不是很清楚呢。。于是就有了这一篇。</p>
+<p>疫情之后回来上班，学了一波小程序开发，很多理念上的东西和APP开发别无二致，还都是数据驱动UI的开发方式，就很赞。</p>
 </blockquote>
+<h4 id="基本结构"><a href="#基本结构" class="headerlink" title="基本结构"></a>基本结构</h4><ul>
+<li><p>小程序<strong>文件四件套</strong>：<strong>.json</strong> 配置文件，有全局和页面的文件；<strong>.wxml</strong> 模板样式文件，类似Android xml，天然支持数据绑定；<strong>.wxss</strong> 微信版CSS文件，用来声明具体样式，比标准CSS多了一个长度单位<code>rpx</code>；<strong>.js</strong> 就是普通的JS文件，用来为wxml文件中绑定的控件设置交互逻辑和数据。</p>
+</li>
+<li><p>小程序的<strong>分层结构</strong>与常规Web页面不同，其页面渲染和逻辑执行是分为两个线程执行的（<strong>Webview</strong>线程与<strong>JsCore</strong>线程），两者通过<strong>Native</strong>层——即微信客户端来进行交互（也包括逻辑层执行网络请求）。一个小程序中每个页面都有其自己的一个Webview线程，但JsCore线程是共用的一个。</p>
 <a id="more"></a>
-<p>####一些基本概念</p>
-<ol>
-<li><p>线程有创建-运行-冻结-停止-临时堵塞五种状态</p>
 </li>
-<li><p>线程创建启动时会给其成员变量重新分配空间，除非定义static变量，否则它们的变量都是独立的。</p>
+<li><p><strong>页面相关</strong>：</p>
+<ul>
+<li>和Flutter声明资源类似的，小程序的页面也是需要列举声明在配置文件中的（app.json 的 <code>pages</code>字段），这个列表中的第一个参数即为小程序的首页。</li>
+<li>小程序有一个唯一的<strong>APP</strong>对象，声明在全局js文件里（即app.js），可以通过<strong>onLaunch</strong>回调来初始化小程序启动后的行为，同时还有<strong>onHide</strong>和<strong>onShow</strong>回调用以处理小程序进入后台状态和进入前台状态的动作。其中onLaunch和onShow方法允许带参数，来表示小程序打开的场景（来自别的小程序、扫码或者公众号等）和相关数值。</li>
+<li>每个页面有一个<strong>Page</strong>对象，可以通过<strong>onLoad</strong>回调来执行页面渲染完后的操作，同时还有onReady、onShow、onHide、onUnload等回调，对应Android Activity的onStart到onDestroy生命周期。类比中有些不同的是onReady只在一个生命周期中调用一次，且调用顺序晚于onShow（和onStart可被多次回调且调用早于onResume不一致）。</li>
+<li>页面的<strong>加载顺序</strong>是这样的：根据.json文件设置页面的初始信息（标题、导航栏等）-&gt;根据.wxml和.wxss来渲染基本页面结构 -&gt; 加载.js文件 执行onLoad回调。</li>
+</ul>
 </li>
-<li><p>当一个线程被多次<code>start()</code>时，会发生线程异常错误。</p>
+</ul>
+<h4 id="开发相关"><a href="#开发相关" class="headerlink" title="开发相关"></a>开发相关</h4><ul>
+<li><p>wxml的标签必须是封闭的，其属性写在第一个标签的&lt;&gt;内，写法类似HTML的标签。</p>
 </li>
-<li><p><code>start()</code>和<code>run()</code>的区别是，前者会开始运行一个线程，而run()是直接以主线程运行线程内的<code>run()</code>函数。</p>
+<li><p>wxml控件的数据绑定用<code>{{variable}}</code>声明，其内语句写法和Databinding写法基本上差不多，不过还支持直接输出数组。</p>
 </li>
-<li><p>可以直接定义一个类实现Runnable重写<code>run()</code>方法，然后直接在构造Thread对象时将实现了Runnable接口定义类的对象为参数传入，这样开启线程时调用的<code>run()</code>方法为Runnable实现类中的<code>run()</code>方法。此时Runnable实现类种若有成员变量的话，它的成员变量是独立存在的（因为线程运行调用的Runnable对象是同一个），能同时被多个线程操作。由于Java的单继承方式，当其有自己的实际父类但又有一些代码需要在多线程操作时，就可以实现Runnable接口来达到目的。</p>
+<li><p>可以用<code>wx:if=&quot;{{condition}}</code>、<code>wx:elseif=&quot;{{condition}}</code>、<code>wx:else=&quot;{{condition}}</code>来判断是否展示当前控件，其作用等效于Android的<code>android:visibility=&quot;{condition?View.VISIBLE:View.GONE}&quot;</code>。如果需要对整块区域的多控件使用这个属性，则可以将那些控件写在一个<code>&lt;block&gt;</code>标签内。</p>
 </li>
-<li><p><code>join()</code>方法和<code>yeild()</code>方法分别用于<strong>等待调用该方法的线程结束</strong>与<strong>暂停当前线程</strong>，其中join是通过wait机制进行循环等待的，在等待的线程结束后会调用notifyAll将其唤醒（这部分代码写在Jvm里）。</p>
+<li><p>与上面相应的，可以用<code>wx:for</code>来重复渲染一个列表的控件，用法如：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--如果这里不设置wx:for-index和wx:for-item属性，则默认为index（表示当前数据在数组的第几个）和item（数组中的当前数据对象）--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">view</span> <span class="attr">wx:for</span>=<span class="string">"&#123;&#123;array&#125;&#125;"</span> <span class="attr">wx:for-index</span>=<span class="string">"idx"</span> <span class="attr">wx:for-item</span>=<span class="string">"itemName"</span>&gt;</span></span><br><span class="line">  &#123;&#123;idx&#125;&#125;: &#123;&#123;itemName.message&#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>用<code>synchronized</code>修饰符设定同步代码块或者函数，可以达到同步执行效果（即在持线程锁（或称监视器）的线程运行完成前无法其他线程执行<code>synchronized</code>内的内容），在其包括的代码内执行线程间共享数据来解决多线程安全问题。其所持的锁为任意一个对象，而同步函数的锁是调用这个函数的对象。当需要同步操作时，所有同步块用的锁必须一致，否则就会失去同步的效果。当同步嵌套并且所持锁都不一样时，会发生<strong>死锁</strong>现象，即两个线程都无法获得需要的锁，于是导致程序的停滞。其代码如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> Object objectA = <span class="keyword">new</span> Object();</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Object objectB = <span class="keyword">new</span> Object();</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">new</span> Thread(<span class="keyword">new</span> TaskA()).start();</span><br><span class="line">        <span class="keyword">new</span> Thread(<span class="keyword">new</span> TaskB()).start();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">TaskA</span> <span class="keyword">implements</span> <span class="title">Runnable</span> </span>&#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">                <span class="keyword">synchronized</span> (objectA) &#123;</span><br><span class="line">                    LogUtil.println(<span class="string">"Enter A"</span>);</span><br><span class="line">                    <span class="keyword">synchronized</span> (objectB) &#123;</span><br><span class="line">                        LogUtil.println(<span class="string">"Enter B"</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">TaskB</span> <span class="keyword">implements</span> <span class="title">Runnable</span> </span>&#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">                <span class="keyword">synchronized</span> (objectB) &#123;</span><br><span class="line">                    LogUtil.println(<span class="string">"Enter B"</span>);</span><br><span class="line">                    <span class="keyword">synchronized</span> (objectA) &#123;</span><br><span class="line">                        LogUtil.println(<span class="string">"Enter A"</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<p>​</p>
+<li><p>可以用<code>&lt;template&gt;</code>标签声明一个模板（类似Android xml的\<include\>），并给它的<code>name</code>参数赋值，在使用时，同样使用该标签，但传给<code>is</code>参数以之前的name值，如果还有相关数据，可以用<code>data</code>参数传入，即可调用该模板。<code>is</code>的参数可以是动态的。</include\></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--声明模板--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">name</span> = <span class="string">"temp"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">view</span>&gt;</span></span><br><span class="line">	<span class="comment">&lt;!--模板内容--&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--使用模板--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">is</span> = <span class="string">"temp"</span> <span class="attr">data</span> = <span class="string">"&#123;&#123;params&#125;&#125;"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>用<code>synchronized</code>同步操作的两个前提是一、同步代码块内的代码必须是两个或两个以上的线程都会操作到的内容。二、<strong>同步锁必须一致</strong>。</p>
-</li>
-<li><p>当线程共享数据为静态变量时，静态同步函数的锁为<code>Class</code>对象。该对象先于本类的实例对象出现，是在static变量进内存时产生的<strong>字节码文件</strong>。而普通同步函数的锁是本类的实例对象，即<strong>this</strong>。</p>
-</li>
-<li><p><code>volateil</code>修饰符可以实现线程共享变量的可见性统一——即在每个线程调用该变量时都<strong>必须访问内存得到它的最新值</strong>，然后拷贝为线程的变量副本，在完成关于变量的操作后立刻将副本的值修改入内存（需要是原子性操作，类似自增之类的多步操作不能起效），以此让每个线程取得的变量值都是同一个。除此之外<code>volatile</code>能够保证被其修饰变量所在的语句一定会按照代码顺序执行（将前后分为两个部分，两个部分内的顺序不保证，但代码一定会在这两个部分之间执行）。<a href="http://www.cnblogs.com/dolphin0520/p/3920373.html" target="_blank" rel="noopener">参考文章</a> </p>
-</li>
-<li><p>ThreadLocal可以实现让每个线程持有其本地变量副本，从而避免多线程访问资源冲突。其实现方法为在每一个线程第一次调用TreadLocal对象时，都创建一个以当前线程对象为键，实际值为值的ThreadLocalMap。之后每一次取值，都会先根据当前线程对象从Map取值，取不到的话返回一个初始化值，该值需要子类重写初始化方法。</p>
-</li>
-</ol>
-<p>####单例模式</p>
-<p>饿汉式单例：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Single</span></span>&#123;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Single s = <span class="keyword">new</span> Single();</span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="title">Single</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Single <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">this</span>.s;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>懒汉式单例：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Single</span></span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> Single s = <span class="keyword">null</span>;</span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="title">Single</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">synchronized</span> Single <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(s==<span class="keyword">null</span>)</span><br><span class="line">          s=<span class="keyword">new</span> Single();</span><br><span class="line">      	<span class="keyword">return</span> s;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>DLC单例：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Single</span></span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">volatile</span> Single s = <span class="keyword">null</span>;</span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="title">Single</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Single <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(<span class="keyword">this</span>.s==<span class="keyword">null</span>)&#123;</span><br><span class="line">			<span class="keyword">synchronized</span>(Single.class)&#123;</span><br><span class="line">              <span class="comment">//这里的判断是为了让在synchronized前挂起的语句不至于再进来创建一个新的对象</span></span><br><span class="line">				<span class="keyword">if</span>(<span class="keyword">this</span>.s==<span class="keyword">null</span>)&#123;</span><br><span class="line">					s=<span class="keyword">new</span> Single(); </span><br><span class="line">                  	<span class="keyword">return</span> s;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">      <span class="keyword">return</span> s;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>静态类单例：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Single</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="title">Single</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Single <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> SingleHolder.s; 	</span><br><span class="line">	&#125;</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> class <span class="title">SingleHolder</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Single s = <span class="keyword">new</span> Single();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>####线程间通信</p>
-<ol>
-<li><p>输入与输出线程为了保证安全，应该对共同操作的数据加同步锁，当需要双方线程动作有序时，可以用到<code>wait()</code> <code>notify()</code>方法实现等待唤醒机制。<code>notify()</code>唤醒的线程为线程池中<strong>第一个</strong>开始等待（调用了<code>wait()</code>）的线程。这些相关方法定义在Object类中，因为它们都需要在同步环境下调用，且调用方需要是同步锁对象。等待唤醒机制种需要一些标识来阻止输入或输出单方面不断循环（来标识此时应该输出或者输入），而这样的标记判断应该由<strong>while</strong>来做。因为有多个线程共同进行输出或者共同输入时，会出现notify唤醒了同一方的线程而没有唤醒对方的线程，导致输入输出多次，故在唤醒后还需要进行标识判断是否应该进行接下来的动作。而相对应的，应该将<code>notify()</code>换为<code>notifyAll()</code>，确保对方一定会有线程被唤醒，防止循环判断后所有线程都处于等待状态，示例如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//被注释的代码部分为同步锁示例</span></span><br><span class="line"><span class="comment">//private static Lock lock = new ReentrantLock(); </span></span><br><span class="line"><span class="comment">//private static Condition objectA = lock.newCondition();</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">TaskA</span> <span class="keyword">implements</span> <span class="title">Runnable</span> </span>&#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">while</span>(<span class="keyword">true</span>) &#123;</span><br><span class="line">                <span class="comment">//lock.lock();</span></span><br><span class="line">                <span class="keyword">synchronized</span> (objectA) &#123;</span><br><span class="line">                    <span class="keyword">try</span> &#123;</span><br><span class="line">                      <span class="comment">//如果这里还是if判断的话，可能会在唤醒同方线程时不作判断便开始执行下面的逻辑，造成不同步错误。</span></span><br><span class="line">                        <span class="keyword">while</span>(product != <span class="keyword">null</span>) &#123;</span><br><span class="line">                            objectA.wait(); <span class="comment">//放弃持有的同步锁，等待唤醒，这里的objectA就是一个普通的对象。</span></span><br><span class="line">                          	<span class="comment">//objectA.await();</span></span><br><span class="line">                        &#125;</span><br><span class="line">                            LogUtil.println(<span class="string">"Productor"</span>);</span><br><span class="line">                            product = <span class="string">""</span>;</span><br><span class="line">                      <span class="comment">//这里保证能够唤醒对方线程</span></span><br><span class="line">                            objectA.notifyAll();</span><br><span class="line">                      		<span class="comment">//objectA.signalAll();</span></span><br><span class="line">                    &#125; <span class="keyword">catch</span> (Exception e) &#123;LogUtil.println(e.getMessage());&#125;</span><br><span class="line">                  	<span class="comment">//finally&#123;lock.unlock;&#125;</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">TaskB</span> <span class="keyword">implements</span> <span class="title">Runnable</span> </span>&#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">                <span class="keyword">synchronized</span> (objectA) &#123;</span><br><span class="line">                    <span class="keyword">try</span> &#123;</span><br><span class="line">                        <span class="keyword">while</span>(product == <span class="keyword">null</span>) &#123;</span><br><span class="line">                            objectA.wait();</span><br><span class="line">                        &#125;</span><br><span class="line">                        LogUtil.println(<span class="string">"Consumer"</span>);</span><br><span class="line">                        product = <span class="keyword">null</span>;</span><br><span class="line">                        objectA.notifyAll();</span><br><span class="line">                    &#125;<span class="keyword">catch</span>(Exception e)&#123;LogUtil.println(e.getMessage());&#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<p>​</p>
-</li>
-<li><p>在JDK1.5以后，开始用Lock接口实现类的对象显式地表达锁的获取和释放（<code>lock()</code>和<code>unlock()</code>），用<strong>Condition</strong>对象来代替作为监视器的Object对象，以<code>await()</code>和<code>signal()</code>方法来代替<code>wait()</code>和<code>notify()</code>。这种同步方式分离了对象和锁，使锁不需要以对象来作为标识，故可以用不同的Condition对象来控制不同的线程（见上面的注释）。</p>
-</li>
-<li><p>Lock 与 synchronized的区别还有Lock可以设定<strong>等待锁的时间以及设定中断锁</strong>，在等待锁休眠状态下允许被其他线程中断。同时Lock需要手动被释放，运行效率在资源竞争不激烈时略低于synchronized，但激烈时比synchronized高出几十倍。</p>
-</li>
-<li><p>关于ReentrantLock的实现，其实当一个线程等待获取Lock时，也是被存在一个双向链表队列中的，其被<strong>LockSupport的park</strong>方法阻塞，直到锁被unlock()释放，然后该线程取得锁并从队列出拆出结点，开始运行。中间有一堆<strong>CAS</strong>操作保证并发安全，并主要靠volatile变量<strong>state</strong>记录锁的状态和当前线程的状态。具体可参考<a href="http://www.cnblogs.com/xrq730/p/4979021.html" target="_blank" rel="noopener">ReentrantLock的实现原理</a>。</p>
-</li>
-<li><p>由于<code>stop()</code>方法已经过时，中止线程的方法只有将<code>run()</code>方法中的代码执行完毕，其中一个方法是将循环标记改变。但如果在<code>run()</code>中线程出现了线程利用<code>wait()</code>或者<code>sleep()</code>方法冻结的情况，线程就将无法结束，此时可以用<code>interrupt()</code>方法中断其冻结状态，但此方法会丢出Interrupt异常。</p>
-</li>
-<li><p>可以用<code>setDaemon()</code>方法来设置守护线程，或者说是后台线程，该标记下的线程运行与正常线程没有区别，区别在所有前台线程都结束时，虚拟机会自动退出该线程，即守护线程有伴生的特性。</p>
-</li>
-<li><p><code>join()</code>方法即一个可操控的抢夺CPU执行权的方法，执行该方法后，执行该方法的线程对象会取得线程执行权，而当前线程会等待其执行完毕之后才从冻结状态中被唤醒。该状态也能被<code>interrupt()</code>唤醒。</p>
-</li>
-<li><p>可以用<code>setPriority()</code>方式设定线程优先级，1最低，10最高。</p>
-</li>
-<li><p>可以用<code>yield()</code>暂停当前线程，即释放当前执行权。</p>
-</li>
-</ol>
-<h4 id="线程池"><a href="#线程池" class="headerlink" title="线程池"></a>线程池</h4><ol>
-<li><p>关于线程池，最关键的一个类是<strong>ThreadPoolExecutor</strong>，关于线池程的事务提交、计数和状态管理都通过调用该类的对象实现，其构造如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//最常用的构造</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">ThreadPoolExecutor</span><span class="params">(<span class="keyword">int</span> corePoolSize, <span class="keyword">int</span> maximumPoolSize, <span class="keyword">long</span> keepAliveTime,</span></span></span><br><span class="line"><span class="function"><span class="params">                          TimeUnit unit, BlockingQueue&lt;Runnable&gt; workQueue)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue,</span><br><span class="line">             Executors.defaultThreadFactory(), defaultHandler);</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">//完全参数构造</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">ThreadPoolExecutor</span><span class="params">(<span class="keyword">int</span> corePoolSize, <span class="keyword">int</span> maximumPoolSize, <span class="keyword">long</span> keepAliveTime,</span></span></span><br><span class="line"><span class="function"><span class="params">                          TimeUnit unit, BlockingQueue&lt;Runnable&gt; workQueue,</span></span></span><br><span class="line"><span class="function"><span class="params">                          ThreadFactory threadFactory, RejectedExecutionHandler handler)</span> </span>&#123;</span><br><span class="line">  <span class="comment">/*全是对成员变量的赋值*/</span>&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>下面需要分别解释一下各参数的含义：</p>
-<ol>
-<li><p>corePoolSize：核心线程池容量，表征一个<strong>较轻的任务执行压力下允许的线程存在数量</strong>。当线程池所需线程大于该值时，则需要将任务加入缓存队列，甚至构造新的线程。</p>
-</li>
-<li><p>maximumPoolSize：最大线程池容量，表征<strong>线程池数量的极限值</strong>。在核心线程数量不满足需求且缓存队列已满的情况下，允许构造新的线程，但线程总数不能超过该值，否则会被拒绝执行任务或者直接抛出异常。</p>
-</li>
-<li><p>keepAliveTime：线程存活时间，表征当线程池内线程数量大于核心线程池容量时，多余的临时线程能够以空闲状态存在的最大时间。另当<code>allowCoreThreadTimeOut()</code>被置为true时，空闲的核心线程也会以相同的标准被结束。</p>
-</li>
-<li><p>unit：线程存活时间的单位。</p>
-</li>
-<li><p>workQueue：任务缓存队列，当任务数大于核心线程池容量时用于存储未执行的任务，主要有下面几种：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1) ArrayBlockingQueue：基于数组的先进先出队列，此队列创建时必须指定大小；</span><br><span class="line"></span><br><span class="line">2) LinkedBlockingQueue：基于链表的先进先出队列，如果创建时没有指定此队列大小，则默认为Integer.MAX_VALUE；</span><br><span class="line"></span><br><span class="line">3) SynchronousQueue：可以视为一个永远为空的队列（或者一个任务传输管道），所有插入的任务都必须有一个线程直接取走执行，而不进行任何存留。</span><br><span class="line"></span><br><span class="line">4) DelayedWorkQueue：用二叉堆算法排序的无界延时序列，在最小延时任务到时前会处于阻塞状态。</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>threadFactory：线程构造器，默认实现为构造一个新线程，并为其设置一个固定的线程组、自增的线程名，无守护线程且线程优先级为5。</p>
-</li>
-<li><p>handler：任务拒绝策略，表征当需求线程数大于最大线程数时，对被提交的任务使用的拒绝策略，主要有下面几种：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1) AbortPolicy：直接抛出一个RejectedExecutionException异常表示拒绝接受任务。</span><br><span class="line"></span><br><span class="line">2) DiscardPolicy：静默地拒绝任务，不做任何操作。</span><br><span class="line"></span><br><span class="line">3) DiscardOldestPolicy：抛弃队列顶端的任务，并重试执行excute；但如果线程池直接进入shutdown状态，则直接放弃当前任务。</span><br><span class="line"></span><br><span class="line">4) CallerRunsPolicy：直接在excute方法执行的当前线程执行任务；但如果线程池直接进入shutdown状态，则直接放弃当前任务。</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-</li>
-<li><p>Java提供了几种默认的ThreadPoolExecutor构造方式，如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1) Executors.newFixedThreadPool(int nThreads)：构造一个核心线程池容量和最大线程池容量都为nThreads的线程池，其没有最大生存时间，同时缓存队列为Integer.MAX_VALUE大小的LinkedBlockingQueue。所有活动线程将存活到shutdown被调用。</span><br><span class="line"></span><br><span class="line">2) Executors.newSingleThreadExecutor()：构造一个只存在一个核心线程的线程池，但其缓存队列同样为Integer.MAX_VALUE大小的LinkedBlockingQueue。</span><br><span class="line"></span><br><span class="line">3) Executors.newCachedThreadPool()：构造一个无核心线程但最大线程数为Integer.MAX_VALUE的线程池，每个线程的空闲存活时间为60s，其缓存队列为SynchronousQueue。</span><br><span class="line"></span><br><span class="line">4) Executors.newSingleThreadScheduledExecutor()：构造一个只存在一个核心线程的定时线程池，线程池最大容量为Integer.MAX_VALUE，可以实现延时、定时、间隔执行任务等操作，其缓存队列为DelayedWorkQueue。</span><br><span class="line"></span><br><span class="line">5) Executors.newScheduledThreadPool(int corePoolSize)：构造一个核心线程池容量为corePoolSize的定时线程池，其余基本同上。</span><br></pre></td></tr></table></figure>
-<p><strong>另外还有ForkJoinPool与ScheduledExecutorService的各种默认构造，这里先放着。</strong></p>
-</li>
-<li><p>线程池在工作时，主要有五种状态，其含义如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1) RUNNING: 正常的工作状态，接受并执行任务。</span><br><span class="line"></span><br><span class="line">2) SHUTDOWN: 即将关闭线程池，不接受新的任务，但会继续执行队列中的任务。 可由RUNNING状态通过调用shutdown()或者finalize()方法进入该状态。</span><br><span class="line"></span><br><span class="line">3) STOP: 线程池彻底停止，不接受新的任务，并会中断执行中的任务。 由前两种状态调用shutdownNow()进入。</span><br><span class="line"></span><br><span class="line">4) TIDYING: 所有任务都被终止，正在工作的线程数为0。 SHUTDOWN/STOP状态下缓存队列和线程池都为空时进入。</span><br><span class="line"></span><br><span class="line">5) TERMINATED: 彻底完成线程的终止。 terminated()方法执行完毕时进入。</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>具体工作流程见下图：</p>
-<p><img src="/2017/08/11/Java多线程相关/线程池任务提交流程.png" alt="线程池任务提交流程"></p>
+<li><p>模板是可以通过引用定义该模板的wxml文件来在其他wxml文件中使用的，用<code>&lt;import src = &quot;XXX.wxml&quot;&gt;</code>语法来实现；当需要引用整个wxml文件时，则可以用<code>&lt;include src=&quot;XXX.wxml&quot;&gt;</code>语法实现，相当于将那个文件中除了template的代码完全复制过来（但页面内使用的template样式实际上还是生效的），这里的意义与Android xml的\<include\>标签完全一致。</include\></p>
 <blockquote>
-<p>还有好多东西没写呢。。未完待续。</p>
+<p>注意如果是引用其他目录的布局文件，比如在/pages/pageFirst/pageFirst.wxml中引用/pages/pageSecond/pageSecond.wxml这里的文件目录写法是”../pageSecond/pageSecond.wxml”，<code>..</code>的作用是回到<code>pages</code>根目录。</p>
 </blockquote>
-<p>​</p>
 </li>
-</ol>
+<li><p>可以通过require(path)引入其他js文件的单一模块方法，或者获取整个js模块的对象，一一单独调用模块中的方法。前者的定义是设置模块的暴露匿名方法，如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//a.js</span></span><br><span class="line"><span class="built_in">module</span>.export = <span class="function"><span class="keyword">function</span>(<span class="params">value</span>)</span>&#123;...&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> func = <span class="built_in">require</span>(<span class="string">"../a.js"</span>);</span><br><span class="line">func(<span class="number">1</span>);</span><br></pre></td></tr></table></figure>
+<p>而后者的定义是在定义方法时添加<code>export</code>关键字：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">doSomething</span> (<span class="params">value</span>)</span>&#123;...&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">require</span>(<span class="string">"../a.js"</span>).doSomething(<span class="number">1</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>js的加载顺序</strong>是这样的：最先加载的一定是app.js，然后按照app.json的<code>pages</code>定义的页面顺序，依次加载各js文件。在这当中，如果有require语句，则会提前加载require要求加载的js文件。</p>
+</li>
+<li><p>小程序中<strong>js变量和方法的作用范围</strong>仅在本文件内，需要使用全局变量时，需要通过<strong>getApp()</strong>方法来获取App对象，对它的属性进行赋值和取值。</p>
+</li>
+<li><p><strong>Page之间的跳转</strong>依靠<code>wx.navigateTo(url)</code>方法，url可以通过拼接query参数的方式来传递参数到Page构造器，Page构造器中则通过option对象取出对应名字的参数。小程序的页面栈最大层级为10级，除了navigateTo方法之外，还可以用<code>redirectTo(url)</code>方法完成对当前页面的替换，以及用<code>navagateBack()</code>进行出栈。</p>
+</li>
+<li><p><strong>setData</strong>方法本身是一个异步方法，所以其第二个参数是setData完成页面渲染后的回调。在setData时，只需要提供需要修改的参数键值对可一个修改某个或者部分参数，而不需要提供整个对象的所有参数；同时，键值对的键允许采用数据路径形式，如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// page.js</span></span><br><span class="line">Page(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    a: <span class="number">1</span>, <span class="attr">b</span>: <span class="number">2</span>, <span class="attr">c</span>: <span class="number">3</span>,</span><br><span class="line">    d: [<span class="number">1</span>, &#123;<span class="attr">text</span>: <span class="string">'Hello'</span>&#125;, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line">  &#125;</span><br><span class="line">  onLoad: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">// a需要变化时，只需要setData设置a字段即可</span></span><br><span class="line">    <span class="keyword">this</span>.setData(&#123;<span class="attr">a</span> : <span class="number">2</span>&#125;)</span><br><span class="line">	<span class="comment">//允许通过引用的方式来确定要修改数据的键</span></span><br><span class="line">	<span class="keyword">this</span>.setData(&#123;<span class="string">"d[0]"</span>: <span class="number">100</span>&#125;); <span class="keyword">this</span>.setData(&#123;<span class="string">"d[1].text"</span>: <span class="string">'Goodbye'</span>&#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>setData的属性值不能是undefined。</p>
+</li>
+<li><p>对于控件的事件监听，可以用bind* 或者 catch*后跟事件名来设置其监听方法参数，或者写作<code>bind:*</code>或<code>catch:*</code>。同时，在这两者前加<code>capture-</code>前缀可以表示添加捕获阶段的监听。</p>
+<blockquote>
+<p>对于上面的说法，有一些概念需要强调：<strong>捕获阶段</strong>和<strong>冒泡阶段</strong>表示事件的触发前和触发后的两个阶段，故带<code>capture-</code>前缀的监听触发一定比正常的监听早。</p>
+<p>另外bind和catch的区别在于bind只进行监听，不影响事件本身的传递；而catch更类似于Android中的事件消费概念，消费完毕后事件就不会再往上层传递。</p>
+</blockquote>
+</li>
+<li><p><strong>关于Flex</strong>，Flex分为容器属性与项目属性，前者作用于容器下的项目排列规则，后者作用于项目自身的排列规则。列举如下：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*容器属性*/</span></span><br><span class="line"><span class="selector-tag">display</span><span class="selector-pseudo">:flex</span>;</span><br><span class="line"><span class="comment">/*排列方式*/</span></span><br><span class="line">flex-direction:row（默认值） | row-reverse | column |column-reverse</span><br><span class="line"><span class="comment">/*排满后是否允许换行*/</span></span><br><span class="line">flex-wrap:nowrap（默认值） | wrap | wrap-reverse</span><br><span class="line"><span class="comment">/*项目主方向排列对齐方式 左对齐 右对齐 等间距均分等*/</span></span><br><span class="line">justify-content:flex-start（默认值） | flex-end | center |space-between | space-around | space-evenly</span><br><span class="line"><span class="comment">/*项目本身对齐方式，类似于LinearLayout的gravity效果*/</span></span><br><span class="line">align-items:stretch（默认值） | center  | flex-end | baseline | flex-start</span><br><span class="line"><span class="comment">/*项目交错方向有多行时的对齐方式 值的含义同justify-content*/</span></span><br><span class="line">align-content:stretch（默认值） | flex-start | center |flex-end | space-between | space-around | space-evenly</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*项目属性*/</span></span><br><span class="line"><span class="comment">/*表示项目在布局中的排列顺序，数字越大越靠后*/</span></span><br><span class="line">order:0（默认值） | &lt;integer&gt;</span><br><span class="line"><span class="comment">/*表示项目在布局空间不足时的压缩比例，如果全都是1的情况下所有控件都会按相同比例缩小*/</span></span><br><span class="line">flex-shrink:1（默认值） | &lt;number&gt;</span><br><span class="line"><span class="comment">/*表示项目在布局空间空余时的拓展权重*/</span></span><br><span class="line">flex-grow:0（默认值） | &lt;number&gt;</span><br><span class="line"><span class="comment">/*表示布局的默认主方向尺寸大小，优先级高于width/height，除非width/height有确定值而该属性值为auto*/</span></span><br><span class="line">flex-basis:auto（默认值） | &lt;length&gt;</span><br><span class="line"><span class="comment">/*上面三个属性的简写形式，当为none时是0,0,auto 为auto时是1,1,auto*/</span></span><br><span class="line">flex:none | auto | @flex-grow @flex-shrink @flex-basis</span><br><span class="line"><span class="comment">/*用以控制项目自身对齐方式的属性，会覆盖align-item属性，auto表示继承align-item属性*/</span></span><br><span class="line">align-self:auto（默认值） | flex-start | flex-end |center | baseline| stretch</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>关于小程序中的网络请求</strong>，小程序提供了API <code>wx.request({url,method,data,header,dataType,success,fail,complete})</code>，可以自行设置请求地址、请求方法、请求数据（post请求中），请求头，请求返回值类型，请求回调等属性。使用get方法请求时，url长度最大为1024byte，超过该长度时需要使用post请求。设置请求的超时时间需要在.json文件中设置<code>networkTimeout</code>参数。</p>
+</li>
+<li><p>小程序的读取本地缓存方法是<code>wx.getStorage/wx.getStorageSync(key)</code>，设置本地缓存的方法则为<code>wx.setStorage/wx.setStorageSync(key,data)</code>，带<code>Sync</code>后缀表示该方法会同步返回结果，而不带后缀的方法需要在回调中接收调用结果。<strong>本地缓存的上限为10MB</strong>。</p>
+</li>
+<li><p><strong>自定义小程序组件</strong>实际上就是被封装的布局模板。当其是一个布局组件时，其内部可以用<code>slot</code>属性来设置占位，<em>类似Android中的ViewStub</em>，可用name属性区分。组件的wxss文件内<strong>不推荐定义除了类选择器之外的选择器样式，且除了继承样式外，调用组件页面的样式对自定义组件无效</strong>，同时子元素选择器的父项不为view时也无效。</p>
+<blockquote>
+<p>上面的样式隔离实际上是可以通过组件设置<code>styleIsolation</code>来打破的，其有以下值：</p>
+<ul>
+<li><code>solated</code> 表示启用样式隔离，在自定义组件内外，使用 class 指定的样式将不会相互影响（一般情况下的默认值）；</li>
+<li><code>apply-shared</code> 表示页面 wxss 样式将影响到自定义组件，但自定义组件 wxss 中指定的样式不会影响页面；</li>
+<li><code>shared</code> 表示页面 wxss 样式将影响到自定义组件，自定义组件 wxss 中指定的样式也会影响页面和其他设置了 <code>apply-shared</code> 或 <code>shared</code> 的自定义组件。（这个选项在插件中不可用。）</li>
+</ul>
+<p>在实际尝试中，即使打破了样式隔离，后来设置的属性也一样不能覆盖组件本身定义的属性，即使它们的声明顺序是extClass在后。</p>
+<p>据说还可以通过设置externalClasses的方式使用外部样式，不过懒得试了。</p>
+</blockquote>
+</li>
+<li><p>实际上Page也可以视为一个大的Component，所以可以<strong>用Component对象构造一个页面</strong>，不同的是页面url的参数会自动注入到<code>properties</code>对象的已存对应键中，点击回调等方法需要声明在<code>method</code>对象中，而onLoad等生命周期方法可以声明lifetimes对象中（优先级最高）或者作为对象的直接方法（区别于Page构造的options参数与预声明的生命周期方法）；除此之外，Component还有页面生命周期回调，如展示、隐藏页面及页面尺寸发生变化时，这些方法开始类似Android中View的行为。其相较Page声明页面的优势在于，可以通过<code>behavior</code>参数设置Behavior对象，来统一为页面声明通用方法（包括部分生命周期方法，会分别在组件和behavior的层面调用一次）。</p>
+</li>
+<li><p><strong>behavior</strong>并不能简单视作组件的一个附加属性或者接口实现，<strong>它包含的方法和属性最终会成为组件对象的一部分，故微信文档说它更像是一种mixins机制</strong>，相当于将公共代码内联于组件之中。但若存在同名属性或者方法，优先级为组件-&gt;后引入的behavior-&gt;先被引入的behavior，如果同名的是对象，则合并对象，否则互相覆盖。如果一个behavior被一个组件多次引用，则其生命周期方法只会调用一次。</p>
+<blockquote>
+<p>还有一种情况下behavior可以更改组件的原有属性或方法，即自定义实现<strong>definitionFilter</strong>方法。这个方法的参数为behavior宿主(一个Component或者behavior)的参数列表对象，和behavior对象自身依赖的behavior对象(通过behaviors属性依赖，如果有的话)的列表。简单地说，就是Component对象可以将自己的参数列表传给behavior进行重定义，并且可以决定是否将这个对象交给behavior链的更上级来进行处理。</p>
+</blockquote>
+</li>
+<li><p>组件中可以通过设置<code>observers</code>对象的值来声明对一个或多个属性的监听，这个监听在setData时触发，且一次setData只触发一次，类似Android的ObservableField（但这里不管值是否真的改变了）结合了RxJava的flatMap。甚至可以通过<code>**</code>通配符来模糊匹配相关名称的属性，只声明<code>**</code>时会匹配所有数据。</p>
+</li>
+<li><p>通过设置组件options属性中的<strong>pureDataPattern</strong>字段，可以设置一个正则表达式，在组件中所有符合这个正则式的属性都不会直接参与到页面渲染中去，包括data中的属性与properties中的属性，这称为<strong>纯数据字段</strong>，可以用于记载组件的一些内部变量。</p>
+</li>
+<li><p>自定义组件的<strong>抽象节点</strong>类似Java泛型的通配符，用以为一个不确定类型控件占位，在使用这个自定义控件时需要声明这个不确定类型控件的具体类型（这里也不能通过数据绑定声明，必须是个确认值），就和Java实现泛型的具体实现时做法一样。抽象节点的节点名称值需要在.json文件中声明，且允许声明默认值。</p>
+</li>
+</ul>
+<h4 id="关于JavaScript"><a href="#关于JavaScript" class="headerlink" title="关于JavaScript"></a>关于JavaScript</h4><blockquote>
+<p>由于很多语法看起来和其他语言差不多，这里只列出一些比较让人惊讶的不同点。</p>
+</blockquote>
+<ul>
+<li><p>当为一个不存在的变量赋值时，这个变量会自动成为<code>window</code>的一个属性。</p>
+</li>
+<li><p>基本类型<code>String</code>和一个入参为String的对象(<code>new String()构造出来的</code>)不是一个类型。理论上基本类型是没有属性和方法的，但是由于JS解释的时候可以自动将其包装为对象，所以实际写的时候它也能直接调用方法。</p>
+</li>
+<li><p><code>==</code> 为相对相等，如果两边类型不同，允许通过自动类型转换再次比较，相当于值比较；<code>===</code>为绝对相等，两边从类型到值必须都相同。<code>!==</code>为不绝对相等，同样是类型不相等而值相等时会得到false。</p>
+</li>
+<li><p>可以通过<code>for(paramName in obj)</code>的语法来遍历对象中的属性。</p>
+</li>
+<li><p><code>NaN</code>是一个number类型，而<code>null</code>是一个Object类型。</p>
+</li>
+<li><p>除了各个类型的初始值（0、false、“”等）和表示错误的值(null、undefined、NaN等)之外，其他所有值自动转化成<code>Boolean</code>类型的时候，都是true。</p>
+</li>
+<li><p>用<code>debugger</code>在代码中打断点。</p>
+</li>
+<li><p>JS中的变量与方法声明会被解释器调到代码的最开始，所以理论上可以做出<strong>“先调用再声明”</strong>的操作。</p>
+</li>
+<li><p>可以通过在脚本或者方法开头加<code>&quot;use strict&quot;</code>的形式，来限制上面先调用再声明或者不定义就调用的行为。</p>
+</li>
+<li><p>switch的对象比较用的是<code>===</code>。</p>
+</li>
+<li><p>JS中两个浮点数相加可能会得到一个有多余位数的浮点数，可以考虑用乘除法将浮点数计算为整数后，再变为浮点数。</p>
+</li>
+<li><p>JS字符串如果在书写时就进行了断行，需要在断行处加反斜杠。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">"Hello\</span></span><br><span class="line"><span class="string">world"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str);</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">输出:</span></span><br><span class="line"><span class="comment">Hello</span></span><br><span class="line"><span class="comment">World</span></span><br><span class="line"><span class="comment">**/</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果对一个数组采用属性名索引，那么这个数组会被定义为一个对象，不再适用数组的相关方法。</p>
+</li>
+<li><p>JS可以不加<code>;</code>，解释器会将一行有效代码当做一个语句。</p>
+</li>
+<li><p><strong>JS中用var定义的变量的作用域只有方法体和全局两种</strong>，if、for等代码块并没有限制其定义变量的作用域。变量调用的查找顺序是从最小的作用域(方法体)一路向最大的作用域(全局)查找，所以在一个范围较小的作用域中，<strong>可以定义与包裹其的作用域变量名相同的变量</strong>，并在其作用域内覆盖这个值。</p>
+<blockquote>
+<p>在可以用<strong>let</strong>和<strong>const</strong>后，JS的作用域问题变得和Java相当相似了，有了块级限制，没有变量提升，也没有了非常magic的window全局对象。</p>
+<p>但不同的是在叠加作用域内（下例），对事先定义的变量的重复定义，let和const会形成一个封闭域，此时之前的定义将无效，而在子作用域内取新的值，这可以视为JS的变量实例选择较Java更先进的一部分。</p>
+<p>let a = “A”; //父作用域内</p>
+<p>{    </p>
+<p>​    let a = “B”; //子作用域内</p>
+<p>​    console.log(a); //输出A</p>
+<p>}</p>
+<p>console.log(a); //输出B</p>
+</blockquote>
+</li>
+<li><p><code>this</code>对象在JS中<strong>指向调用方法的对象</strong>（<em>而不是其所在作用域的对象</em>），没有调用方（简单得看就是方法之前有没有<code>.</code>）或者方法是全局方法时，就指向全局对象（在浏览器中是window）。方法可以通过<code>call()</code>或者<code>apply()</code>方法向A对象的方法注入B对象的实例，来达到切换上下文的目的（相当于让B调用这个方法）。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> A = &#123;</span><br><span class="line">  fullName: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.firstName + <span class="string">" "</span> + <span class="keyword">this</span>.lastName;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> B = &#123;</span><br><span class="line">  firstName:<span class="string">"John"</span>,</span><br><span class="line">  lastName: <span class="string">"Doe"</span>,</span><br><span class="line">&#125;</span><br><span class="line">person1.fullName.call(B);  <span class="comment">// 返回 "John Doe" 这里A中方法的this已经是B了</span></span><br></pre></td></tr></table></figure>
+<p>还有一个例外，如果对一个全局方法采用了<code>var func = new XXX(params);</code>的写法，那么此时这个方法对象就不再是一个属于全局的方法对象了，此时方法内指向的this是方法对象本身的实例，上面那句语句称为调用了方法对象的构造方法。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//全局方法</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params">arg1, arg2</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.firstName = arg1;</span><br><span class="line">    <span class="keyword">this</span>.lastName  = arg2;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> x = <span class="keyword">new</span> myFunction(<span class="string">"John"</span>,<span class="string">"Doe"</span>) <span class="comment">//此时会构造一个方法对象实例，并赋予其两个属性值</span></span><br><span class="line"><span class="comment">//x.firstName === "John"</span></span><br><span class="line">myFunction(<span class="string">"Doe"</span>,<span class="string">"John"</span>);<span class="comment">//常规调用，会给其宿主——即全局对象赋两个属性</span></span><br><span class="line"><span class="comment">//window.firstName === "Doe"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> father = &#123;</span><br><span class="line">    presentation: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">    name:<span class="string">"Lazxy"</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">Object</span>.setPrototypeOf(obj,father);</span><br><span class="line">obj.presentation();</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>这里有个重要的问题，方法或者Object对象内的属性引用对于其内部来说<code>this.</code>是不能够省略的，这在Java是一个理所当然的语法糖，但JS并没有做简化。</p>
+<p>随后就是关于为什么JS要提供这种能够变更上下文的方法调用方式，其原因应该是因为JS没有Java那样的继承机制，导致一个方法被定义后，不能直接由其他对象方便地使用，所以采用这种上下文变更的方式变更方法调用时的条件和参数，以达到复用的目的。这相较直接变更原型对象的形式，应该算是一种更<strong>轻量级</strong>的复用方式？</p>
+</blockquote>
+</li>
+<li><p>即使一个方法声明并没有写参数列表，依然可以向这个方法传入任意数量的参数，并通过<strong>arguments</strong>字段进行引用，这是一个参数<strong>数组</strong>对象。</p>
+</li>
+<li><p>关于<strong>闭包</strong>，它的作用是给方法提供一个私有作用域环境，保留需要持久保存但又不会被外部访问的变量，用以解决计时、列表分页记录等问题：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> counter = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> count = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; <span class="keyword">return</span> count++&#125;;</span><br><span class="line">&#125;)(); <span class="comment">//闭包中相当于声明了上面自调用方法的一个私有变量count，这个变量外部无法访问，但是能通过访问其返回值方法来进行自增操作，以此实现了安全的计数器实现</span></span><br><span class="line">counter();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>可以通过对象的<code>prototype</code>为对象设置新的属性和方法。但这个对象<strong>必须是有名字的</strong>，所以在ES5版本中，只能对命名方法对象和基本类型对象赋值。写法如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">firstName,lastName</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.firstName = firstName;</span><br><span class="line">    <span class="keyword">this</span>.lastName = lastName;</span><br><span class="line">&#125;</span><br><span class="line">Person.prototype.name = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.firstName + <span class="keyword">this</span>.lastName; <span class="comment">//这里的this不能去掉，因为默认情况</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>对象的prototype是对象<strong>原型对象</strong>的引用，而原型对象的prototype又指向其自身的原型对象，于是构成了<strong>原型链</strong>。一个对象拥有调用原型对象属性与方法的权限，所以就类比来说，原型对象概念相当于Java中的<strong>子父类继承</strong>。最神奇的是，JS支持通过各种方法对prototype进行变更，这意味着JS支持<strong>动态的继承变更和属性/方法拓展（四处认爹，遍地播种）。</strong></p>
+</blockquote>
+</li>
+<li><p>ES6中的<strong>解构操作</strong>，当解构结果为忽略时，其表示为空格，当解构结果为剩余值时，其表示为<code>...</code>（即<strong>拓展运算符</strong>），解构的默认值为<code>undefined</code>，设置默认值时和对方法设置默认值一致:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//数组解构</span></span><br><span class="line"><span class="keyword">let</span> [a, ,b] = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];<span class="comment">//a = 1 b = 3</span></span><br><span class="line"><span class="keyword">let</span> [a,...b] = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];<span class="comment">// a = 1 b = [2,3]</span></span><br><span class="line"><span class="keyword">let</span> [a,b] = [<span class="number">1</span>]; <span class="comment">//a = 1 b = undefined</span></span><br><span class="line"><span class="keyword">let</span> [a = <span class="number">1</span>, b = <span class="number">2</span>] = [<span class="number">3</span>]; <span class="comment">//a的设置生效故a = 3 b取默认值，故b = 2</span></span><br><span class="line"><span class="keyword">let</span> [a = <span class="number">1</span>, b = a] = [<span class="number">2</span>] <span class="comment">// a = 2 b = 2</span></span><br><span class="line"><span class="keyword">let</span> [a = <span class="number">1</span>, b = a] = [<span class="number">1</span>,<span class="number">2</span>] <span class="comment">//a = 1 b = 2</span></span><br><span class="line"><span class="comment">//对实现了Iterator 接口的对象进行遍历解构</span></span><br><span class="line"><span class="keyword">let</span> [a,b,c,d,e] = <span class="string">"hello"</span> <span class="comment">//a = 'h' b = 'e' c = 'l' d = 'l' e = 'o' </span></span><br><span class="line"></span><br><span class="line"><span class="comment">//对象解构</span></span><br><span class="line"><span class="keyword">let</span> obj = &#123;<span class="attr">p</span>: [<span class="string">'hello'</span>, &#123;<span class="attr">y</span>: <span class="string">'world'</span>&#125;] &#125;;</span><br><span class="line"><span class="keyword">let</span> &#123;<span class="attr">p</span>: [x, &#123;y&#125;] &#125; = obj; <span class="comment">// x = 'hello' // y = 'world'</span></span><br><span class="line"><span class="keyword">let</span> &#123;<span class="attr">p</span>: [x, &#123;&#125;] &#125; = obj;<span class="comment">//忽略y属性 这里的",&#123;&#125;"其实可以去掉 x = 'hello'</span></span><br><span class="line"><span class="keyword">let</span> &#123;<span class="attr">p</span>: [, &#123;y&#125;]&#125; = obj; <span class="comment">//忽略x属性 注意这里“，”不能去掉 y = 'world'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> obj = &#123;<span class="attr">a</span>:<span class="number">20</span>,<span class="attr">b</span>:<span class="number">30</span>,<span class="attr">c</span>:<span class="number">40</span>&#125;;</span><br><span class="line"><span class="keyword">let</span> &#123;a, ...rest&#125; = obj; <span class="comment">//a = 20 rest = &#123;b:30,c:40&#125;</span></span><br><span class="line"><span class="keyword">let</span> &#123;a = <span class="number">10</span>,b,d = <span class="number">50</span>&#125; = obj; <span class="comment">//a = 20取得对应值 忽略默认值 b = 30 d = 50未取得对应值，取默认值</span></span><br><span class="line"><span class="keyword">let</span> &#123;<span class="attr">a</span> : av =<span class="number">10</span>,<span class="attr">b</span> : bv,<span class="attr">d</span> : dv = <span class="number">50</span> &#125; <span class="comment">// av = 20，bv = 30，dv = 50 理由同上</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>ES6中的<strong>Symbol</strong>用于提供一个唯一性标识，其可以视为一个拥有一个String类型属性的类，两个new出来的Symbol不绝对相等。它可以作为对象的属性名，这种情况下对象引用相关属性只能通过<code>[]</code>，而不能用<code>.</code>（因为<code>.</code>后一定跟String）；它也能作为一个常量（类似Java的枚举类成员）作为switch的条件。可以用<code>Symbol.for(name)</code>取得一个以name的值为value的Symbol单例对象，以及用<code>Symbol.keyFor(symbol)</code>取得当前symbol对象的value。</p>
+</li>
+<li><p>ES6中增加了<strong>Map和Set</strong>的实现，前者用于存储任意类型为key的键值对，可以用for…of 或forEach进行遍历；后者维护一个值不重复的数组，可以用来进行去重。</p>
+</li>
+<li><p>ES6中的<strong>Proxy</strong>对象能够通过传入相应的代理方法实现对一个对象的属性读取、构造、自身类型的判断等等切入埋点；而<strong>Reflect</strong>对象与之正好相配合，可以获得方法的属性、取得方法实例以及调用方法，可以用于在埋点逻辑处理结束后调用原方法。</p>
+</li>
+<li><p>ES6可以用“<strong>``</strong>”来标识字符串了，且里面支持转义字符和换行，不需要再在换行处加<code>/</code>。并且，这种字符串表示方式支持用<code>${}</code>插入变量作为内容。</p>
+</li>
+<li><p>ES6的对象声明<strong>允许忽略key</strong>，此时value的变量名作为属性的key；声明方法的时候也<strong>允许忽略function字段</strong>，直接像Java一样声明方法。</p>
+</li>
+<li><p>ES6允许<strong>用表达式作为属性名</strong>，此时表达式需要写在方括号<code>[]</code>内。这种情况下方法可以使用上面的忽略形式，但是变量对象不允许这样。</p>
+</li>
+<li><p>ES6中的<code>Object.is</code>方法用于比较两个对象是否绝对相等，和<code>===</code>基本相同，除了两个特例：is方法下<code>+0</code>和<code>-0</code>不相等，<code>NaN</code>和<code>NaN</code>相等。</p>
+</li>
+<li><p>ES6中可以通过<strong>DataView</strong>对象控制其作用范围（由构造时的<strong>缓冲区对象</strong>入参决定）内的数值型数据类型值写入，<em>暂时理解为JS中的Parcel对象？</em>在类型确定的情况下，也可以用<strong>定型数组</strong>来进行特定类型数组声明。</p>
+<blockquote>
+<p>数组缓冲区的内容长度是固定的，类似Java中的长度确定的数组定义。</p>
+</blockquote>
+</li>
+<li><p>当参数列表中<strong>存在同名参数</strong>时，JS居然是不报错的（后者的值会覆盖前者的值），除非存在有默认值的参数。</p>
+</li>
+<li><p><strong>null是一个合法值</strong>，不会使默认参数起效。</p>
+</li>
+<li><p>JS的<strong>箭头函数没有 arguments </strong>绑定，也不会绑定this。<strong>箭头函数内的this指向其作用域的上一级作用域所指向的this，而无关调用时的对象</strong>，这和普通方法有所区别。</p>
+<blockquote>
+<p>这里需要明确一点，那就是Object对象声明是不会产生作用域的，故箭头函数永远指向一个方法或者方法所属对象的this。</p>
+</blockquote>
+</li>
+<li><p>JS的<strong>class</strong>关键字实际上是一个function定义的简写形式，允许设置内部属性，其内的方法不需要<code>function</code>关键字，写法与Java基本一致。其自带<code>constructor</code>默认构造方法，以及类名属性<code>name</code>(如果一个类是匿名定义的，那这个属性即其变量名)。需要注意的是，function的实例方法需要用<code>new</code>构造类对象来调用，而用<code>static</code>关键字修饰的静态方法可以直接通过类名调用，这也跟Java类似。此外，类的实例对象之间共享一个原型对象，这和Kotlin的拓展方法行为结果是一致的。</p>
+</li>
+<li><p>class通过设置getter和setter方法来取代Proxy中对属性读取与设置的代理，这和Kotlin也基本差不多。</p>
+</li>
+</ul>
+<h4 id="关于CSS"><a href="#关于CSS" class="headerlink" title="关于CSS"></a>关于CSS</h4><ul>
+<li><p>CSS的<strong>盒模型</strong>是元素size+padding+border+margin，这意味着如果在一个100%高度或宽度的元素中添加padding或者margin，其大小将超过100%高度和宽度，这和Android XML的做法不一样。</p>
+<blockquote>
+<p>用%表达单位数值时指的是其占父布局单位的百分比。</p>
+</blockquote>
+</li>
+<li><p>CSS的<strong>position</strong>定位：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">static：不受其他属性值影响，始终处于默认位置。</span><br><span class="line"></span><br><span class="line">relative：相对正常所处位置的位置，left|top|right|bottom属性对其的影响类似于Android的</span><br><span class="line"></span><br><span class="line">translate属性——只更改其绘制的位置，但不影响其所占据空间的位置。</span><br><span class="line"></span><br><span class="line">fixed：定位在相对浏览器初始位置的固定位置，可以设置left|top|right|bottom属性来指定相对距离，不会随着滚动条滚动。可以理解成元素在FrameLayout中的行为，包括其会与其他元素重叠。</span><br><span class="line"></span><br><span class="line">absolute：相对于已定位的父元素的位置，可以设置left|top|right|bottom属性来指定相对距离，类似于RelativeLayout，其会与其他元素重叠。当其没有已定位的父元素时，父元素为&lt;html&gt;标签。如果需要一个已定位的父元素且这个元素不想特意设置，可以对父元素用relative定位。</span><br><span class="line"></span><br><span class="line">sticky：在正常情况下相当于relative的行为，在其原位置（translate前的位置）滚出视界时，转换成fix模式，简单的说就是悬浮导航栏的行为模式。</span><br><span class="line"></span><br><span class="line">z-index 用于控制重叠对象的绘制层级优先度。默认是后声明的元素后绘制（在上层）。</span><br><span class="line"></span><br><span class="line">PS：上面的属性相互冲突时（如同时设置left和right），后声明的会覆盖先声明的结果。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>CSS的<strong>float</strong>属性：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">float属性能够使元素水平方向浮动，在其周围的元素，会自动环绕在其周围，如果有浮动元素并排且横向空间不足，则会自动向竖直方向排列。</span><br><span class="line">可以通过这个属性绘制流式布局或者文字环绕图片效果。</span><br><span class="line">clear属性可以控制使声明元素的某一方向不能有浮动元素作用范围（相当于将此方向浮动元素包裹在块中，不影响到声明元素）。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>CSS居中对齐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. 通过设置 margin:auto可以实现块级元素的水平居中对齐。</span><br><span class="line"></span><br><span class="line">2. 由于默认情况下包裹内容的块级元素是wrap_content的，故可以通过设置竖直方向padding来实现垂直居中。</span><br><span class="line"></span><br><span class="line">3. 将position设置为relative，设置两个方向的偏移各为50%，然后设置transform:transfalte(-50%.-50%)，相当于将元素的定位点从左上角移到元素中心，以此实现垂直居中。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>伪类</strong>指在某些特定场景下特定状态（如链接的悬停状态）的CSS属性，其语法为<code>[选择器]:[功能名]{属性声明}</code>。与之类似的还有<strong>伪元素</strong>，指在特定元素中特定项（如列表的第一项）的CSS属性</p>
+</li>
+<li><p>CSS组合选择器：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">后代选择器(以空格分隔) </span><br><span class="line">示例：.father .child &#123; ... &#125; //对father类元素中的child类元素生效 这里把类换成标签也一样</span><br><span class="line">子元素选择器(以大于号分隔）</span><br><span class="line">示例 div&gt;p &#123; ... &#125; //对div标签中的直接子p标签生效</span><br><span class="line">相邻兄弟选择器（以加号分隔）</span><br><span class="line">示例 a+p &#123; ... &#125; //对a标签的相邻p标签生效（仅之后的一个标签）</span><br><span class="line">普通兄弟选择器（以破折号分隔）</span><br><span class="line">示例 a~p &#123; ... &#125; //对a标签后的所有同级p标签生效</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用<strong>box-sizing:border-box</strong>可以使CSS的元素尺寸计算方式变更为Android XML的计算方式——即设定的高宽是包括padding与margin的。</p>
+</li>
+<li><p>CSS<strong>display</strong>属性：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">inline: 内联样式，不受height/width设置影响</span><br><span class="line">block：就是盒子模型中的盒子，默认独占一行。</span><br><span class="line">inline-block：对外表现为流式的内联样式，元素本身有块的特征，可以设置形状大小。</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h4><ul>
+<li>微信<strong>临时文件的存储路径</strong>为：<code>/storage/0/tencent/MicroMsg/wxafiles/[wxID]</code></li>
+</ul>
 
       
 
@@ -334,7 +456,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://lazxy.github.io/2017/08/11/Java多线程相关/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://lazxy.github.io/2020/04/27/关于微信小程序/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -348,18 +470,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/07/09/C++笔记/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          C++笔记
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/07/25/Realm数据库学习笔记/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Realm数据库学习笔记</div>
+    <a href="/2020/03/12/Flutter学习笔记/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Flutter学习笔记</div>
       <i class="icon-circle-right"></i>
     </a>
   

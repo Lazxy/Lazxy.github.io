@@ -142,6 +142,245 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-日常知识点总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/13/日常知识点总结/">日常知识点总结</a>
+    </h1>
+  
+
+        
+        <a href="/2017/05/13/日常知识点总结/" class="archive-article-date">
+  	<time datetime="2017-05-13T00:55:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>Mark了好多前人总结的面试题库，准备至少全部看一遍，算是完整地复习一遍基础知识吧，顺手记一些并不太清楚或者容易遗忘的知识点在这。</p>
+</blockquote>
+        
+          <a class="article-more-a" href="/2017/05/13/日常知识点总结/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-关于Activity栈" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/10/关于Activity栈/">关于Activity栈</a>
+    </h1>
+  
+
+        
+        <a href="/2017/05/10/关于Activity栈/" class="archive-article-date">
+  	<time datetime="2017-05-10T08:15:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>​    前两天在写项目的时候突然碰到个问题，当用户进入应用时，先进入MainActivity，如果判断为非登陆状态，则应该直接跳转到登陆页面 ，如果在登陆界面放弃登陆，则应该直接回到主界面。这意味着在登陆界面打开时，MainActivity应该从回退栈中弹出，而不是下压。那个时候草草百度了一番，用Intent加Flag的方法匆匆混了过去，然而新栈建立的Transition动画着实让人难受(所以又回去补了一波动画的相关，然而还是没有补到Activity Transition的部分-_-)，今天完善各个界面的逻辑和细节的时候又想起来了这档子事，于是抛下写到一半的代码，准备温习一下Activity进栈出栈的具体过程。<del>又逮着码字的机会了了！！</del></p>
+</blockquote>
+<p>​    Activity的出入栈控制主要来自于两个地方Activity的声明处——Manifest文件定义的属性和Activity的开启者——Intent的Flag定义。下面分别看看它们都能定义哪些属性。</p>
+        
+          <a class="article-more-a" href="/2017/05/10/关于Activity栈/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-关于动画" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/05/关于动画/">关于动画</a>
+    </h1>
+  
+
+        
+        <a href="/2017/05/05/关于动画/" class="archive-article-date">
+  	<time datetime="2017-05-05T02:29:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>一直以来各种动画效果也只是零碎地在需要用到的时候复制粘贴，或者直接自己Draw一遍，并且记下一些零碎的代码段。然而最近比赛项目又碰到了需要各种动画过场的情况，想想这问题也是积攒已久了，于是准备认真的学习一下。</p>
+</blockquote>
+<p>​    首先，Android里的动画分为三种：<strong>PropertyAnimation（属性动画）</strong>、<strong>ViewAnimation（视图动画）</strong>和<strong>DrawableAnimation（帧动画，By the way，官网中翻是可绘制动画，感觉就很不对劲 -_-）</strong>。其中属性动画在API 11之后加入，它可以对所有对象（包括未渲染到屏幕的对象）添加动画效果，拓展性强且特点多样，是官方推荐的动画实现手段；视图动画则是比较老的动画实现手段，其仅对View起效，并且只有视觉上的变化，而不实际改变View的位置或其他真实属性；可绘制动画则适用于借助Drawable资源实现的情景，通过切换帧实现动画效果，比如常见的进度条旋转与游戏中人物走动效果等。下面依次说一下各个动画的用法。</p>
+        
+          <a class="article-more-a" href="/2017/05/05/关于动画/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-关于Retrofit" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/01/关于Retrofit/">关于Retrofit</a>
+    </h1>
+  
+
+        
+        <a href="/2017/05/01/关于Retrofit/" class="archive-article-date">
+  	<time datetime="2017-05-01T11:25:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>笔记转移之路的第一篇，就先好好回顾下这默默工作在层层封装下的劳模。</p>
+</blockquote>
+<p><strong>Retrofit</strong>同<strong>OkHttp</strong>一样都是square公司（然后查了一下发现Picasso和Dragger也是他们的项目，向大佬低头）的开源网络框架，大概因为这个原因，它们也有相似的Builder链式调用和相似的请求流程。当然Retrofit实际可以算作是OkHttp的加强版，其不仅有各种方便的注解简化代码，更有其他开源库的支持（看看漫山遍野的Retrofit+RxJava使用教程），下面简单地记录一下当时学习过的一些点。</p>
+        
+          <a class="article-more-a" href="/2017/05/01/关于Retrofit/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-新的开始" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     

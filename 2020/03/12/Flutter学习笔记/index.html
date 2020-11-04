@@ -6,22 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="//lazxy.github.io">
-  <title>Java多线程相关 | Lazxy</title>
+  <title>Flutter学习笔记 | Lazxy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="记得刚开始学Android的时候，曾经做过一个图库类应用，在我知道Universal-Image-Loader之前，类似从图片加载图片与遍历文件夹这样的操作都是很粗暴地直接在主线程里做。。于是GridView滑动地永远都是那么痛苦而挣扎。。进入页面总要卡个两秒钟。。后来学乖了开始知道用多线程操作，然而每次要用到子线程都是直接new Thread（你封装个Runnable会死啊！！）。。再之后接触">
+  <meta name="description" content="当时为了赶时髦，同时也闲得无聊，于是学了一阵Flutter，最后想要实践个项目，然而无疾而终。画页面真的好难！！  1. Widget类React的响应式布局，通过对比算法确定Widget组件变化时的最小更改。 Widget的构建顺序是从上到下的，上层Widget决定控件在布局中的位置，底层Widget决定控件的具体形状（RenderObject）。 Widget的手势设置和设置布局属性类似，需">
 <meta name="keywords" content="笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java多线程相关">
-<meta property="og:url" content="//lazxy.github.io/2017/08/11/Java多线程相关/index.html">
+<meta property="og:title" content="Flutter学习笔记">
+<meta property="og:url" content="//lazxy.github.io/2020/03/12/Flutter学习笔记/index.html">
 <meta property="og:site_name" content="Lazxy">
-<meta property="og:description" content="记得刚开始学Android的时候，曾经做过一个图库类应用，在我知道Universal-Image-Loader之前，类似从图片加载图片与遍历文件夹这样的操作都是很粗暴地直接在主线程里做。。于是GridView滑动地永远都是那么痛苦而挣扎。。进入页面总要卡个两秒钟。。后来学乖了开始知道用多线程操作，然而每次要用到子线程都是直接new Thread（你封装个Runnable会死啊！！）。。再之后接触">
+<meta property="og:description" content="当时为了赶时髦，同时也闲得无聊，于是学了一阵Flutter，最后想要实践个项目，然而无疾而终。画页面真的好难！！  1. Widget类React的响应式布局，通过对比算法确定Widget组件变化时的最小更改。 Widget的构建顺序是从上到下的，上层Widget决定控件在布局中的位置，底层Widget决定控件的具体形状（RenderObject）。 Widget的手势设置和设置布局属性类似，需">
 <meta property="og:locale" content="zh">
-<meta property="og:image" content="//lazxy.github.io/2017/08/11/Java多线程相关/线程池任务提交流程.png">
-<meta property="og:updated_time" content="2017-09-17T11:43:30.000Z">
+<meta property="og:updated_time" content="2020-11-04T08:06:48.184Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java多线程相关">
-<meta name="twitter:description" content="记得刚开始学Android的时候，曾经做过一个图库类应用，在我知道Universal-Image-Loader之前，类似从图片加载图片与遍历文件夹这样的操作都是很粗暴地直接在主线程里做。。于是GridView滑动地永远都是那么痛苦而挣扎。。进入页面总要卡个两秒钟。。后来学乖了开始知道用多线程操作，然而每次要用到子线程都是直接new Thread（你封装个Runnable会死啊！！）。。再之后接触">
-<meta name="twitter:image" content="//lazxy.github.io/2017/08/11/Java多线程相关/线程池任务提交流程.png">
+<meta name="twitter:title" content="Flutter学习笔记">
+<meta name="twitter:description" content="当时为了赶时髦，同时也闲得无聊，于是学了一阵Flutter，最后想要实践个项目，然而无疾而终。画页面真的好难！！  1. Widget类React的响应式布局，通过对比算法确定Widget组件变化时的最小更改。 Widget的构建顺序是从上到下的，上层Widget决定控件在布局中的位置，底层Widget决定控件的具体形状（RenderObject）。 Widget的手势设置和设置布局属性类似，需">
   
     <link rel="alternative" href="/atom.xml" title="Lazxy" type="application/atom+xml">
   
@@ -147,20 +145,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Java多线程相关" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Flutter学习笔记" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Java多线程相关
+      Flutter学习笔记
     </h1>
   
 
         
-        <a href="/2017/08/11/Java多线程相关/" class="archive-article-date">
-  	<time datetime="2017-08-11T10:03:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-11</time>
+        <a href="/2020/03/12/Flutter学习笔记/" class="archive-article-date">
+  	<time datetime="2020-03-12T09:34:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-12</time>
 </a>
         
       </header>
@@ -168,103 +166,213 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>记得刚开始学Android的时候，曾经做过一个图库类应用，在我知道Universal-Image-Loader之前，类似从图片加载图片与遍历文件夹这样的操作都是很粗暴地直接在主线程里做。。于是GridView滑动地永远都是那么痛苦而挣扎。。进入页面总要卡个两秒钟。。后来学乖了开始知道用多线程操作，然而每次要用到子线程都是直接new Thread（你封装个Runnable会死啊！！）。。再之后接触了更多开源库，对于多线程的妙用也算是有些体会了，然而貌似好多概念还不是很清楚呢。。于是就有了这一篇。</p>
+<p>当时为了赶时髦，同时也闲得无聊，于是学了一阵Flutter，最后想要实践个项目，然而无疾而终。画页面真的好难！！</p>
 </blockquote>
+<h4 id="1-Widget"><a href="#1-Widget" class="headerlink" title="1. Widget"></a>1. Widget</h4><p>类React的响应式布局，通过对比算法确定Widget组件变化时的最小更改。</p>
+<p>Widget的构建顺序是从上到下的，上层Widget决定控件在布局中的位置，底层Widget决定控件的具体形状（RenderObject）。</p>
+<p>Widget的手势设置和设置布局属性类似，需要在外层裹上一层GestureDetector</p>
+<p>StatefulWidget与StatelessWidget的继承用于声明一个控件状态可变/不可变，前者的实际控件声明都写在其State实现类中。</p>
+<p>Widget的嵌套写法中，子Widget可以作为参数传入父Widget的构造方法， 且其命名与父Widget中一致，这样其位置也是固定的。</p>
 <a id="more"></a>
-<p>####一些基本概念</p>
-<ol>
-<li><p>线程有创建-运行-冻结-停止-临时堵塞五种状态</p>
-</li>
-<li><p>线程创建启动时会给其成员变量重新分配空间，除非定义static变量，否则它们的变量都是独立的。</p>
-</li>
-<li><p>当一个线程被多次<code>start()</code>时，会发生线程异常错误。</p>
-</li>
-<li><p><code>start()</code>和<code>run()</code>的区别是，前者会开始运行一个线程，而run()是直接以主线程运行线程内的<code>run()</code>函数。</p>
-</li>
-<li><p>可以直接定义一个类实现Runnable重写<code>run()</code>方法，然后直接在构造Thread对象时将实现了Runnable接口定义类的对象为参数传入，这样开启线程时调用的<code>run()</code>方法为Runnable实现类中的<code>run()</code>方法。此时Runnable实现类种若有成员变量的话，它的成员变量是独立存在的（因为线程运行调用的Runnable对象是同一个），能同时被多个线程操作。由于Java的单继承方式，当其有自己的实际父类但又有一些代码需要在多线程操作时，就可以实现Runnable接口来达到目的。</p>
-</li>
-<li><p><code>join()</code>方法和<code>yeild()</code>方法分别用于<strong>等待调用该方法的线程结束</strong>与<strong>暂停当前线程</strong>，其中join是通过wait机制进行循环等待的，在等待的线程结束后会调用notifyAll将其唤醒（这部分代码写在Jvm里）。</p>
-</li>
-<li><p>用<code>synchronized</code>修饰符设定同步代码块或者函数，可以达到同步执行效果（即在持线程锁（或称监视器）的线程运行完成前无法其他线程执行<code>synchronized</code>内的内容），在其包括的代码内执行线程间共享数据来解决多线程安全问题。其所持的锁为任意一个对象，而同步函数的锁是调用这个函数的对象。当需要同步操作时，所有同步块用的锁必须一致，否则就会失去同步的效果。当同步嵌套并且所持锁都不一样时，会发生<strong>死锁</strong>现象，即两个线程都无法获得需要的锁，于是导致程序的停滞。其代码如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> Object objectA = <span class="keyword">new</span> Object();</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Object objectB = <span class="keyword">new</span> Object();</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">new</span> Thread(<span class="keyword">new</span> TaskA()).start();</span><br><span class="line">        <span class="keyword">new</span> Thread(<span class="keyword">new</span> TaskB()).start();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">TaskA</span> <span class="keyword">implements</span> <span class="title">Runnable</span> </span>&#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">                <span class="keyword">synchronized</span> (objectA) &#123;</span><br><span class="line">                    LogUtil.println(<span class="string">"Enter A"</span>);</span><br><span class="line">                    <span class="keyword">synchronized</span> (objectB) &#123;</span><br><span class="line">                        LogUtil.println(<span class="string">"Enter B"</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">TaskB</span> <span class="keyword">implements</span> <span class="title">Runnable</span> </span>&#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">                <span class="keyword">synchronized</span> (objectB) &#123;</span><br><span class="line">                    LogUtil.println(<span class="string">"Enter B"</span>);</span><br><span class="line">                    <span class="keyword">synchronized</span> (objectA) &#123;</span><br><span class="line">                        LogUtil.println(<span class="string">"Enter A"</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<p>​</p>
-</li>
-<li><p>用<code>synchronized</code>同步操作的两个前提是一、同步代码块内的代码必须是两个或两个以上的线程都会操作到的内容。二、<strong>同步锁必须一致</strong>。</p>
-</li>
-<li><p>当线程共享数据为静态变量时，静态同步函数的锁为<code>Class</code>对象。该对象先于本类的实例对象出现，是在static变量进内存时产生的<strong>字节码文件</strong>。而普通同步函数的锁是本类的实例对象，即<strong>this</strong>。</p>
-</li>
-<li><p><code>volateil</code>修饰符可以实现线程共享变量的可见性统一——即在每个线程调用该变量时都<strong>必须访问内存得到它的最新值</strong>，然后拷贝为线程的变量副本，在完成关于变量的操作后立刻将副本的值修改入内存（需要是原子性操作，类似自增之类的多步操作不能起效），以此让每个线程取得的变量值都是同一个。除此之外<code>volatile</code>能够保证被其修饰变量所在的语句一定会按照代码顺序执行（将前后分为两个部分，两个部分内的顺序不保证，但代码一定会在这两个部分之间执行）。<a href="http://www.cnblogs.com/dolphin0520/p/3920373.html" target="_blank" rel="noopener">参考文章</a> </p>
-</li>
-<li><p>ThreadLocal可以实现让每个线程持有其本地变量副本，从而避免多线程访问资源冲突。其实现方法为在每一个线程第一次调用TreadLocal对象时，都创建一个以当前线程对象为键，实际值为值的ThreadLocalMap。之后每一次取值，都会先根据当前线程对象从Map取值，取不到的话返回一个初始化值，该值需要子类重写初始化方法。</p>
-</li>
-</ol>
-<p>####单例模式</p>
-<p>饿汉式单例：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Single</span></span>&#123;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Single s = <span class="keyword">new</span> Single();</span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="title">Single</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Single <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">this</span>.s;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>懒汉式单例：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Single</span></span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> Single s = <span class="keyword">null</span>;</span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="title">Single</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">synchronized</span> Single <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(s==<span class="keyword">null</span>)</span><br><span class="line">          s=<span class="keyword">new</span> Single();</span><br><span class="line">      	<span class="keyword">return</span> s;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>DLC单例：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Single</span></span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">volatile</span> Single s = <span class="keyword">null</span>;</span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="title">Single</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Single <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(<span class="keyword">this</span>.s==<span class="keyword">null</span>)&#123;</span><br><span class="line">			<span class="keyword">synchronized</span>(Single.class)&#123;</span><br><span class="line">              <span class="comment">//这里的判断是为了让在synchronized前挂起的语句不至于再进来创建一个新的对象</span></span><br><span class="line">				<span class="keyword">if</span>(<span class="keyword">this</span>.s==<span class="keyword">null</span>)&#123;</span><br><span class="line">					s=<span class="keyword">new</span> Single(); </span><br><span class="line">                  	<span class="keyword">return</span> s;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">      <span class="keyword">return</span> s;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>静态类单例：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Single</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="title">Single</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Single <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> SingleHolder.s; 	</span><br><span class="line">	&#125;</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> class <span class="title">SingleHolder</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Single s = <span class="keyword">new</span> Single();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>####线程间通信</p>
-<ol>
-<li><p>输入与输出线程为了保证安全，应该对共同操作的数据加同步锁，当需要双方线程动作有序时，可以用到<code>wait()</code> <code>notify()</code>方法实现等待唤醒机制。<code>notify()</code>唤醒的线程为线程池中<strong>第一个</strong>开始等待（调用了<code>wait()</code>）的线程。这些相关方法定义在Object类中，因为它们都需要在同步环境下调用，且调用方需要是同步锁对象。等待唤醒机制种需要一些标识来阻止输入或输出单方面不断循环（来标识此时应该输出或者输入），而这样的标记判断应该由<strong>while</strong>来做。因为有多个线程共同进行输出或者共同输入时，会出现notify唤醒了同一方的线程而没有唤醒对方的线程，导致输入输出多次，故在唤醒后还需要进行标识判断是否应该进行接下来的动作。而相对应的，应该将<code>notify()</code>换为<code>notifyAll()</code>，确保对方一定会有线程被唤醒，防止循环判断后所有线程都处于等待状态，示例如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//被注释的代码部分为同步锁示例</span></span><br><span class="line"><span class="comment">//private static Lock lock = new ReentrantLock(); </span></span><br><span class="line"><span class="comment">//private static Condition objectA = lock.newCondition();</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">TaskA</span> <span class="keyword">implements</span> <span class="title">Runnable</span> </span>&#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">while</span>(<span class="keyword">true</span>) &#123;</span><br><span class="line">                <span class="comment">//lock.lock();</span></span><br><span class="line">                <span class="keyword">synchronized</span> (objectA) &#123;</span><br><span class="line">                    <span class="keyword">try</span> &#123;</span><br><span class="line">                      <span class="comment">//如果这里还是if判断的话，可能会在唤醒同方线程时不作判断便开始执行下面的逻辑，造成不同步错误。</span></span><br><span class="line">                        <span class="keyword">while</span>(product != <span class="keyword">null</span>) &#123;</span><br><span class="line">                            objectA.wait(); <span class="comment">//放弃持有的同步锁，等待唤醒，这里的objectA就是一个普通的对象。</span></span><br><span class="line">                          	<span class="comment">//objectA.await();</span></span><br><span class="line">                        &#125;</span><br><span class="line">                            LogUtil.println(<span class="string">"Productor"</span>);</span><br><span class="line">                            product = <span class="string">""</span>;</span><br><span class="line">                      <span class="comment">//这里保证能够唤醒对方线程</span></span><br><span class="line">                            objectA.notifyAll();</span><br><span class="line">                      		<span class="comment">//objectA.signalAll();</span></span><br><span class="line">                    &#125; <span class="keyword">catch</span> (Exception e) &#123;LogUtil.println(e.getMessage());&#125;</span><br><span class="line">                  	<span class="comment">//finally&#123;lock.unlock;&#125;</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">TaskB</span> <span class="keyword">implements</span> <span class="title">Runnable</span> </span>&#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">                <span class="keyword">synchronized</span> (objectA) &#123;</span><br><span class="line">                    <span class="keyword">try</span> &#123;</span><br><span class="line">                        <span class="keyword">while</span>(product == <span class="keyword">null</span>) &#123;</span><br><span class="line">                            objectA.wait();</span><br><span class="line">                        &#125;</span><br><span class="line">                        LogUtil.println(<span class="string">"Consumer"</span>);</span><br><span class="line">                        product = <span class="keyword">null</span>;</span><br><span class="line">                        objectA.notifyAll();</span><br><span class="line">                    &#125;<span class="keyword">catch</span>(Exception e)&#123;LogUtil.println(e.getMessage());&#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<p>​</p>
-</li>
-<li><p>在JDK1.5以后，开始用Lock接口实现类的对象显式地表达锁的获取和释放（<code>lock()</code>和<code>unlock()</code>），用<strong>Condition</strong>对象来代替作为监视器的Object对象，以<code>await()</code>和<code>signal()</code>方法来代替<code>wait()</code>和<code>notify()</code>。这种同步方式分离了对象和锁，使锁不需要以对象来作为标识，故可以用不同的Condition对象来控制不同的线程（见上面的注释）。</p>
-</li>
-<li><p>Lock 与 synchronized的区别还有Lock可以设定<strong>等待锁的时间以及设定中断锁</strong>，在等待锁休眠状态下允许被其他线程中断。同时Lock需要手动被释放，运行效率在资源竞争不激烈时略低于synchronized，但激烈时比synchronized高出几十倍。</p>
-</li>
-<li><p>关于ReentrantLock的实现，其实当一个线程等待获取Lock时，也是被存在一个双向链表队列中的，其被<strong>LockSupport的park</strong>方法阻塞，直到锁被unlock()释放，然后该线程取得锁并从队列出拆出结点，开始运行。中间有一堆<strong>CAS</strong>操作保证并发安全，并主要靠volatile变量<strong>state</strong>记录锁的状态和当前线程的状态。具体可参考<a href="http://www.cnblogs.com/xrq730/p/4979021.html" target="_blank" rel="noopener">ReentrantLock的实现原理</a>。</p>
-</li>
-<li><p>由于<code>stop()</code>方法已经过时，中止线程的方法只有将<code>run()</code>方法中的代码执行完毕，其中一个方法是将循环标记改变。但如果在<code>run()</code>中线程出现了线程利用<code>wait()</code>或者<code>sleep()</code>方法冻结的情况，线程就将无法结束，此时可以用<code>interrupt()</code>方法中断其冻结状态，但此方法会丢出Interrupt异常。</p>
-</li>
-<li><p>可以用<code>setDaemon()</code>方法来设置守护线程，或者说是后台线程，该标记下的线程运行与正常线程没有区别，区别在所有前台线程都结束时，虚拟机会自动退出该线程，即守护线程有伴生的特性。</p>
-</li>
-<li><p><code>join()</code>方法即一个可操控的抢夺CPU执行权的方法，执行该方法后，执行该方法的线程对象会取得线程执行权，而当前线程会等待其执行完毕之后才从冻结状态中被唤醒。该状态也能被<code>interrupt()</code>唤醒。</p>
-</li>
-<li><p>可以用<code>setPriority()</code>方式设定线程优先级，1最低，10最高。</p>
-</li>
-<li><p>可以用<code>yield()</code>暂停当前线程，即释放当前执行权。</p>
-</li>
-</ol>
-<h4 id="线程池"><a href="#线程池" class="headerlink" title="线程池"></a>线程池</h4><ol>
-<li><p>关于线程池，最关键的一个类是<strong>ThreadPoolExecutor</strong>，关于线池程的事务提交、计数和状态管理都通过调用该类的对象实现，其构造如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//最常用的构造</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">ThreadPoolExecutor</span><span class="params">(<span class="keyword">int</span> corePoolSize, <span class="keyword">int</span> maximumPoolSize, <span class="keyword">long</span> keepAliveTime,</span></span></span><br><span class="line"><span class="function"><span class="params">                          TimeUnit unit, BlockingQueue&lt;Runnable&gt; workQueue)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue,</span><br><span class="line">             Executors.defaultThreadFactory(), defaultHandler);</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">//完全参数构造</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">ThreadPoolExecutor</span><span class="params">(<span class="keyword">int</span> corePoolSize, <span class="keyword">int</span> maximumPoolSize, <span class="keyword">long</span> keepAliveTime,</span></span></span><br><span class="line"><span class="function"><span class="params">                          TimeUnit unit, BlockingQueue&lt;Runnable&gt; workQueue,</span></span></span><br><span class="line"><span class="function"><span class="params">                          ThreadFactory threadFactory, RejectedExecutionHandler handler)</span> </span>&#123;</span><br><span class="line">  <span class="comment">/*全是对成员变量的赋值*/</span>&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>下面需要分别解释一下各参数的含义：</p>
-<ol>
-<li><p>corePoolSize：核心线程池容量，表征一个<strong>较轻的任务执行压力下允许的线程存在数量</strong>。当线程池所需线程大于该值时，则需要将任务加入缓存队列，甚至构造新的线程。</p>
-</li>
-<li><p>maximumPoolSize：最大线程池容量，表征<strong>线程池数量的极限值</strong>。在核心线程数量不满足需求且缓存队列已满的情况下，允许构造新的线程，但线程总数不能超过该值，否则会被拒绝执行任务或者直接抛出异常。</p>
-</li>
-<li><p>keepAliveTime：线程存活时间，表征当线程池内线程数量大于核心线程池容量时，多余的临时线程能够以空闲状态存在的最大时间。另当<code>allowCoreThreadTimeOut()</code>被置为true时，空闲的核心线程也会以相同的标准被结束。</p>
-</li>
-<li><p>unit：线程存活时间的单位。</p>
-</li>
-<li><p>workQueue：任务缓存队列，当任务数大于核心线程池容量时用于存储未执行的任务，主要有下面几种：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1) ArrayBlockingQueue：基于数组的先进先出队列，此队列创建时必须指定大小；</span><br><span class="line"></span><br><span class="line">2) LinkedBlockingQueue：基于链表的先进先出队列，如果创建时没有指定此队列大小，则默认为Integer.MAX_VALUE；</span><br><span class="line"></span><br><span class="line">3) SynchronousQueue：可以视为一个永远为空的队列（或者一个任务传输管道），所有插入的任务都必须有一个线程直接取走执行，而不进行任何存留。</span><br><span class="line"></span><br><span class="line">4) DelayedWorkQueue：用二叉堆算法排序的无界延时序列，在最小延时任务到时前会处于阻塞状态。</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>threadFactory：线程构造器，默认实现为构造一个新线程，并为其设置一个固定的线程组、自增的线程名，无守护线程且线程优先级为5。</p>
-</li>
-<li><p>handler：任务拒绝策略，表征当需求线程数大于最大线程数时，对被提交的任务使用的拒绝策略，主要有下面几种：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1) AbortPolicy：直接抛出一个RejectedExecutionException异常表示拒绝接受任务。</span><br><span class="line"></span><br><span class="line">2) DiscardPolicy：静默地拒绝任务，不做任何操作。</span><br><span class="line"></span><br><span class="line">3) DiscardOldestPolicy：抛弃队列顶端的任务，并重试执行excute；但如果线程池直接进入shutdown状态，则直接放弃当前任务。</span><br><span class="line"></span><br><span class="line">4) CallerRunsPolicy：直接在excute方法执行的当前线程执行任务；但如果线程池直接进入shutdown状态，则直接放弃当前任务。</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-</li>
-<li><p>Java提供了几种默认的ThreadPoolExecutor构造方式，如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1) Executors.newFixedThreadPool(int nThreads)：构造一个核心线程池容量和最大线程池容量都为nThreads的线程池，其没有最大生存时间，同时缓存队列为Integer.MAX_VALUE大小的LinkedBlockingQueue。所有活动线程将存活到shutdown被调用。</span><br><span class="line"></span><br><span class="line">2) Executors.newSingleThreadExecutor()：构造一个只存在一个核心线程的线程池，但其缓存队列同样为Integer.MAX_VALUE大小的LinkedBlockingQueue。</span><br><span class="line"></span><br><span class="line">3) Executors.newCachedThreadPool()：构造一个无核心线程但最大线程数为Integer.MAX_VALUE的线程池，每个线程的空闲存活时间为60s，其缓存队列为SynchronousQueue。</span><br><span class="line"></span><br><span class="line">4) Executors.newSingleThreadScheduledExecutor()：构造一个只存在一个核心线程的定时线程池，线程池最大容量为Integer.MAX_VALUE，可以实现延时、定时、间隔执行任务等操作，其缓存队列为DelayedWorkQueue。</span><br><span class="line"></span><br><span class="line">5) Executors.newScheduledThreadPool(int corePoolSize)：构造一个核心线程池容量为corePoolSize的定时线程池，其余基本同上。</span><br></pre></td></tr></table></figure>
-<p><strong>另外还有ForkJoinPool与ScheduledExecutorService的各种默认构造，这里先放着。</strong></p>
-</li>
-<li><p>线程池在工作时，主要有五种状态，其含义如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1) RUNNING: 正常的工作状态，接受并执行任务。</span><br><span class="line"></span><br><span class="line">2) SHUTDOWN: 即将关闭线程池，不接受新的任务，但会继续执行队列中的任务。 可由RUNNING状态通过调用shutdown()或者finalize()方法进入该状态。</span><br><span class="line"></span><br><span class="line">3) STOP: 线程池彻底停止，不接受新的任务，并会中断执行中的任务。 由前两种状态调用shutdownNow()进入。</span><br><span class="line"></span><br><span class="line">4) TIDYING: 所有任务都被终止，正在工作的线程数为0。 SHUTDOWN/STOP状态下缓存队列和线程池都为空时进入。</span><br><span class="line"></span><br><span class="line">5) TERMINATED: 彻底完成线程的终止。 terminated()方法执行完毕时进入。</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>具体工作流程见下图：</p>
-<p><img src="/2017/08/11/Java多线程相关/线程池任务提交流程.png" alt="线程池任务提交流程"></p>
+<hr>
+<p>关于无状态Widget的状态监听，状态的变更交由有状态的父Widget执行，此时下层控件状态可由上层控件掌握，并由上层发起对下层控件的重绘（通过上层的setState方法将子控件标记为脏视图）</p>
+<p>StatefulWidget在首次加入到视图树中时，会通过createState创建一个状态实例，这个状态在Widget（采用相同的命名）重绘时，会进行重用。</p>
 <blockquote>
-<p>还有好多东西没写呢。。未完待续。</p>
-</blockquote>
-<p>​</p>
-</li>
+<p>关于这种状态管理方式的好处，类似于DataBinding的状态绑定：只需要设置不同状态下视图的属性，就可以简单地完成视图的更新，并且得益于比对算法， 视图不需要完全重绘</p>
+<p>将StatefulWidget控件的实际build方法放在State中的用意是(来自State的build方法注释)</p>
+<ol>
+<li>如果StatefulWidget中包含了带State的构造方法，这样其子类也不可避免地会持有其State的引用，可能影响父类的状态。</li>
+<li>同理如果StatefulWidget的子类为StatelessWidget，其子类就不能不带状态，这违背设计的初衷。</li>
+<li>再者如果在StatefulWidget中直接定义状态，则在buildState方法中使用闭包时获取现有属性就会是以<code>this.XX</code>的形式，而Dart的闭包内的引用是不可变的实体——于是在Widget重建时，如果不同时重建State，就会出现State依然持有被重建前的Widget内容，而不会因为重建得到更新，这影响了State恒定而Widget可变的设计初衷。</li>
 </ol>
+</blockquote>
+<hr>
+<p>GlobalKey可以用来在整个视图树中表示唯一的控件。</p>
+<h4 id="2-Diffrence"><a href="#2-Diffrence" class="headerlink" title="2.Diffrence"></a>2.Diffrence</h4><p>Flutter的每一帧都要重绘一次视图树，且Widget不可变</p>
+<blockquote>
+<p>这里的不可变指的是，一方面，Widget对象除了初始化之外没有设置修改属性的方法，完全依赖StatefulWidget的状态对象存储，每次更新属性时重建一个对象；另一方面Widget在树中的位置不变</p>
+</blockquote>
+<p>Flutter中的动画设置也是通过<strong>AnimationController（控制动画绘制每一帧的属性值）及Interpolator（插值器，但是也继承自Animation）</strong>来实现的。除非自己实现TickerProvider的接口，否则<strong>含有动画的控件必须是StatefulWidget</strong>（Ticker是触发每帧动画回调的对象）。</p>
+<p>可以通过<strong>CustomPainter和CustomPaint</strong>来自定义绘制画布，和View重写onDraw方法类似的，重写paint方法，获得Canvas对象来进行绘制操作。</p>
+<p>Flutter中的自定义控件修改一般是通过控件组合实现的，而非继承覆盖父类方法</p>
+<blockquote>
+<p><em>这样做的好处在哪里？</em></p>
+</blockquote>
+<p>Flutter的页面定向方式与Native大为不同，其倾向于在main方法中通过<strong>routes</strong>参数声明所有可能跳转的页面，包括其<strong>路径名</strong>和页面对象构造方式，然后通过<strong>Navigator</strong>（类似页面栈的Widget）来切换各个页面（以路径名为路由方式），并且可以通过Navigator方法的返回值来获得页面跳转返回的数据（类似startActivityForResult）。或者也可以使用native集成方式调用Intent。</p>
+<blockquote>
+<p><em>route方式切换页面，如何在页面间传递数据呢？</em></p>
+</blockquote>
+<p>Flutter可以通过MethodChannel来定义、调用原生应用与Flutter约定的接口，以此来进行数据传递。</p>
+<p>Dart是一个单线程模型，<em>类似Android的Message事件循环模式，优先执行”主线程”的操作，然后依次将后续异步事件（<strong>async</strong>关键字标注）插入执行队列，以此实现伪异步执行的效果</em>。另外还有Isolate机制，用于处理计算量大的并发任务，类似Java的多线程，但是其任务间并不共享内存，仅通过约定调用方与被调用方的Port形式来进行通信。</p>
+<blockquote>
+<p>官方示例中<strong>Port</strong>的约定方式是这样的：</p>
+<ol>
+<li>主线程开启一个接收端口<code>receivePort1</code>（<strong>ReceivePort</strong>），通过<strong>Isolate.spawn([methodName]，sendPort)</strong>方法开启一个Isolate任务，并传递<code>receivePort1.sendPort</code>给任务线程。在这之后可以通过<strong>await</strong>关键字等待任务线程响应</li>
+<li>Isolate任务线程 也开启一个接收端口<code>iReceivePort</code>，并且把这个接收端口通过主线程传入的<code>receivePort1</code>调用send方法发给主线程，然后await等待接收任务的具体参数</li>
+<li>主线程通过<code>receivePort1</code>的<code>first</code>参数获得了任务线程回调的接收端口<code>iReceivePort</code>，此时再通过<code>iReceivePort.sendPort</code>端口send任务参数以及主线程接收端口<code>receivePort2.sendPort</code>给任务线程</li>
+<li>任务线程得到了参数及主线程回调端口，经过耗时任务操作之后，将结果通过<code>receivePort2.first</code>对象传递给主线程。</li>
+</ol>
+<p>这个例子可能略为有些复杂，实际上，如果Isolate是一个简单的固定任务的话，只需要主线程把sendPort对象传给任务线程，任务线程处理完任务后通过接收的sendPort对象将结果返回给主线程即可。</p>
+<p>但由这个例子可以看出，主线程和Isolate线程间的信息交互是通过ReceivePort实现的，并辅以await关键字的使用，就可以实现异步执行任务，同步等待结果（Future）的调度效果。</p>
+</blockquote>
+<p>Flutter中图片的分辨率格式与iOS类似，采用1x、2x与3x的分辨率，置于images中，但不足的是需要在<strong>pubspec.yaml</strong>中进行声明才能引用（第三方库的依赖也在这个文件里）；而对于strings，Flutter中只能置于dart文件中，以静态对象的方式来引用</p>
+<blockquote>
+<p>另外，对于strings文本的国际化，Flutter并没有语言资源文件分别放置这样的操作，如果要实现这个需求，就需要依赖flutter_localizations包，在APP创建时为它进行初始化配置，并构造相应的Localization文件来列举不同语言的文本，以键值对的方式存放，再由Location.of方式获取对应值。后半部分也可以通过采用<strong>Flutter i18n</strong>插件通过书写.arb文件的形式来进行简化，但调用时仍然具有侵入性（部分不在MaterialApp下的文本甚至并不能通过这种方法来进行国际化设置）。</p>
+</blockquote>
+<p>Flutter中可通过WidgetsBinding观察监听didChangedAppLifecycleState来监听生命周期，通用事件主要有两种：</p>
+<ul>
+<li>resumed -对应onResume </li>
+<li>paused - 对应onPause</li>
+</ul>
+<p>而在onCreate中执行的动作一般会在initState中执行，onDestroy则对应dispose方法</p>
+<p>ListView在Flutter中同时承担了ScrollView和ListView的功能，但这里的ListView没有 Adapter来进行子列构造以及数据更新提示，需要在每次更新数据时变更数据源List的引用或者采用ListView.builder来启动布局的更新。</p>
+<blockquote>
+<p>本质上上述的两种方式应该都是为了Flutter对比新旧ListView时能得到一个不同的结果（不同的数据源引用对象）。</p>
+</blockquote>
+<p>Text Widget的各种样式来自于TextStyle对象，TextField的hint文本则需要在布局下嵌套一个InputDecoration</p>
+<p>Flutter的主题声明是在顶层widget中实现的。</p>
+<p>Flutter的各种平台/硬件相关功能都通过<strong>插件</strong>来实现，如相机、传感器使用、持久化存储、调用数据库与实现Notification等等，其实现方式类似于Flutter发送相关请求与Platform层交互，然后Platform层完成请求任务后对Flutter进行通知。</p>
+<ul>
+<li><a href="https://flutterchina.club/widgets" target="_blank" rel="noopener">Flutter Widgets List</a>  </li>
+<li><a href="pub.dev">Plugins</a></li>
+</ul>
+<h4 id="3-No-man‘s-sky"><a href="#3-No-man‘s-sky" class="headerlink" title="3. No man‘s sky"></a>3. No man‘s sky</h4><hr>
+<h3 id="Dart"><a href="#Dart" class="headerlink" title="Dart"></a>Dart</h3><p>Dart的所有变量都是对象实例，包括方法和null（和kotlin一样），允许显式的声明对象类型或者用<code>var</code>声明一个动态（dynamic）类型对象。</p>
+<p>Dart 的运行入口是无参的main()方法。</p>
+<p>Dart没有可见性描述符，变量名以<code>_</code>开头时，即表示它是一个私有变量。</p>
+<p>所有变量在初始化之前都为<strong>null</strong>，包括数字。</p>
+<p>Dart中同时存在<strong>final和const</strong>，final变量只能被赋值一次，而const表示一个常量，不可被改变（不能是实例变量，在类中定义时必须是静态的）。且const也可以用来修饰一个构造方法，这样构造出来的对象也是不可变的（但和C++一样，其引用可以变化，如果引用没有用const或final修饰的话）。</p>
+<p>数字类型在Dart中仅有int和double两种，其中int型的范围没有限制，且两者都继承num类。</p>
+<p>Dart中的String与Kotlin类似，也支持单引号、双引号、三引号（多行字符串），前两者不支持书写时换行，三者都支持转义字符和参数引用（用<code>$</code>符号引用）。且由于多行字符串也支持转义字符(Kotlin并不支持)，Dart的“生”字符串（raw string）使用小写字母r开头来表示的，如：</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> rawStr = <span class="string">r"In a raw string, even \n isn't special."</span>;</span><br></pre></td></tr></table></figure>
+<p>这里的raw string既不支持转义字符，也不支持变量引用。</p>
+<p>字符串间的比较可以直接用<code>==</code>，连接时则可以选择用<code>+</code>，或者直接省略，仅把字符串放在一起来表达连接的字符串（这种情况下这些字符串不能是变量）。</p>
+<p>Dart中的布尔类型类型标志为<code>bool</code>，这个类型可以被其他类型转换而来（类似C++的int转boolean，不过只在检查模式下生效），但除了其值等于true的情况，其他情况都为false。</p>
+<p>Dart中的数组即<code>List</code>对象，其定义时类似这样：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var strList = [&quot;a&quot;,&quot;b&quot;]; //这个经过初始化的数组也是可增长的</span><br><span class="line">or</span><br><span class="line">var strList = new List();</span><br></pre></td></tr></table></figure>
+<p>总体来说这个类与Java中的List还是非常像的，方法基本上都可以共用。</p>
+<p><code>Map</code>对象也得到了一定的简化，写法类似JS：</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> tab = &#123;</span><br><span class="line">    <span class="string">"manager"</span>:<span class="string">"Lazxy"</span>,</span><br><span class="line">    <span class="string">"staff"</span>:<span class="string">"Lzxin"</span></span><br><span class="line">&#125;; <span class="comment">//初始化</span></span><br><span class="line"><span class="keyword">var</span> tab = <span class="keyword">new</span> <span class="built_in">Map</span>();<span class="comment">//初始化</span></span><br><span class="line">tab[manager] = <span class="string">"Gready"</span>;<span class="comment">//赋值与取值</span></span><br></pre></td></tr></table></figure>
+<p>List和Map初始化时都可以指定泛型，写法类似:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var tab = &lt;num,String&gt; &#123;1:&quot;Lazxy&quot;,2:&quot;Lzxin&quot;&#125; //之类查找表key为num类型，value为String类型</span><br></pre></td></tr></table></figure>
+<p>Dart中的方法也同时是对象，书写方式和Java没有很大差别，但可以不写返回值类型声明和参数类型声明，并且当方法<strong>表达式只有一行</strong>时，可以采用简写方法，如：</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">isValid（<span class="built_in">int</span> <span class="built_in">num</span>）=&gt; <span class="built_in">num</span> &gt; <span class="number">0</span>; <span class="comment">//这里省略了 bool这个返回值类型，且没有return</span></span><br></pre></td></tr></table></figure>
+<p>同时，方法声明中允许<strong>命名参数</strong>，并且将其设为可选项，如：</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//声明一个命名参数方法</span></span><br><span class="line"><span class="built_in">bool</span> checkFace(<span class="built_in">String</span> eye,&#123;<span class="built_in">String</span> mouse,<span class="built_in">String</span> ear&#125;)&#123; <span class="comment">//部分可命名</span></span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//调用一个命名参数方法</span></span><br><span class="line">checkFace(eye:<span class="string">"shining"</span>, mouse:<span class="string">"pretty"</span>);<span class="comment">//调用这样的方法时，所有参数都需要指定名称，即使填入的参数已经与整个参数列表一一对应</span></span><br></pre></td></tr></table></figure>
+<p>方法声明中也允许通过定义<strong>可选位置参数</strong>来进行参数缺省，如：</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//声明一个可选位置参数方法</span></span><br><span class="line"><span class="built_in">bool</span> checkFace(<span class="built_in">String</span> eye,<span class="built_in">String</span> mouse,[<span class="built_in">String</span> wings])&#123;</span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//调用一个可选参数方法</span></span><br><span class="line">checkFace(<span class="string">"shining"</span>,<span class="string">"pretty"</span>);</span><br></pre></td></tr></table></figure>
+<p>这里可选参数的范围也可以拓展到多个参数，实际就是扩大<code>[]</code>的作用范围，但是必须是后几个参数。在多个参数为可选位置参数时，调用方法时传入的参数将按声明顺序对应到各个参数。</p>
+<p>与Kotlin类似的，Dart的方法还能声明默认参数，但只有以上两种可选参数允许设置默认参数，调用时若参数缺省，则使用默认值。</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//声明一个带默认值的可选参数方法</span></span><br><span class="line"><span class="built_in">bool</span> checkFace(&#123;<span class="built_in">String</span> eye,<span class="built_in">String</span> mouse,<span class="built_in">String</span> ear = <span class="string">"cute"</span>&#125;)&#123;</span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>Dart的程序入口是<strong>main</strong>方法，其参数可以为空也可以是一个List\<string\>。</string\></p>
+<p>Dart的方法可以作为一个变量被引用，并允许匿名定义，也就是熟悉的闭包形式，不过和常见的lambda表达式不同，有点像是去了名字的方法定义：</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> funcObj = (<span class="built_in">bool</span> someCondition)&#123; <span class="comment">//这里的参数类型也可以不写</span></span><br><span class="line">    <span class="keyword">if</span>(someCondition)&#123;</span><br><span class="line">        <span class="comment">//...</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">"success"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;；</span><br><span class="line"><span class="comment">//or </span></span><br><span class="line"><span class="keyword">var</span> funcObj = (someCondition) =&gt; someCondition?<span class="string">"success"</span>:<span class="string">"fail"</span>;</span><br></pre></td></tr></table></figure>
+<p>此时这个变量类型为<code>Function</code>或者更详细的<code>String Function(boolean)</code>。且匿名方法作为方法，也支持上述缺省参数的声明方式。</p>
+<p>允许在一个方法内，以正常的定义方式定义另一个方法。如：</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> oneFunction()&#123;</span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">    boolean judge(Condition con)&#123;</span><br><span class="line">        <span class="comment">//...</span></span><br><span class="line">    &#125;<span class="comment">//这个时候这里不需要写分号</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Dart的匿名方法内传参是对象传参，其不会因为外部引用的更改而更改，故也不像Java一样需要把外部参数设为常量参数，可以等同于匿名方法留存了一套入参的对象备份。</p>
+<p>方法对象间的比较是引用比较，当两个方法引用指向的实例对象地址不同时，称这两个方法不相等。</p>
+<blockquote>
+<p>Dart中的方法是不存在重载的，因为每个方法的命名都需要不同，且方法的参数列表实际上是可以不设定具体类型的，也就是说，只要方法内能够处理不同类型的参数，重载这个行为实际上是在方法内实现的，而与声明关系不大。</p>
+</blockquote>
+<p>Dart的操作符和Java大体类似，但有一些区别，比如当一个运算符是中缀操作符时，其采用的重载实现是其左边类型的实现，比如下面<code>+</code>运算符的例子：</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> result = <span class="string">"No."</span> + <span class="number">1</span>; <span class="comment">//正确 采用了String的+符号重写，结果是No.1</span></span><br><span class="line"><span class="keyword">var</span> result = <span class="number">1</span> + <span class="string">"No."</span>; <span class="comment">//错误 采用了num的+符号重写，不允许第二个参数为String</span></span><br></pre></td></tr></table></figure>
+<p>还有诸如类型判断与类型转换，Dart的语法更像Kotlin，前者使用了<code>is</code>和<code>is!</code>关键字，而后者则使用了<code>as</code>，且启用了智能类型推断，用法如：</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(coder <span class="keyword">is</span> Man)&#123;</span><br><span class="line">    coder.drink()；<span class="comment">//这里自动将coder类型推断为了Man</span></span><br><span class="line">&#125;</span><br><span class="line">(coder <span class="keyword">as</span> Man).drink(); <span class="comment">//这里主动将coder类型转化为了Man</span></span><br></pre></td></tr></table></figure>
+<p>在条件表达式中，Dart除了和Java一致的三元表达式之外，多了一个判空选择操作符<code>??</code>，用来简化三元表达式第一个参数为null的情况下取第二个参数的操作，即：</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = b != <span class="keyword">null</span> ? b : c;</span><br><span class="line"><span class="comment">//eqauls</span></span><br><span class="line"><span class="keyword">var</span> a = b ?? c;</span><br></pre></td></tr></table></figure>
+<p>类似的还有一个判空赋值操作符<code>??=</code>，当左边的对象为空时，才会将右边的对象赋值给左边。</p>
+<p>除此之外，Dart还有两个非常好用的操作符，一个是类似Kotlin防空操作的<code>?.</code>操作符，当一个空对象使用这个操作符引用成员变量或者方法时，会默认返回一个空值；另一个是级联操作符<code>..</code>，这个操作符可以在语言层面实现Builder设计模式的链式调用</p>
+<blockquote>
+<p>文档中说明只能用于成员变量的链式赋值，而不能用于返回void的方法调用，但实际尝试是可以的，留待观察</p>
+</blockquote>
+<p>控制流与循环方面，Dart和Java的关键字几乎没什么区别，仅在两个地方有不同：一个是for循环语句，forEach的调用方式使用了Kotlin中使用的<code>in</code>关键字，并且可以简写为forEach方法的调用，如：</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> str <span class="keyword">in</span> strList)&#123;</span><br><span class="line">    <span class="built_in">print</span>(str);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//or</span></span><br><span class="line">strList.forEach((str) =&gt; <span class="built_in">print</span>(str));</span><br></pre></td></tr></table></figure>
+<p>另一个是swith语句，Dart中的swith语句不再是不终止匹配的情况就自然向下的逻辑，而是强制限定了每条非空匹配必须通过break/return/throw终止当前匹配行为，或者采用continue选择向一个已命名的匹配分支跳转，如：</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> command = <span class="string">'CLOSED'</span>;</span><br><span class="line"><span class="keyword">switch</span> (command) &#123;</span><br><span class="line">  <span class="keyword">case</span> <span class="string">'OPEND'</span>:</span><br><span class="line">  	executeOpened();</span><br><span class="line">    <span class="keyword">break</span>; <span class="comment">//这里不写break会抛出编译时异常</span></span><br><span class="line">  <span class="keyword">case</span> <span class="string">'CLOSED'</span>:</span><br><span class="line">    executeClosed();</span><br><span class="line">    <span class="keyword">continue</span> nowClosed;</span><br><span class="line">    <span class="comment">// Continues executing at the nowClosed label.</span></span><br><span class="line"></span><br><span class="line">nowClosed:</span><br><span class="line">  <span class="keyword">case</span> <span class="string">'NOW_CLOSED'</span>:</span><br><span class="line">    <span class="comment">// Runs for both CLOSED and NOW_CLOSED.</span></span><br><span class="line">    executeNowClosed();</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>和Kotlin一样，Dart中的异常也都是非检察异常，不会在编译时要求程序一定捕获，且<code>throw</code>这个关键字可以用以抛出所有非空对象为异常，并不要求其是Exception对象或者Error对象。<code>rethrow</code>关键字允许在catch到异常之后，再次将原异常抛出（虽然感觉并没有什么用）。</p>
+<p>Dart中，类的声明和Java区别不算很大，主要的差别在构造方法上。</p>
+<p>在默认构造方法上，两者没有区别，同样是一个空参数构造方法，如果父类没有默认构造，则子类必须调用父类的非默认构造方法，调用法法与Kotlin类似，使用了<code>:</code>符号：</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Parent</span></span>&#123;</span><br><span class="line">	<span class="built_in">String</span> name;</span><br><span class="line">    <span class="built_in">num</span> age;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//类似Kotlin中的data类型的构造,等价于将name和age赋值给成员变量，语法糖</span></span><br><span class="line">    <span class="comment">//但需要注意的是Dart只允许类有一个非命名构造方法，且不允许重载</span></span><br><span class="line">    Parent(name,age);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Child</span> <span class="keyword">extends</span> <span class="title">Parent</span></span>&#123;</span><br><span class="line">    Child(name) : <span class="keyword">super</span>(name , <span class="number">13</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> father = Parent(<span class="string">"Lazxy"</span>,<span class="number">23</span>);</span><br><span class="line"><span class="keyword">var</span> child = Child(<span class="string">"Lzxin"</span>);</span><br></pre></td></tr></table></figure>
+<p>类似调用父类方法的方式，子类调用自己的非命名构造方法时也需要用<code>:</code>符号，称为重定向构造，如：</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">	<span class="built_in">String</span> name;</span><br><span class="line">	<span class="built_in">num</span> age;</span><br><span class="line"></span><br><span class="line">    Person(name,age);</span><br><span class="line">    <span class="comment">//重定向构造，这种构造方法没有方法体，且被重定向的对象必须是一个普通无名构造</span></span><br><span class="line">    Person.baby(name) : <span class="keyword">this</span>(name,<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在此基础上，构造方法可以提供自己的初始化列表，声明在构造方法体之前，同时也执行在方法体之前，甚至早于调用父类的构造，在此基础上，可以进行一些条件设置，如：</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Parent</span></span>&#123;</span><br><span class="line">	<span class="built_in">String</span> name;</span><br><span class="line">    <span class="built_in">num</span> age;</span><br><span class="line">    </span><br><span class="line">    Parent(name,age)&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">if</span>(age != <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="comment">//这里设置age不为0时才设置其值</span></span><br><span class="line">        	<span class="keyword">this</span>.age = age;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Child</span> <span class="keyword">extends</span> <span class="title">Parent</span></span>&#123;</span><br><span class="line">	<span class="built_in">num</span> age; <span class="comment">//如果不在这里声明一次，就会提示无法在这个范围内访问该参数</span></span><br><span class="line">    <span class="comment">//这里预先初始化age = 12,再执行父类构造方法， 由于此时age已不为0，故age的值不会更改</span></span><br><span class="line">    Child(name) : age = <span class="number">12</span>,<span class="keyword">super</span>(name , <span class="number">13</span>); <span class="comment">//与父类构造声明用“,”连接</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Dart也可以声明<strong>命名构造方法</strong>，即通过类似静态方法的声明调用方式构造类对象的构造方式，例如：</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">    <span class="built_in">String</span> name;</span><br><span class="line">    <span class="built_in">num</span> age;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//命名构造方法</span></span><br><span class="line">    Person.fromRecord(<span class="built_in">Map</span> record)&#123;</span><br><span class="line">        name = record[<span class="string">"name"</span>];</span><br><span class="line">        age = <span class="built_in">num</span>.parse(record[<span class="string">"age"</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//构造调用</span></span><br><span class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> Person.fromRecord(&#123;<span class="string">"name"</span>:<span class="string">"Lazxy"</span>,<span class="string">"age"</span>:<span class="string">"23"</span>&#125;); <span class="comment">//这里的new当然也可以省略，就像调用一个静态方法</span></span><br></pre></td></tr></table></figure>
+<p>还有一种特别的构造方法，成为<strong>常量构造函数</strong>，这个构造方法会成为编译时常量，并且要求其成员变量都是final的，整个类都不可变（虽然并不知道这个特性有什么用）：</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ImmutablePoint</span> </span>&#123;</span><br><span class="line">  <span class="keyword">final</span> <span class="built_in">num</span> x;</span><br><span class="line">  <span class="keyword">final</span> <span class="built_in">num</span> y;</span><br><span class="line">  <span class="keyword">const</span> ImmutablePoint(<span class="keyword">this</span>.x, <span class="keyword">this</span>.y);</span><br><span class="line">  <span class="keyword">static</span> <span class="keyword">final</span> ImmutablePoint origin = <span class="keyword">const</span> ImmutablePoint(<span class="number">0</span>, <span class="number">0</span>); <span class="comment">//这里的const也不是必须的</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>最后，在许多SDK预置的类中还可以看到的一种构造方法，<strong>工厂方法构造函数</strong>，这个构造并不一定会构造一个新的对象，而是采取自定义操作来获取一个对象（诸如从缓存中获取实例或者构造一个子对象实现）的动作，如：</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Parent</span></span>&#123;</span><br><span class="line">    <span class="comment">//无名工厂方法构造</span></span><br><span class="line">    <span class="keyword">factory</span> Parent()&#123;</span><br><span class="line">        <span class="keyword">return</span> Child();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//命名工厂方法构造</span></span><br><span class="line">    <span class="keyword">factory</span> Parent.withName(<span class="built_in">String</span> name)&#123;</span><br><span class="line">        <span class="keyword">return</span> Parent(name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在工厂方法构造中，不允许访问<code>this</code>实例，此时命名工厂方法就更像一个静态的getInstance方法了。</p>
+<p>Dart中的成员变量自带getter和setter方法，且支持自定义（和Kotlin类似）。</p>
+<p>Dart中的抽象类定义与Java中相同，使用<code>abstract</code>修饰符，抽象方法的声明则简单的不写方法体就可以了，不需要修饰符修饰。但不同的是普通类也是可以定义抽象方法的，所以不实现这个方法调用的结果就是运行时异常（实在没搞懂为什么要做这么不安全的设计）。</p>
+<p>Dart中的<strong>每个类都隐式地定义了包含所有实例成员的接口</strong>，其他类可以通过<code>implement</code>继承实现，并需要重写所有接口方法与继承成员变量。</p>
+<p>Dart中一个特别的继承机制，<strong>mixin</strong>，其作用相当于允许进行多继承，用<code>with</code>关键字声明。继承类可以使用mixin类的成员变量和方法，并允许重写这些实例成员。但mixin类本身不能有构造方法，在早期版本里也不能继承其他类与调用super方法。</p>
+<blockquote>
+<p>这里仍然需要讨论下多继承情况下的方法实现冲突，经过实验其先后顺序应该是这样的：一个类必须先extends 再 with最后implements，如果这三者的实现对象都有同一个方法，子类不需要任何实现，该方法的实现由with的对象实现，如果多个with对象都有一个方法，则选择最后一个with的对象；如果没有with对象，即使extends的父类已有这个方法的实现，接口也会要求再次重写这个方法。</p>
+<p>Dart里的继承方式更具多样性，其定制程度层层递进——<strong>mixin实现了完全的代码复用，子类可以什么都不实现；普通的extends需要实现父类的构造方法进行变量初始化；abstract规定了抽象方法的APi，并可以提供部分实现；implements接口提供了实例成员的API，需要开发者完全地进行实现。</strong></p>
+</blockquote>
+<p>Dart库（Library）的引用同样使用<code>import</code>关键字，内置的库与自定义的库引用方式有所不同：</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">'dart:io'</span>; <span class="comment">//引用内置库</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">'package:mylib/mylib.dart'</span>; <span class="comment">//引用自定义的库</span></span><br></pre></td></tr></table></figure>
+<p>在两个库有冲突类型时，可以通过<code>as</code>指定库的别名来进行解决，类似Kotlin：</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">'package:lib/lib.dart'</span> <span class="keyword">as</span> lib;</span><br></pre></td></tr></table></figure>
+<p>同时Dart支持部分导入，这个“部分”单位是class，用 <code>hide</code>和<code>show</code>关键字实现：</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 只导入foo.class</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">'package:lib1/lib1.dart'</span> show foo;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 除了foo.class都导入</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">'package:lib2/lib2.dart'</span> hide foo;</span><br></pre></td></tr></table></figure>
+<p>当需要延时导入相关的库以节省开销时，可以采用<code>defferred as</code>关键字来实现，同时在合适的时候<code>loadLibrary</code>，写法如下：</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">'package:deferred/hello.dart'</span> deferred <span class="keyword">as</span> hello; <span class="comment">//延时加载一个库</span></span><br><span class="line">greet() <span class="keyword">async</span> &#123;</span><br><span class="line">  <span class="keyword">await</span> hello.loadLibrary(); <span class="comment">//通过库的别名启动loadLibrary方法</span></span><br><span class="line">  hello.printGreeting();<span class="comment">//调用库中的方法，在导入成功前是不可用的</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Dart的异步支持算是和Java的一大区分点，其没有了Java中显式的线程概念，而多采用Future与Steam的对象表示一个延迟返回/即时读取状态的异步任务，用到的关键字是<code>async</code>和<code>await</code>。其中async关键字用于声明一个方法是异步方法，而await关键字修饰一个需要异步执行的操作，这个关键字必须使用在async方法中，如：</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">networkTask() <span class="keyword">async</span>&#123; </span><br><span class="line">    <span class="keyword">var</span> response = <span class="keyword">await</span> postRequest();</span><br><span class="line">    <span class="keyword">return</span> response；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上述方法在加上了async关键字后，返回的结果会被自动包装为Future\<t\>对象来承载方法结果，且这个方法在方法体执行完之前就会返回结果。而await修饰的语句会一直阻塞至执行完成，返回一个相应的对象。</t\></p>
+<blockquote>
+<p>Steam相关的暂不记录，没弄清楚这个的使用场景。</p>
+</blockquote>
+<p>如果在Dart的类中定义<code>call</code>方法，则可以将类对象名视为方法名来调用这个方法，参数可以自定义。</p>
+<p>可以通过<code>typedef</code>关键字来修饰方法，来定义方法的类型，这个类型包括方法的入参类型和返回值类型，如：</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//定义返回值为bool，接收两个String入参的方法未Compare方法</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="built_in">bool</span> Compare(<span class="built_in">String</span> ori,<span class="built_in">String</span> src);</span><br></pre></td></tr></table></figure>
+<h3 id="实战笔记"><a href="#实战笔记" class="headerlink" title="实战笔记"></a>实战笔记</h3><ul>
+<li><p>在开始之前：无论需要用到哪个控件，如果对它的属性不太熟悉的话，可以直接进去看它的构造方法，flutter的变量和注释还是比较容易看懂的。</p>
+</li>
+<li><p>关于布局的一些先行概念：Flutter的布局采用的是沙盒模型，控件通过约束（<strong>Constraint</strong>）来决定沙盒的尺寸（<strong>Size</strong>），同时父级控件会将约束条件传递给子集控件，从而影响子控件的绘制。在此基础上，需要注意<strong>无界约束（Unbounded constrains）</strong>与<strong>柔性对象（Flex）</strong>的概念——前者表示控件至少在某个方向上的约束设置是无限的，典型代表即作为柔性对象的<strong>Column、Row</strong>或者具有滚动条的<strong>ListView</strong>；而后者表示一类在某一方向上有序排列的布局，其特性为：在有界约束下，其会尽可能地占满空间（往延伸方向上，即match_parent），在无界约束下时，则会适配子控件的大小（即wrap_content）。</p>
+<blockquote>
+<p>就约束本身而言，虽然看起来是在设定控件本身的大小和尺寸，但实际上约束设定的是其子控件绘制的区域大小，而父控件往往只是在根据子控件的大小进行变化。</p>
+<p>这种说法解释了为什么Container在直接作为Material的直接子对象时，自身设置的约束不起效，大小永远为占满全屏。</p>
+</blockquote>
+</li>
+<li><p>万物始于<strong>Container</strong>，如果需要设置布局的背景色、padding、<strong>子控件整体宽高</strong>等属性，就需要在最外面套一层Container,然而Container的宽高设置遵从了复杂的规则，并会受到父类约束规则的影响，列举如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1.如果有约束配置（无论有无对齐方式），在无界约束下，Container会wrap_content，而在有界约束下，Container会match_parent。</span><br><span class="line">2.如果无约束配置，在有对齐方式的情况下，Container会将父控件的约束传给子控件，并wrap_content</span><br></pre></td></tr></table></figure>
+<p>但是暂时不知道Material或者Container这类控件属于什么类型的约束，反正在这两者的约束下，Container的约束配置会失效。</p>
+</li>
+<li><p><strong>GridView</strong>作为网格布局，当正方向子项数量确定时，默认状态下其纵横比为1，基准为正方向子项的尺寸（横向为width，纵向为height），此时子项的边界容易溢出，故注意要设置<code>childAspectRatio</code>，保证子项的绘制空间足够。</p>
+</li>
+<li><p>动画效果而言，有<strong>AnimationController</strong>、<strong>Animation</strong>、<strong>Animatable</strong>、<strong>AnimatedWidget</strong>四个关键类。<strong>AnimationController</strong>类似ValueAnimator，将一个动画过程用double值表示，有下限值与上限值，能设置动画运行时间，并执行重复、停止等操作；<strong>Animation</strong>类则主要承担了动画状态监听设置和<strong>AnimationController</strong>值的动态处理工作；<strong>Animatable</strong>的实现基本就是各种<strong>Tween</strong>类，它的作用是对Animation的value值进行转化，从而变成各种AnimatedWidget能够直接使用的对象，如Offset、Color等；最后，<strong>AnimatedWidget</strong>，其子类是各种<strong>Transition</strong>类，作为视图树中的一部分，即动画执行目标的容器，会根据Tween类转化的各种对象来对当前视图进行动态渲染（也有类似FadeTransition这种类不属于AnimatedWidget，但同样可以通过Animation获得动画效果，其作用应该是直接获取value值作为渲染参数）。</p>
+</li>
+<li><p>关于页面跳转，之前看文档的时候提到过，相关的两个类是<strong>Router</strong>和<strong>Navigator</strong>。其中<strong>Router的作用类似于Android中的Activity/Dialog/PopupWindow等基础页面单位 + Transition</strong>，即一方面Router可以用来设定当前页面的展示形式（全屏占满还是部分中间悬浮），另一方面它可以决定当前页面是通过怎样的动画形式完成展示与隐藏（Android的上滑渐进或者iOS的左右切入等）；而Navigator的作用就更接近它的名字的意义了——即<strong>通过新增、删除Router来完成当前页面的展示、隐藏，并通过记录Router的历史顺序来串联访问流程</strong>，类似ActivityStack。目前看来Flutter的页面管理比Android更透明，观感上更像Fragment管理，可以直接通过Navigator方法来完成类似singleTask的效果，也方便调整页面的展示动画，但缺点是每个页面都需要手动从栈中弹出。</p>
+<blockquote>
+<p>如果在main方法的APP中同时设置了home和initialRoute，则在打开APP的时候会同时打开两个页面。</p>
+</blockquote>
+</li>
+<li><p><strong>Scaffold</strong>是一个按MD风格首页绘制的Widget，其内容接近AS提供的Navigation Drawer Activity的那个页面模板，即包括一个Drawer、FloatActionButton和App Bar的页面。其中，AppBar是一个<code>PreferredSizeWidget</code>，这类控件定义了一个预期尺寸，而不固定大小，方便Scaffold对其进行调整（比如处于全局模式时加上一个状态栏的高度，这个模式由<code>primary</code>属性决定，默认为true）；</p>
+</li>
+<li><p>Flutter页面的生命周期与数据的关联方式相当有意思，当一个Route被添加到窗口中（也就是调用了<code>push</code>）之后，会返回一个Future\<t\>对象，该对象是这个Route被关闭（也就是被<code>pop</code>）时的返回值。这种情况可以类比为：将一个Bundle对象通过Intent传给Activity，在该Activity完成任务之后向该Bundle放入需要的结果值，然后关闭页面时回调上个页面的onActivityResult。</t\></p>
+<p>和Android不同，Flutter通过Future机制替代了回调形式，在上面类比的场景中，可以通过生命周期回调中处理Future的方式来传递数据；或者像<code>WillPopScope</code>所做的一样，通过await等待得到Future的结果（这个控件就通过Future标志位阻断了pop的过程，从而能够实现首页按两次返回退出的功能）。</p>
+</li>
+<li><p>Flutter的常用网络请求框架是Dio，其用法搭配Dart的异步机制可以说相当简单，基本就是通过get、post等方法， 获得相应的Response，然后对其进行解析即可，大多数请求语句可能就一行代码。Dio的一大亮点是提供了并发请求统一处理的方法和可以锁定请求队列完成前置任务的Interceptor Lock设计。其扁平化的编码方式得益于Dart语言本身的特性，但的确节省了当前网络请求框架需要与RxJava等框架结合使用的开发成本。</p>
+</li>
+<li><p><strong>Completer</strong>是一个Future的生成器与控制器。很多时候Future的使用依赖于一个显示的对象构造，且只能预设其获得目标值之后的操作。但Completer允许通过complete、completeError等方法，来控制Future的设值与完成状态，从而起到与Java体系中回调相似的作用，不过其功能实现基于Future的监听机制。</p>
+<blockquote>
+<p>这里关于Future需要详细说明一下：</p>
+<p>Future的各种构造入参都是FutureOr\<t\>，其声明了一个Future\<t\>或一个T类型的参数，这是一个综合类型，由编译器动态解释（语法糖之一）。</t\></t\></p>
+<p>当一个方法的返回值为Future时，这个方法的非Future返回值，若类型为T，则会被包装成Future\<t\>（语法糖之二）。</t\></p>
+<p>Future任务的执行依靠isolate的事件队列循环进行调度，其中<code>microTask</code>(微任务)的执行优先级高于一般的<code>event</code>(事件)，可以通过Future的方法来构造这两种优先级不同的事件。</p>
+<p>Future的异步效果实际上是<strong>“延迟执行任务”</strong>的表现，一个Future任务也许会晚于当前方法的代码执行，但当几个Future任务在一个时段进行排队执行时，其执行效果永远是有序的，而明显区别于多线程工作。同时在Future任务执行时间较长时，会阻塞UI的交互。所以密集型计算任务，还是需要开启新的isolate来执行。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><ul>
+<li>当项目运行卡在<code>resolve dependences</code>时，可以在项目的<code>android</code>目录中用gradlew命令手动下载依赖文件。</li>
+<li>flutter对gradle的配置文件在<code>[flutter sdk 目录]\packages\flutter_tools\gradle\flutter.gradle</code>文件中</li>
+</ul>
 
       
 
@@ -334,7 +442,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://lazxy.github.io/2017/08/11/Java多线程相关/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://lazxy.github.io/2020/03/12/Flutter学习笔记/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -348,18 +456,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/07/09/C++笔记/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/04/27/关于微信小程序/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          C++笔记
+          关于微信小程序
         
       </div>
     </a>
   
   
-    <a href="/2017/07/25/Realm数据库学习笔记/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Realm数据库学习笔记</div>
+    <a href="/2018/07/09/Frament相关/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Fragment相关</div>
       <i class="icon-circle-right"></i>
     </a>
   

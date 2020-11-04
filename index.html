@@ -142,6 +142,316 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-关于微信小程序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/27/关于微信小程序/">关于微信小程序</a>
+    </h1>
+  
+
+        
+        <a href="/2020/04/27/关于微信小程序/" class="archive-article-date">
+  	<time datetime="2020-04-27T06:30:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>疫情之后回来上班，学了一波小程序开发，很多理念上的东西和APP开发别无二致，还都是数据驱动UI的开发方式，就很赞。</p>
+</blockquote>
+<h4 id="基本结构"><a href="#基本结构" class="headerlink" title="基本结构"></a>基本结构</h4><ul>
+<li><p>小程序<strong>文件四件套</strong>：<strong>.json</strong> 配置文件，有全局和页面的文件；<strong>.wxml</strong> 模板样式文件，类似Android xml，天然支持数据绑定；<strong>.wxss</strong> 微信版CSS文件，用来声明具体样式，比标准CSS多了一个长度单位<code>rpx</code>；<strong>.js</strong> 就是普通的JS文件，用来为wxml文件中绑定的控件设置交互逻辑和数据。</p>
+</li>
+<li><p>小程序的<strong>分层结构</strong>与常规Web页面不同，其页面渲染和逻辑执行是分为两个线程执行的（<strong>Webview</strong>线程与<strong>JsCore</strong>线程），两者通过<strong>Native</strong>层——即微信客户端来进行交互（也包括逻辑层执行网络请求）。一个小程序中每个页面都有其自己的一个Webview线程，但JsCore线程是共用的一个。</p></li></ul>
+        
+          <a class="article-more-a" href="/2020/04/27/关于微信小程序/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-Flutter学习笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/12/Flutter学习笔记/">Flutter学习笔记</a>
+    </h1>
+  
+
+        
+        <a href="/2020/03/12/Flutter学习笔记/" class="archive-article-date">
+  	<time datetime="2020-03-12T09:34:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>当时为了赶时髦，同时也闲得无聊，于是学了一阵Flutter，最后想要实践个项目，然而无疾而终。画页面真的好难！！</p>
+</blockquote>
+<h4 id="1-Widget"><a href="#1-Widget" class="headerlink" title="1. Widget"></a>1. Widget</h4><p>类React的响应式布局，通过对比算法确定Widget组件变化时的最小更改。</p>
+<p>Widget的构建顺序是从上到下的，上层Widget决定控件在布局中的位置，底层Widget决定控件的具体形状（RenderObject）。</p>
+<p>Widget的手势设置和设置布局属性类似，需要在外层裹上一层GestureDetector</p>
+<p>StatefulWidget与StatelessWidget的继承用于声明一个控件状态可变/不可变，前者的实际控件声明都写在其State实现类中。</p>
+<p>Widget的嵌套写法中，子Widget可以作为参数传入父Widget的构造方法， 且其命名与父Widget中一致，这样其位置也是固定的。</p>
+        
+          <a class="article-more-a" href="/2020/03/12/Flutter学习笔记/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-Frament相关" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/09/Frament相关/">Fragment相关</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/09/Frament相关/" class="archive-article-date">
+  	<time datetime="2018-07-09T06:14:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>​    项目中碰到了Fragment切换造成整个界面UI都混乱的情况，于是决定研究下Fragment的生命周期里具体都对UI做了什么，希望找到突破点。<del>当然最后并没有折腾到最后</del></p>
+</blockquote>
+<h4 id="从add-开始讲起"><a href="#从add-开始讲起" class="headerlink" title="从add()开始讲起"></a>从add()开始讲起</h4><p>​    在对Fragment的使用中，除了对Fragment的对象构造，第一个动作应该就是用add()将其放到Activity准备的容器布局中，一般语句如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">getSupportFragmentManager().beginTransaction().add(container.getId(), fragment).commit();<span class="comment">//这里用的v4包中的Fragment</span></span><br></pre></td></tr></table></figure>
+<p>首先，第一个方法，getSupportFragmentManager()，其获得的对象是一个FragmentManager抽象类的子类(也写在这个类的文件里，是一个final内部类)，即<strong>FragmentManagerImpl</strong>，这里要注意的是，<strong>android.app</strong>包里的Fragment调用getFragmentManager()也能得到一个FragmentManagerImpl对象，然而这个对象所属的类也在android.app包里，而不是上面的<strong>v4</strong>包，两者方法上有些差异，不能混为一谈。</p>
+        
+          <a class="article-more-a" href="/2018/07/09/Frament相关/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-SSM简易笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/09/SSM简易笔记/">SSM简易笔记</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/09/SSM简易笔记/" class="archive-article-date">
+  	<time datetime="2018-07-09T06:14:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>2018年上半年接手Portal服务端的开发任务，使命艰巨啊，由此先从简单的入手，走一遍SSM基础教程。内容来自<a href="http://how2j.cn/k/" target="_blank" rel="noopener">How2J</a>。<del>惊了！我怎么什么都学过，为什么一点都记不起来了！</del></p>
+</blockquote>
+<h4 id="Spring部分"><a href="#Spring部分" class="headerlink" title="Spring部分"></a>Spring部分</h4><p>​    Spring的作用是提供一个基本框架用以注入对象（IOC）以及提供非业务服务（AOP），从而达到通过配置文件就能改变对象属性以及尽量少地侵入代码的效果。</p>
+<h4 id="一、IOC-DI"><a href="#一、IOC-DI" class="headerlink" title="一、IOC/DI"></a>一、IOC/DI</h4><p>IOC即控制反转，想想Dagger就好，这里最简单的实现是在<strong>applicationContext.xml</strong>文件 <em>(在src目录下)</em>的bean节点里声明类以及需要注入的属性，其样式如下：</p>
+        
+          <a class="article-more-a" href="/2018/07/09/SSM简易笔记/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-C++笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/09/C++笔记/">C++笔记</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/09/C++笔记/" class="archive-article-date">
+  	<time datetime="2018-07-09T06:04:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>C++，我可能永远都学不会的语言OTZ。应该是当年做毕设的时候折腾的成果，看的大概是《Accelerated.C++》，希望哪天能重新学完。</p>
+</blockquote>
+<h4 id="Chapter-Zero"><a href="#Chapter-Zero" class="headerlink" title="Chapter Zero"></a>Chapter Zero</h4><p>​    导入依赖库 <code>include &lt;XXX&gt;</code>(标准库) 或者<code>include &#39;XXX&#39;</code>(当前路径下的文件);main函数的返回值，0表示执行无异常；命名空间是一系列相关声明名字的集合，用<code>XXX::</code>表示引用XXX命名空间内的名字；<code>&lt;&lt;</code>输入输出运算符接收两个参数，一个是<strong>std::ostream</strong>类型 如std:cout 另一个是一个String类型，并返回第一个参数； C++函数体内<strong>空代码块{}的存在是合法的（Java其实也合法）</strong>；段注释之内不能有其他的段注释结束符，如/*/<em>*/\</em>/，且段注释前不能有行注释；</p>
+        
+          <a class="article-more-a" href="/2018/07/09/C++笔记/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-Java多线程相关" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -409,323 +719,6 @@
 <h3 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h3><p>​    正则表达式的匹配语法其实也很简单，只需要将下面的各种字符像普通字符串一样列举出来，各种支持正则的语言自然会对其实际语义进行处理，然后寻找和其结构一致的目标字符串，作为结果给出。<br></p>
         
           <a class="article-more-a" href="/2017/07/07/正则表达式/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-关于RxJava2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/19/关于RxJava2/">关于RxJava2</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/19/关于RxJava2/" class="archive-article-date">
-  	<time datetime="2017-05-19T05:46:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>先前对RxJava的认识只停留在“它是可以与Retrofit配合的线程调度工具”的层面，并没有更多地探索它的原理和用法。然后在项目中要进行耗时文件I/O操作，正在考虑用AsynTask还是Handler来进行多线程处理回调时，突然想起了RxJava，遂决定再翻一遍以前看过的技术文章，认真地把它好好学一遍。（并且曾在项目里用过的RxJava由于依赖问题用的基本是RxJava1.x，不过既然RxJava2.x也已经发布稳定版，当然是学最新的啦。）</p>
-</blockquote>
-<h4 id="配置依赖"><a href="#配置依赖" class="headerlink" title="配置依赖"></a>配置依赖</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">compile &apos;io.reactivex.rxjava2:rxjava:2.1.0&apos; </span><br><span class="line">compile &apos;io.reactivex.rxjava2:rxandroid:2.0.1&apos;//RxAndroid更新可能会慢一点，但反正不要求版本号一致</span><br><span class="line">//这里的包名也和1.x时代的 &apos;io.reactivex:rxjava&apos;有所区别了</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2017/05/19/关于RxJava2/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-面试相关各知识点总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/13/面试相关各知识点总结/">面试相关各知识点总结</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/13/面试相关各知识点总结/" class="archive-article-date">
-  	<time datetime="2017-05-13T00:55:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>Mark了好多前人总结的面试题库，准备至少全部看一遍，算是完整地复习一遍基础知识吧，顺手记一些并不太清楚或者容易遗忘的知识点在这。</p>
-</blockquote>
-<ol>
-<li><p>关于<strong>XML</strong>的解析</p>
-<p>XML（可拓展标记语言），一般常用的解析方式主要有两种：<strong>DOM</strong>和<strong>SAX</strong>，前者一次性地将整个XML文件节点树构造出来放进内存，易对节点进行各种操作，但缺点在于占用资源，容易造成内存浪费；后者以流式方法解析XML，节约资源的同时并不利于节点操作。</p>
-<p>例程参考地址 [深入解读XML解析][<a href="http://blog.csdn.net/sdksdk0/article/details/50749326" target="_blank" rel="noopener">http://blog.csdn.net/sdksdk0/article/details/50749326</a>] （文中包括了XML的基本语法与Schema命名空间约束等知识点）</p>
-</li>
-</ol>
-<ol>
-<li><p>关于<strong>String</strong>的各种小知识点</p>
-<p>String构造时，<code>String s = &quot;String&quot;</code>与 <code>String s = new String(&quot;string&quot;)</code>在内存里的处理是不一样的，前者直接在字符串常量池中构造了一个对象，之后每个用相同方法构造的String引用都指向同一个地址；而后者实际上构造了两个对象，一个在字符串常量池，另一个在堆里(即s指向的地址)。</p>
-<p>​</p>
-</li>
-<li><p>关于try catch语句里return的顺序</p>
-<p>在try catch语句中，如果存在return 且有finally代码块，则会<strong>先执行return表达式，再执行finally，最后返回相应值。</strong></p>
-<p>实验参考 [finally与return 的执行顺序][<a href="http://www.cnblogs.com/lanxuezaipiao/p/3440471.html" target="_blank" rel="noopener">http://www.cnblogs.com/lanxuezaipiao/p/3440471.html</a>]</p>
-<p>​</p>
-</li>
-<li><p>Serializable与Parcelable</p>
-<p>​</p>
-</li>
-</ol>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-关于Activity栈" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/10/关于Activity栈/">关于Activity栈</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/10/关于Activity栈/" class="archive-article-date">
-  	<time datetime="2017-05-10T08:15:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>​    前两天在写项目的时候突然碰到个问题，当用户进入应用时，先进入MainActivity，如果判断为非登陆状态，则应该直接跳转到登陆页面 ，如果在登陆界面放弃登陆，则应该直接回到主界面。这意味着在登陆界面打开时，MainActivity应该从回退栈中弹出，而不是下压。那个时候草草百度了一番，用Intent加Flag的方法匆匆混了过去，然而新栈建立的Transition动画着实让人难受(所以又回去补了一波动画的相关，然而还是没有补到Activity Transition的部分-_-)，今天完善各个界面的逻辑和细节的时候又想起来了这档子事，于是抛下写到一半的代码，准备温习一下Activity进栈出栈的具体过程。<del>又逮着码字的机会了了！！</del></p>
-</blockquote>
-<p>​    Activity的出入栈控制主要来自于两个地方Activity的声明处——Manifest文件定义的属性和Activity的开启者——Intent的Flag定义。下面分别看看它们都能定义哪些属性。</p>
-        
-          <a class="article-more-a" href="/2017/05/10/关于Activity栈/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-关于动画" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/05/关于动画/">关于动画</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/05/关于动画/" class="archive-article-date">
-  	<time datetime="2017-05-05T02:29:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>一直以来各种动画效果也只是零碎地在需要用到的时候复制粘贴，或者直接自己Draw一遍，并且记下一些零碎的代码段。然而最近比赛项目又碰到了需要各种动画过场的情况，想想这问题也是积攒已久了，于是准备认真的学习一下。</p>
-</blockquote>
-<p>​    首先，Android里的动画分为三种：<strong>PropertyAnimation（属性动画）</strong>、<strong>ViewAnimation（视图动画）</strong>和<strong>DrawableAnimation（帧动画，By the way，官网中翻是可绘制动画，感觉就很不对劲 -_-）</strong>。其中属性动画在API 11之后加入，它可以对所有对象（包括未渲染到屏幕的对象）添加动画效果，拓展性强且特点多样，是官方推荐的动画实现手段；视图动画则是比较老的动画实现手段，其仅对View起效，并且只有视觉上的变化，而不实际改变View的位置或其他真实属性；可绘制动画则适用于借助Drawable资源实现的情景，通过切换帧实现动画效果，比如常见的进度条旋转与游戏中人物走动效果等。下面依次说一下各个动画的用法。</p>
-        
-          <a class="article-more-a" href="/2017/05/05/关于动画/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-关于Retrofit" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/01/关于Retrofit/">关于Retrofit</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/01/关于Retrofit/" class="archive-article-date">
-  	<time datetime="2017-05-01T11:25:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>笔记转移之路的第一篇，就先好好回顾下这默默工作在层层封装下的劳模。</p>
-</blockquote>
-<p><strong>Retrofit</strong>同<strong>OkHttp</strong>一样都是square公司（然后查了一下发现Picasso和Dragger也是他们的项目，向大佬低头）的开源网络框架，大概因为这个原因，它们也有相似的Builder链式调用和相似的请求流程。当然Retrofit实际可以算作是OkHttp的加强版，其不仅有各种方便的注解简化代码，更有其他开源库的支持（看看漫山遍野的Retrofit+RxJava使用教程），下面简单地记录一下当时学习过的一些点。</p>
-        
-          <a class="article-more-a" href="/2017/05/01/关于Retrofit/#more">more >></a>
         
       
 
